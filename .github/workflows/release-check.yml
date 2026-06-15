@@ -61,6 +61,8 @@ jobs:
     if: fromJSON(needs.check.outputs.build_needed)
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v6
+
       - name: Trigger core build (will chain to 3rdparty via workflow_run)
         if: fromJSON(needs.check.outputs.core_changed)
         env:
