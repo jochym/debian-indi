@@ -19,6 +19,18 @@ jobs:
           apt-get update && apt-get install -y --no-install-recommends \
             ca-certificates curl gnupg
 
+      - name: Wait for Pages deployment
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sfI "https://jochym.github.io/debian-indi/dists/stable/main/binary-amd64/Packages" >/dev/null 2>&1; then
+              echo "::notice::GitHub Pages ready after ${i}s"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::GitHub Pages not ready after 150s"
+          exit 1
+
       - name: Test with trusted=yes
         run: |
           echo "deb [trusted=yes] https://jochym.github.io/debian-indi/ stable main" \
