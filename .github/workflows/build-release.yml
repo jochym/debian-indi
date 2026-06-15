@@ -2,16 +2,12 @@ name: Build & Publish Release
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: [Build INDI 3rdparty Meta-Package]
-    types: [completed]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   release:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -164,3 +160,16 @@ jobs:
               -H "Content-Type: application/octet-stream" \
               "$UPLOAD?name=$name" --data-binary "@$deb" > /dev/null
           done
+
+  trigger-repo:
+    needs: [release]
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - run: |
+          gh workflow run "Build & Deploy APT Repository (gh-pages, history pruned)" --ref "${{ github.ref_name }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

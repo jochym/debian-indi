@@ -101,3 +101,16 @@ jobs:
             **/*.deb
           retention-days: 14
           if-no-files-found: error
+
+  trigger-3rdparty:
+    needs: [build]
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - run: |
+          gh workflow run alt-indi-3rdparty.yml --ref "${{ github.ref_name }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

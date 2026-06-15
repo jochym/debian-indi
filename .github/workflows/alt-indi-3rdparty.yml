@@ -2,9 +2,6 @@ name: Build 3rd Party Libs and Drivers
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: [Build core INDI Libs and Drivers]
-    types: [completed]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
@@ -13,7 +10,6 @@ env:
 
 jobs:
   build-3rdparty-drivers:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     strategy:
       fail-fast: false
       matrix:
@@ -212,3 +208,16 @@ jobs:
             build-libraries.log
             build-drivers.log
           retention-days: 30
+
+  trigger-meta:
+    needs: [build-3rdparty-drivers]
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - run: |
+          gh workflow run indi-3rdparty-meta.yml --ref "${{ github.ref_name }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

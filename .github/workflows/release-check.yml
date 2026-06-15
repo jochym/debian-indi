@@ -67,16 +67,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Trigger core build (will chain to 3rdparty via workflow_run)
+      - name: Trigger core build
         if: fromJSON(needs.check.outputs.core_changed)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh workflow run alt-indi-core.yml --ref "${{ github.ref_name }}"
-
-      - name: Trigger 3rdparty build directly (will chain to meta via workflow_run)
-        if: fromJSON(needs.check.outputs.core_changed) == false && fromJSON(needs.check.outputs.thirdparty_changed)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger 3rdparty build (only if core unchanged)
+        if: fromJSON(needs.check.outputs.core_changed) == false && fromJSON(needs.check.outputs.thirdparty_changed)
         run: |
           gh workflow run alt-indi-3rdparty.yml --ref "${{ github.ref_name }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
