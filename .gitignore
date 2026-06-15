@@ -1,0 +1,35 @@
+# Debian packaging
+*.deb
+*.ddeb
+*.build
+*.buildinfo
+*.changes
+*.dsc
+*.tar.*
+debian/files
+debian/debhelper-build-stamp
+debian/*.substvars
+debian/*.log
+debian/*.debhelper
+
+# Build artifacts
+_build/
+build/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
