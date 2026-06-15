@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Build & Deploy APT Repository (gh-pages, history pruned)"
+      - "Build & Deploy APT Repository"
     types:
       - completed
 

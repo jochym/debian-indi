@@ -171,6 +171,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - run: |
-          gh workflow run "Build & Deploy APT Repository (gh-pages, history pruned)" --ref "${{ github.ref_name }}"
+          gh workflow run "Build & Deploy APT Repository" --ref "${{ github.ref_name }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

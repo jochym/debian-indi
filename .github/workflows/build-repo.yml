@@ -1,4 +1,4 @@
-name: Build & Deploy APT Repository (gh-pages, history pruned)
+name: Build & Deploy APT Repository
 
 on:
   workflow_dispatch:
