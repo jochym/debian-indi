@@ -26,13 +26,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          REPO="${{ github.repository }}"
           CORE=$(curl -s https://api.github.com/repos/indilib/indi/releases/latest | jq -r .tag_name | sed 's/^v//')
           CORE="${CORE:-2.2.2}"
           THIRD=$(curl -s https://api.github.com/repos/indilib/indi-3rdparty/releases/latest | jq -r .tag_name | sed 's/^v//')
           THIRD="${THIRD:-2.2.2.1}"
 
           TOKEN="${{ secrets.GITHUB_TOKEN }}"
-          API="https://api.github.com/repos/${{ github.repository }}"
+          API="https://api.github.com/repos/$REPO"
 
           # Check latest release
           OUR_TAG=$(curl -s -H "Authorization: token $TOKEN" \
@@ -50,10 +51,10 @@ jobs:
           echo "Upstream: core v$CORE, 3rdparty v$THIRD"
 
           # Also check latest successful workflow runs (in case build succeeded but chain didn't complete)
-          LAST_CORE_RUN=$(gh run list --workflow "Build core INDI Libs and Drivers" \
+          LAST_CORE_RUN=$(gh run list --repo "$REPO" --workflow "Build core INDI Libs and Drivers" \
             --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId' 2>/dev/null)
           if [ -n "$LAST_CORE_RUN" ] && [ "$LAST_CORE_RUN" != "null" ]; then
-            LOG_CORE=$(gh run view "$LAST_CORE_RUN" --log 2>/dev/null)
+            LOG_CORE=$(gh run view "$LAST_CORE_RUN" --repo "$REPO" --log 2>/dev/null)
             BUILT_CORE=$(echo "$LOG_CORE" | grep -oP 'Detected package version: \K[0-9.]+' | head -1)
             if [ -n "$BUILT_CORE" ] && dpkg --compare-versions "$BUILT_CORE" gt "$OUR_CORE"; then
               echo "Found core v$BUILT_CORE in run #$LAST_CORE_RUN (newer than release)"
@@ -61,10 +62,10 @@ jobs:
             fi
           fi
 
-          LAST_THIRD_RUN=$(gh run list --workflow "Build 3rd Party Libs and Drivers" \
+          LAST_THIRD_RUN=$(gh run list --repo "$REPO" --workflow "Build 3rd Party Libs and Drivers" \
             --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId' 2>/dev/null)
           if [ -n "$LAST_THIRD_RUN" ] && [ "$LAST_THIRD_RUN" != "null" ]; then
-            LOG_THIRD=$(gh run view "$LAST_THIRD_RUN" --log 2>/dev/null)
+            LOG_THIRD=$(gh run view "$LAST_THIRD_RUN" --repo "$REPO" --log 2>/dev/null)
             BUILT_THIRD=$(echo "$LOG_THIRD" | grep -oP 'Detected package version: \K[0-9.]+' | head -1)
             if [ -n "$BUILT_THIRD" ] && dpkg --compare-versions "$BUILT_THIRD" gt "$OUR_THIRD"; then
               echo "Found 3rdparty v$BUILT_THIRD in run #$LAST_THIRD_RUN (newer than release)"
@@ -73,9 +74,9 @@ jobs:
           fi
 
           # Also check if any workflow is already running for this version
-          RUNNING_CORE=$(gh run list --workflow "Build core INDI Libs and Drivers" \
+          RUNNING_CORE=$(gh run list --repo "$REPO" --workflow "Build core INDI Libs and Drivers" \
             --branch main --status in_progress --limit 1 --json databaseId --jq '.[0].databaseId' 2>/dev/null)
-          RUNNING_THIRD=$(gh run list --workflow "Build 3rd Party Libs and Drivers" \
+          RUNNING_THIRD=$(gh run list --repo "$REPO" --workflow "Build 3rd Party Libs and Drivers" \
             --branch main --status in_progress --limit 1 --json databaseId --jq '.[0].databaseId' 2>/dev/null)
 
           echo "Latest core run built: v$OUR_CORE, latest 3rdparty run built: v$OUR_THIRD"
