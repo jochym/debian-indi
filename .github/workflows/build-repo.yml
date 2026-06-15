@@ -215,6 +215,7 @@ jobs:
       actions: write
       contents: read
     steps:
+      - uses: actions/checkout@v6
       - run: |
           gh workflow run "Test APT Repository" --ref "${{ github.ref_name }}"
         env:

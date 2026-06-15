@@ -110,6 +110,7 @@ jobs:
       actions: write
       contents: read
     steps:
+      - uses: actions/checkout@v6
       - run: |
           gh workflow run alt-indi-3rdparty.yml --ref "${{ github.ref_name }}"
         env:

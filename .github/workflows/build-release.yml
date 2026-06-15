@@ -169,6 +169,7 @@ jobs:
       actions: write
       contents: read
     steps:
+      - uses: actions/checkout@v6
       - run: |
           gh workflow run "Build & Deploy APT Repository (gh-pages, history pruned)" --ref "${{ github.ref_name }}"
         env:
