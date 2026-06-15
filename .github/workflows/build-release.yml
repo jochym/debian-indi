@@ -1,0 +1,166 @@
+name: Build & Publish Release
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Build INDI 3rdparty Meta-Package]
+    types: [completed]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  release:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Detect upstream versions
+        run: |
+          CORE_TAG=$(curl -s https://api.github.com/repos/indilib/indi/releases/latest | jq -r .tag_name | sed 's/^v//')
+          THIRD_TAG=$(curl -s https://api.github.com/repos/indilib/indi-3rdparty/releases/latest | jq -r .tag_name | sed 's/^v//')
+          [ -z "$CORE_TAG" ] || [ "$CORE_TAG" = "null" ] && CORE_TAG="2.2.2"
+          [ -z "$THIRD_TAG" ] || [ "$THIRD_TAG" = "null" ] && THIRD_TAG="2.2.2.1"
+          echo "CORE_VERSION=$CORE_TAG" >> $GITHUB_ENV
+          echo "THIRD_VERSION=$THIRD_TAG" >> $GITHUB_ENV
+          if dpkg --compare-versions "$CORE_TAG" gt "$THIRD_TAG"; then
+            RELEASE_VERSION=$CORE_TAG
+          else
+            RELEASE_VERSION=$THIRD_TAG
+          fi
+          BUILD_TAG=$(date +%Y%m%d)
+          RELEASE_VERSION="${RELEASE_VERSION}+ab${BUILD_TAG}"
+          echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
+          echo "Core: v$CORE_TAG, 3rdparty: v$THIRD_TAG, Release: v$RELEASE_VERSION"
+
+      - name: Download core packages (arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-arm64
+          workflow_conclusion: success
+          path: ./artifacts/core-arm64
+
+      - name: Download core packages (amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-amd64
+          workflow_conclusion: success
+          path: ./artifacts/core-amd64
+
+      - name: Download 3rdparty packages (arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-arm64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-arm64
+
+      - name: Download 3rdparty packages (amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-amd64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-amd64
+
+      - name: Download meta-packages (arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-arm64
+          workflow_conclusion: success
+          path: ./artifacts/meta-arm64
+
+      - name: Download meta-packages (amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-amd64
+          workflow_conclusion: success
+          path: ./artifacts/meta-amd64
+
+      - name: Create or find GitHub Release
+        run: |
+          TAG="v${RELEASE_VERSION}"
+          API="https://api.github.com/repos/${{ github.repository }}"
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+
+          EXISTING=$(curl -s -H "Authorization: token $TOKEN" "$API/releases/tags/$TAG")
+          RELEASE_ID=$(echo "$EXISTING" | jq -r '.id // empty')
+
+          if [ -z "$RELEASE_ID" ]; then
+            echo "Creating release $TAG..."
+            BODY=$(printf '## Community build of INDI v%s\n\n- **indi-core:** v%s\n- **indi-3rdparty:** v%s\n- **Architectures:** amd64, arm64\n\nAssets below are individual `.deb` packages for direct download.\n\n**APT repository (unofficial):** https://jochym.github.io/debian-indi/' \
+              "$RELEASE_VERSION" "$CORE_VERSION" "$THIRD_VERSION")
+            PAYLOAD=$(jq -n \
+              --arg tag "$TAG" \
+              --arg name "Community build of INDI v${RELEASE_VERSION}" \
+              --arg body "$BODY" \
+              '{tag_name: $tag, name: $name, body: $body, draft: false, prerelease: false}')
+
+            CREATE=$(curl -s -X POST -H "Authorization: token $TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD" "$API/releases")
+            RELEASE_ID=$(echo "$CREATE" | jq -r '.id // empty')
+            echo "Created release ID: $RELEASE_ID"
+          else
+            echo "Release $TAG already exists, ID: $RELEASE_ID"
+            echo "Updating release body and name..."
+            BODY=$(printf '## Community build of INDI v%s\n\n- **indi-core:** v%s\n- **indi-3rdparty:** v%s\n- **Architectures:** amd64, arm64\n\nAssets below are individual `.deb` packages for direct download.\n\n**APT repository (unofficial):** https://jochym.github.io/debian-indi/' \
+              "$RELEASE_VERSION" "$CORE_VERSION" "$THIRD_VERSION")
+            PAYLOAD=$(jq -n \
+              --arg name "Community build of INDI v${RELEASE_VERSION}" \
+              --arg body "$BODY" \
+              '{name: $name, body: $body}')
+            curl -s -X PATCH -H "Authorization: token $TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD" "$API/releases/$RELEASE_ID" > /dev/null
+            echo "Release body updated."
+          fi
+
+          echo "RELEASE_ID=$RELEASE_ID" >> $GITHUB_ENV
+          echo "RELEASE_TAG=$TAG" >> $GITHUB_ENV
+
+      - name: Filter and upload .deb packages (exclude dbg/dbgsym)
+        run: |
+          API="https://api.github.com/repos/${{ github.repository }}"
+          UPLOAD="https://uploads.github.com/repos/${{ github.repository }}/releases/${{ env.RELEASE_ID }}/assets"
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+
+          echo "Removing all existing assets..."
+          curl -s -H "Authorization: token $TOKEN" \
+            "$API/releases/${{ env.RELEASE_ID }}/assets" | \
+            jq -r '.[] | "\(.id) \(.name)"' | \
+            while read -r id name; do
+              echo "  Removing: $name"
+              curl -s -X DELETE -H "Authorization: token $TOKEN" \
+                "$API/releases/assets/$id" > /dev/null
+            done
+
+          echo "Uploading packages in alphabetical order..."
+          find ./artifacts -name "*.deb" -print0 | sort -z | while IFS= read -r -d '' deb; do
+            name=$(basename "$deb")
+            # Skip dbg and dbgsym packages
+            if [[ "$name" =~ (-dbg|-dbgsym)_ ]]; then
+              echo "  Skipping: $name (debug package)"
+              continue
+            fi
+            echo "  Uploading: $name"
+            curl -s -X POST -H "Authorization: token $TOKEN" \
+              -H "Content-Type: application/octet-stream" \
+              "$UPLOAD?name=$name" --data-binary "@$deb" > /dev/null
+          done

@@ -1,0 +1,76 @@
+name: INDI Release Check
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: release-pipeline
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      build_needed: ${{ steps.ver.outputs.build_needed }}
+      core_changed: ${{ steps.ver.outputs.core_changed }}
+      thirdparty_changed: ${{ steps.ver.outputs.thirdparty_changed }}
+    steps:
+      - name: Check upstream releases vs our releases
+        id: ver
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CORE=$(curl -s https://api.github.com/repos/indilib/indi/releases/latest | jq -r .tag_name | sed 's/^v//')
+          CORE="${CORE:-2.2.2}"
+          THIRD=$(curl -s https://api.github.com/repos/indilib/indi-3rdparty/releases/latest | jq -r .tag_name | sed 's/^v//')
+          THIRD="${THIRD:-2.2.2.1}"
+
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+          API="https://api.github.com/repos/${{ github.repository }}"
+          OUR_TAG=$(curl -s -H "Authorization: token $TOKEN" \
+            "$API/releases/latest" | jq -r '.tag_name // "v0.0.0"' | sed 's/^v//')
+
+          OUR_CORE="0.0.0"; OUR_THIRD="0.0.0"
+          if [ "$OUR_TAG" != "0.0.0" ]; then
+            BODY=$(curl -s -H "Authorization: token $TOKEN" \
+              "$API/releases/latest" | jq -r '.body // ""')
+            OUR_CORE=$(echo "$BODY" | grep -oP 'indi-core: v\K[0-9.]+' | head -1) && OUR_CORE="${OUR_CORE:-0.0.0}"
+            OUR_THIRD=$(echo "$BODY" | grep -oP 'indi-3rdparty: v\K[0-9.]+' | head -1) && OUR_THIRD="${OUR_THIRD:-0.0.0}"
+          fi
+
+          echo "Upstream core: v$CORE, ours: v$OUR_CORE"
+          echo "Upstream 3rdparty: v$THIRD, ours: v$OUR_THIRD"
+
+          CORE_CHANGED=false; THIRD_CHANGED=false
+          dpkg --compare-versions "$CORE" gt "$OUR_CORE" && CORE_CHANGED=true
+          dpkg --compare-versions "$THIRD" gt "$OUR_THIRD" && THIRD_CHANGED=true
+
+          echo "core_changed=$CORE_CHANGED" >> "$GITHUB_OUTPUT"
+          echo "thirdparty_changed=$THIRD_CHANGED" >> "$GITHUB_OUTPUT"
+
+          if [ "$CORE_CHANGED" = true ] || [ "$THIRD_CHANGED" = true ]; then
+            echo "build_needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "build_needed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  trigger:
+    needs: [check]
+    if: fromJSON(needs.check.outputs.build_needed)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger core build (will chain to 3rdparty via workflow_run)
+        if: fromJSON(needs.check.outputs.core_changed)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run alt-indi-core.yml --ref "${{ github.ref_name }}"
+
+      - name: Trigger 3rdparty build directly (will chain to meta via workflow_run)
+        if: fromJSON(needs.check.outputs.core_changed) == false && fromJSON(needs.check.outputs.thirdparty_changed)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run alt-indi-3rdparty.yml --ref "${{ github.ref_name }}"

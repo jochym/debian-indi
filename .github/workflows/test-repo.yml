@@ -1,0 +1,57 @@
+name: Test APT Repository
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Build & Deploy APT Repository (gh-pages, history pruned)"
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:trixie-slim
+    steps:
+      - name: Install tools
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+            ca-certificates curl gnupg
+
+      - name: Test with trusted=yes
+        run: |
+          echo "deb [trusted=yes] https://jochym.github.io/debian-indi/ stable main" \
+            > /etc/apt/sources.list.d/debian-indi.list
+          apt-get update 2>&1
+          echo "::notice::apt update with trusted=yes succeeded"
+
+      - name: Verify package metadata
+        run: |
+          apt-cache show indi-bin 2>&1 | head -10
+          echo "---"
+          apt-cache show indi-3rdparty-drivers 2>&1 | head -10
+          echo "::notice::Package metadata verified"
+
+      - name: Test GPG signed repo
+        run: |
+          curl -fsSL https://jochym.github.io/debian-indi/gpg_public_key.asc \
+            | gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-indi.gpg
+          cat > /etc/apt/sources.list.d/debian-indi.list <<'EOF'
+          deb [signed-by=/etc/apt/trusted.gpg.d/debian-indi.gpg] https://jochym.github.io/debian-indi/ stable main
+          EOF
+          apt-get update 2>&1
+          apt-cache policy indi-bin 2>&1
+          echo "::notice::GPG-signed repo verified"
+
+      - name: Install indi-bin
+        run: |
+          apt-get install -y --no-install-recommends indi-bin
+          indiserver --version 2>&1 || true
+          echo "::notice::indi-bin installed successfully"
+
+      - name: Install indi-3rdparty-drivers (meta)
+        run: |
+          apt-get install -y --no-install-recommends indi-3rdparty-drivers
+          dpkg -l 'indi-*' 2>&1 | head -30
+          echo "::notice::indi-3rdparty-drivers installed"

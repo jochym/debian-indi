@@ -1,0 +1,103 @@
+name: Build core INDI Libs and Drivers
+
+on:
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  DEBIAN_FRONTEND: noninteractive
+  DEBCONF_FRONTEND: noninteractive
+  APT_LISTCHANGES_FRONTEND: none
+  DH_VERBOSE: '0'
+  DEB_BUILD_OPTIONS: 'quiet'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            runner: ubuntu-24.04-arm
+          - arch: amd64
+            runner: ubuntu-latest
+
+    runs-on: ${{ matrix.runner }}
+
+    container:
+      image: debian:trixie-slim
+
+    steps:
+      - name: Configure apt for quiet mode
+        run: |
+          cat > /etc/apt/apt.conf.d/99opencode-quiet <<'EOF'
+          APT::Get::Quiet "2";
+          Dpkg::Progress-Fancy "0";
+          quiet "true";
+          EOF
+
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y git ca-certificates curl jq build-essential dpkg-dev
+
+      - name: Detect upstream release version
+        run: |
+          UPSTREAM_TAG=$(curl -s https://api.github.com/repos/indilib/indi/releases/latest | jq -r .tag_name)
+          VERSION=$(echo "$UPSTREAM_TAG" | sed 's/^v//')
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "Failed to fetch version from GitHub API. Using default version: 2.2.2"
+            VERSION="2.2.2"
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Detected package version: $VERSION"
+      
+      - name: Checkout INDI sources
+        uses: actions/checkout@v6
+        with:
+          repository: 'indilib/indi'
+          ref: refs/tags/v${{ env.VERSION }}
+          path: 'indi'
+
+      - name: Install build dependencies
+        run: |
+          apt-get build-dep -y ./indi
+
+      - name: Inject build version into changelog
+        run: |
+          BUILD_TAG=$(date +%Y%m%d)-r${{ github.run_number }}
+          sed -i "1s/)/+ab${BUILD_TAG})/" indi/debian/changelog
+          echo "Patched: $(head -1 indi/debian/changelog)"
+
+      - name: Build INDI core packages
+        run: |
+          exec 3>&1 4>&2
+          BUILD_LOG="build-core.log"
+          : > "$BUILD_LOG"
+          exec >> "$BUILD_LOG" 2>&1
+          indi/scripts/indi-core-deb.sh
+          rc=$?
+          exec 1>&3 2>&4
+          if [ $rc -ne 0 ]; then
+            echo "::error::Core build: FAILED"
+            tail -20 "$BUILD_LOG"
+            exit $rc
+          fi
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-core-log-${{ matrix.arch }}
+          path: build-core.log
+          retention-days: 14
+
+      - name: Upload compiled packages (${{ matrix.arch }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: indi-compiled-packages-${{ matrix.arch }}
+          path: |
+            *.deb
+            **/*.deb
+          retention-days: 14
+          if-no-files-found: error

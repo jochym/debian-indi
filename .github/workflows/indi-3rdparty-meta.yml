@@ -1,0 +1,125 @@
+name: Build INDI 3rdparty Meta-Package
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Build 3rd Party Libs and Drivers]
+    types: [completed]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  DEBIAN_FRONTEND: noninteractive
+  DEBCONF_FRONTEND: noninteractive
+  APT_LISTCHANGES_FRONTEND: none
+
+jobs:
+  build-meta:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    strategy:
+      fail-fast: false
+      matrix:
+        arch:
+          - arm64
+          - amd64
+
+    runs-on: ubuntu-24.04-arm
+    container: debian:trixie-slim
+    steps:
+      - name: Configure apt for quiet mode
+        run: |
+          cat > /etc/apt/apt.conf.d/99opencode-quiet <<'EOF'
+          APT::Get::Quiet "2";
+          Dpkg::Progress-Fancy "0";
+          quiet "true";
+          EOF
+
+      - name: Install packaging tools
+        run: |
+          apt-get update
+          apt-get install -y dpkg-dev binutils curl jq
+
+      - name: Download 3rdparty packages (${{ matrix.arch }})
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-${{ matrix.arch }}
+          run_id: ${{ github.event.workflow_run.id || '' }}
+          workflow_conclusion: success
+          path: ./downloaded-packages
+
+      - name: Generate meta-packages (${{ matrix.arch }})
+        run: |
+          UPSTREAM_TAG=$(curl -s https://api.github.com/repos/indilib/indi-3rdparty/releases/latest | jq -r .tag_name)
+          VERSION=$(echo "$UPSTREAM_TAG" | sed 's/^v//')
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "Failed to fetch version from GitHub API. Using default version: 2.2.2.1"
+            VERSION="2.2.2.1"
+          fi
+          BUILD_TAG=$(date +%Y%m%d)-r${{ github.run_number }}
+          EPOCHED="1:${VERSION}-meta+ab${BUILD_TAG}"
+          echo "Detected package version: $EPOCHED"
+
+          # --- indi-3rdparty-libs: empty meta-package with no Depends ---
+          mkdir -p libs-pkg/DEBIAN
+          cat <<EOF > libs-pkg/DEBIAN/control
+          Package: indi-3rdparty-libs
+          Version: ${EPOCHED}
+          Section: misc
+          Priority: optional
+          Architecture: ${{ matrix.arch }}
+          Maintainer: Debian INDI Build System <jochym@debian-indi>
+          Description: INDI 3rd party libraries meta-package (${{ matrix.arch }})
+            Empty meta-package for compatibility with astroberry-OS repository structure.
+            Version epochs guarantee this package supersedes the astroberry-OS one.
+          EOF
+          dpkg-deb --build libs-pkg "./indi-3rdparty-libs_${VERSION}-meta_${{ matrix.arch }}.deb"
+
+          # --- indi-3rdparty-drivers: Recommends all indi-* drivers + Depends on libs ---
+          RECOMMENDS_LIST=""
+          for deb in ./downloaded-packages/*.deb; do
+            [ -f "$deb" ] || continue
+            pkg_name=$(dpkg-deb -f "$deb" Package)
+            case "$pkg_name" in
+              indi-*)
+                if [ -z "$RECOMMENDS_LIST" ]; then
+                  RECOMMENDS_LIST="$pkg_name"
+                else
+                  RECOMMENDS_LIST="$RECOMMENDS_LIST, $pkg_name"
+                fi
+                ;;
+            esac
+          done
+
+          if [ -z "$RECOMMENDS_LIST" ]; then
+            echo "::error:: No indi-* packages found to recommend!"
+            exit 1
+          fi
+
+          echo "Packages added to Recommends: $RECOMMENDS_LIST"
+
+          mkdir -p drivers-pkg/DEBIAN
+          cat <<EOF > drivers-pkg/DEBIAN/control
+          Package: indi-3rdparty-drivers
+          Version: ${EPOCHED}
+          Section: misc
+          Priority: optional
+          Architecture: ${{ matrix.arch }}
+          Maintainer: Debian INDI Build System <jochym@debian-indi>
+          Depends: indi-3rdparty-libs (>= ${EPOCHED})
+          Recommends: $RECOMMENDS_LIST
+          Description: Meta-package for INDI 3rd party drivers (${{ matrix.arch }})
+           This meta-package recommends all compiled 3rd party drivers
+           for the ${{ matrix.arch }} architecture.
+           Using Recommends allows users to safely remove or replace individual
+           drivers without breaking the meta-package dependency chain.
+          EOF
+          dpkg-deb --build drivers-pkg "./indi-3rdparty-drivers_${VERSION}-meta_${{ matrix.arch }}.deb"
+
+      - name: Upload meta-packages (${{ matrix.arch }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: indi-3rdparty-meta-package-${{ matrix.arch }}
+          path: ./*.deb
+          retention-days: 14
+          if-no-files-found: error

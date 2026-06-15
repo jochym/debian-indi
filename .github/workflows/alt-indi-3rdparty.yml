@@ -1,0 +1,214 @@
+name: Build 3rd Party Libs and Drivers
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Build core INDI Libs and Drivers]
+    types: [completed]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  DEBIAN_FRONTEND: noninteractive
+  DEBCONF_FRONTEND: noninteractive
+
+jobs:
+  build-3rdparty-drivers:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            runner: ubuntu-24.04-arm
+          - arch: amd64
+            runner: ubuntu-latest
+
+    runs-on: ${{ matrix.runner }}
+    container: debian:trixie-slim
+    steps:
+      - name: Configure apt for quiet mode
+        run: |
+          cat > /etc/apt/apt.conf.d/99opencode-quiet <<'EOF'
+          APT::Get::Quiet "2";
+          Dpkg::Progress-Fancy "0";
+          quiet "true";
+          EOF
+
+      - name: Install build tools
+        run: |
+          apt-get update
+          apt-get install -y git ca-certificates build-essential curl jq dpkg-dev
+
+      - name: Detect upstream release version
+        run: |
+          UPSTREAM_TAG=$(curl -s https://api.github.com/repos/indilib/indi-3rdparty/releases/latest | jq -r .tag_name)
+          VERSION=$(echo "$UPSTREAM_TAG" | sed 's/^v//')
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "Failed to fetch version from GitHub API. Using default version: 2.2.2.1"
+            VERSION="2.2.2.1"
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Detected package version: $VERSION"
+
+      - name: Checkout INDI 3rdparty sources
+        uses: actions/checkout@v6
+        with:
+          repository: 'indilib/indi-3rdparty'
+          ref: refs/tags/v${{ env.VERSION }}
+          path: '3rdparty'
+
+      - name: Download core packages (${{ matrix.arch }})
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-${{ matrix.arch }}
+          workflow_conclusion: success
+          path: ./pre-built-core
+
+      - name: Install core packages
+        run: |
+          apt-get install -y ./pre-built-core/build/*.deb
+
+      - name: Inject build version into driver changelogs
+        run: |
+          BUILD_TAG=$(date +%Y%m%d)-r${{ github.run_number }}
+          for cl in 3rdparty/debian/*/changelog; do
+            [ -f "$cl" ] || continue
+            sed -i "1s/)/+ab${BUILD_TAG})/" "$cl"
+          done
+          echo "Patched changelogs with +ab${BUILD_TAG}"
+
+      - name: Build and install all libraries
+        run: |
+          exec 3>&1 4>&2
+          BUILD_LOG="$GITHUB_WORKSPACE/build-libraries.log"
+          : > "$BUILD_LOG"
+          exec >> "$BUILD_LOG" 2>&1
+          cd 3rdparty
+          for lib in lib* ; do
+            control_file=debian/$lib/control
+            [ -e "$control_file" ] || [ -e "$lib/debian/control" ] || continue
+            RAW_DEPS=$(dpkg-checkbuilddeps "$control_file" 2>&1 | \
+                        sed -E 's/^.*unmet build dependencies:\s*//Ii' | \
+                        sed -e 's/([^)]*)//g' -e 's/,//g')
+            if [ ! -z "$RAW_DEPS" ]; then
+              case "$RAW_DEPS" in
+                *błąd*|*error*|*Error*|*Błąd*)
+                  exec 1>&3 2>&4
+                  echo "::error::$lib: corrupted control file or dpkg error"
+                  exec >> "$BUILD_LOG" 2>&1
+                  continue
+                  ;;
+              esac
+              DEBS_TO_INSTALL=""
+              FATAL_ERROR=0
+              MISSING_PACKAGES=""
+              for package in $RAW_DEPS; do
+                if apt-cache policy "$package" | grep -q "Candidate: [^ ]"; then
+                  DEBS_TO_INSTALL="$DEBS_TO_INSTALL $package"
+                else
+                  FATAL_ERROR=1
+                  MISSING_PACKAGES="$MISSING_PACKAGES $package"
+                fi
+              done
+              if [ "$FATAL_ERROR" -eq 1 ]; then
+                exec 1>&3 2>&4
+                echo "::error::$lib: missing packages: $MISSING_PACKAGES"
+                exec >> "$BUILD_LOG" 2>&1
+                continue
+              fi
+              if [ ! -z "$DEBS_TO_INSTALL" ]; then
+                apt-get install -y $DEBS_TO_INSTALL
+              fi
+            fi
+            if ./scripts/indi-3rdparty-deb.sh "$lib"; then
+              :
+            else
+              exec 1>&3 2>&4
+              echo "::error::$lib: FAILED"
+              tail -10 "$BUILD_LOG" >&3
+              exec >> "$BUILD_LOG" 2>&1
+            fi
+          done
+          if [ -d "build" ] && ls build/lib*.deb >/dev/null 2>&1; then
+            apt-get install -y -o Dpkg::Options::="--force-overwrite" ./build/lib*.deb
+          fi
+          exec 1>&3 2>&4
+
+      - name: Build drivers
+        run: |
+          exec 3>&1 4>&2
+          BUILD_LOG="$GITHUB_WORKSPACE/build-drivers.log"
+          : > "$BUILD_LOG"
+          exec >> "$BUILD_LOG" 2>&1
+          cd 3rdparty
+          for driver in indi-* ; do
+            control_file=debian/$driver/control
+            [ -e "$control_file" ] || continue
+            DRIVER_NAME=$driver
+            RAW_DEPS=$(dpkg-checkbuilddeps "$control_file" 2>&1 | \
+                        sed -E 's/^.*unmet build dependencies:\s*//Ii' | \
+                        sed -e 's/([^)]*)//g' -e 's/,//g')
+            if [ -z "$RAW_DEPS" ]; then
+              :
+            else
+              case "$RAW_DEPS" in
+                *błąd*|*error*|*Error*|*Błąd*)
+                  exec 1>&3 2>&4
+                  echo "::error::$DRIVER_NAME: corrupted control file or dpkg error"
+                  exec >> "$BUILD_LOG" 2>&1
+                  continue
+                  ;;
+              esac
+              DEBS_TO_INSTALL=""
+              FATAL_ERROR=0
+              MISSING_FATAL_PACKAGES=""
+              for package in $RAW_DEPS; do
+                if apt-cache policy "$package" | grep -q "Candidate: [^ ]"; then
+                  DEBS_TO_INSTALL="$DEBS_TO_INSTALL $package"
+                else
+                  FATAL_ERROR=1
+                  MISSING_FATAL_PACKAGES="$MISSING_FATAL_PACKAGES $package"
+                fi
+              done
+              if [ "$FATAL_ERROR" -eq 1 ]; then
+                exec 1>&3 2>&4
+                echo "::error::$DRIVER_NAME: missing packages: $MISSING_FATAL_PACKAGES"
+                exec >> "$BUILD_LOG" 2>&1
+                continue
+              fi
+              if [ ! -z "$DEBS_TO_INSTALL" ]; then
+                apt-get install -y $DEBS_TO_INSTALL
+              fi
+            fi
+            if ./scripts/indi-3rdparty-deb.sh "$DRIVER_NAME"; then
+              :
+            else
+              exec 1>&3 2>&4
+              echo "::error::$DRIVER_NAME: FAILED"
+              tail -10 "$BUILD_LOG" >&3
+              exec >> "$BUILD_LOG" 2>&1
+              continue
+            fi
+          done
+          exec 1>&3 2>&4
+
+      - name: Upload compiled packages (${{ matrix.arch }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3rdparty-compiled-packages-${{ matrix.arch }}
+          path: |
+            3rdparty/build/*.deb
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Upload build logs (${{ matrix.arch }})
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-3rdparty-log-${{ matrix.arch }}
+          path: |
+            build-libraries.log
+            build-drivers.log
+          retention-days: 30
