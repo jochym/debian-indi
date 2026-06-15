@@ -12,6 +12,5 @@ Provide up-to-date INDI builds for Debian in an easy-to-use APT repository forma
 
 ## Background
 
-This repository was extracted from the [astroberry-os](https://github.com/rkaczorek/astroberry-os)
-project workflows, adapted as a standalone repository with the intention of eventually
-moving it under the [indilib](https://github.com/indilib) organization.
+This repository was created for use in the [astroberry-os](https://github.com/rkaczorek/astroberry-os)
+project as an alternative source for indi packages, with the intention of eventually moving it under the [indilib](https://github.com/indilib) organization.
