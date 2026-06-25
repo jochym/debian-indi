@@ -97,7 +97,7 @@ jobs:
             echo "::info:: $lib: Installing build dependencies via mk-build-deps"
             
             # Force non-interactive frontend and handle mk-build-deps execution
-            if ! DEBIAN_FRONTEND=noninteractive mk-build-deps -i -r -c \
+            if ! DEBIAN_FRONTEND=noninteractive mk-build-deps -i -r \
                -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" \
                "$control_file"; then
               
@@ -148,7 +148,7 @@ jobs:
             echo "::info:: $driver: Installing build dependencies via mk-build-deps"
             
             # Force non-interactive frontend and handle mk-build-deps execution
-            if ! DEBIAN_FRONTEND=noninteractive mk-build-deps -i -r -c \
+            if ! DEBIAN_FRONTEND=noninteractive mk-build-deps -i -r \
                -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" \
                "$control_file"; then
               
