@@ -94,8 +94,30 @@ jobs:
             control_file=debian/$lib/control
             [ -e "$control_file" ] || [ -e "$lib/debian/control" ] || continue
             
+            echo "::info:: $lib: Installing build dependencies via mk-build-deps"
+            
+            # Force non-interactive frontend and handle mk-build-deps execution
+            if ! DEBIAN_FRONTEND=noninteractive mk-build-deps -i -r -c \
+               -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" \
+               "$control_file"; then
+              
+              # Temporarily restore stdout/stderr to log the error to the GitHub Actions UI
+              exec 1>&3 2>&4
+              echo "::error::$lib: failed to install build dependencies via mk-build-deps"
+              
+              if [ -f "$BUILD_LOG" ]; then
+                echo "::group::Recent installation log entries for $DRIVER_NAME"
+                tail -n 20 "$BUILD_LOG" >&3
+                echo "::endgroup::"
+              fi
+              
+              # Redirect back to build log and proceed with the next package
+              exec >> "$BUILD_LOG" 2>&1
+              continue
+            fi
+            
             # Detect and install build deps
-            mk-build-deps -i -r -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" "debian/$lib/control"
+            # mk-build-deps -i -r -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" "debian/$lib/control"
 
             if ./scripts/indi-3rdparty-deb.sh "$lib"; then
               :
@@ -123,8 +145,30 @@ jobs:
             [ -e "$control_file" ] || continue
             DRIVER_NAME=$driver
             
+            echo "::info:: $driver: Installing build dependencies via mk-build-deps"
+            
+            # Force non-interactive frontend and handle mk-build-deps execution
+            if ! DEBIAN_FRONTEND=noninteractive mk-build-deps -i -r -c \
+               -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" \
+               "$control_file"; then
+              
+              # Temporarily restore stdout/stderr to log the error to the GitHub Actions UI
+              exec 1>&3 2>&4
+              echo "::error::$DRIVER_NAME: failed to install build dependencies via mk-build-deps"
+              
+              if [ -f "$BUILD_LOG" ]; then
+                echo "::group::Recent installation log entries for $DRIVER_NAME"
+                tail -n 20 "$BUILD_LOG" >&3
+                echo "::endgroup::"
+              fi
+              
+              # Redirect back to build log and proceed with the next package
+              exec >> "$BUILD_LOG" 2>&1
+              continue
+            fi
+            
             # Detect and install build deps
-            mk-build-deps -i -r -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" "debian/$driver/control"
+            # mk-build-deps -i -r -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" "debian/$driver/control"
 
             RAW_DEPS=$(dpkg-checkbuilddeps "$control_file" 2>&1 | \
                         sed -E 's/^.*unmet build dependencies:\s*//Ii' | \
