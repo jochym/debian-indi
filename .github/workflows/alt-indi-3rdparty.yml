@@ -41,7 +41,7 @@ jobs:
       - name: Install build tools
         run: |
           apt-get update
-          apt-get install -y git ca-certificates build-essential curl jq dpkg-dev
+          apt-get install -y git ca-certificates build-essential curl jq dpkg-dev devscripts equiv
 
       - name: Detect upstream release version
         run: |
@@ -93,39 +93,10 @@ jobs:
           for lib in lib* ; do
             control_file=debian/$lib/control
             [ -e "$control_file" ] || [ -e "$lib/debian/control" ] || continue
-            RAW_DEPS=$(dpkg-checkbuilddeps "$control_file" 2>&1 | \
-                        sed -E 's/^.*unmet build dependencies:\s*//Ii' | \
-                        sed -e 's/([^)]*)//g' -e 's/,//g')
-            if [ ! -z "$RAW_DEPS" ]; then
-              case "$RAW_DEPS" in
-                *błąd*|*error*|*Error*|*Błąd*)
-                  exec 1>&3 2>&4
-                  echo "::error::$lib: corrupted control file or dpkg error"
-                  exec >> "$BUILD_LOG" 2>&1
-                  continue
-                  ;;
-              esac
-              DEBS_TO_INSTALL=""
-              FATAL_ERROR=0
-              MISSING_PACKAGES=""
-              for package in $RAW_DEPS; do
-                if apt-cache policy "$package" | grep -q "Candidate: [^ ]"; then
-                  DEBS_TO_INSTALL="$DEBS_TO_INSTALL $package"
-                else
-                  FATAL_ERROR=1
-                  MISSING_PACKAGES="$MISSING_PACKAGES $package"
-                fi
-              done
-              if [ "$FATAL_ERROR" -eq 1 ]; then
-                exec 1>&3 2>&4
-                echo "::error::$lib: missing packages: $MISSING_PACKAGES"
-                exec >> "$BUILD_LOG" 2>&1
-                continue
-              fi
-              if [ ! -z "$DEBS_TO_INSTALL" ]; then
-                apt-get install -y $DEBS_TO_INSTALL
-              fi
-            fi
+            
+            # Detect and install build deps
+            mk-build-deps -i -r -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" "debian/$lib/control"
+
             if ./scripts/indi-3rdparty-deb.sh "$lib"; then
               :
             else
@@ -151,6 +122,10 @@ jobs:
             control_file=debian/$driver/control
             [ -e "$control_file" ] || continue
             DRIVER_NAME=$driver
+            
+            # Detect and install build deps
+            mk-build-deps -i -r -t "apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends -y" "debian/$driver/control"
+
             RAW_DEPS=$(dpkg-checkbuilddeps "$control_file" 2>&1 | \
                         sed -E 's/^.*unmet build dependencies:\s*//Ii' | \
                         sed -e 's/([^)]*)//g' -e 's/,//g')
