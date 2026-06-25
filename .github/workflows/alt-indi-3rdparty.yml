@@ -41,7 +41,7 @@ jobs:
       - name: Install build tools
         run: |
           apt-get update
-          apt-get install -y git ca-certificates build-essential curl jq dpkg-dev devscripts equiv
+          apt-get install -y git ca-certificates build-essential curl jq dpkg-dev devscripts equivs
 
       - name: Detect upstream release version
         run: |
