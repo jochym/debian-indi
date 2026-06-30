@@ -6,6 +6,8 @@ This repository contains Debian packaging files and build workflows for
 [INDI](https://indilib.org) (Instrument Neutral Distributed Interface) libraries
 and drivers, producing APT repositories for Debian-based systems.
 
+For the instructions how to use it go to https://jochym.github.io/debian-indi
+
 ## Objective
 
 Provide up-to-date INDI builds for Debian in an easy-to-use APT repository format.
