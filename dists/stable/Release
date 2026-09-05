@@ -1,0 +1,32 @@
+Architectures: arm64 amd64
+Codename: stable
+Components: main
+Date: Sat, 05 Sep 2026 20:43:41 +0000
+Description: Debian INDI repository for Debian stable
+Label: Debian INDI Repository
+Origin: Debian INDI
+Suite: stable
+MD5Sum:
+ 8dda07b18ab644723df71627787f2b64              217 Release
+ 8278e298173d1d5cf8a29e6bc62ebf74           149851 main/binary-amd64/Packages
+ 7a65be119279a58f329f485843cb0e82            41904 main/binary-amd64/Packages.gz
+ 8278e298173d1d5cf8a29e6bc62ebf74           149851 main/binary-arm64/Packages
+ c55751dab2226ea76e7067a24fb3c5e9            41904 main/binary-arm64/Packages.gz
+SHA1:
+ ba982a914804d86de1a7847161ab3fcbf1050108              217 Release
+ b2c2a95a62149f07e5ce51a7674b68035631a8f9           149851 main/binary-amd64/Packages
+ c480d856588954c0346f1b57ca37f766ff4811ac            41904 main/binary-amd64/Packages.gz
+ b2c2a95a62149f07e5ce51a7674b68035631a8f9           149851 main/binary-arm64/Packages
+ dad2c9fb2fc0522cce3dfb401147fe5635a170b4            41904 main/binary-arm64/Packages.gz
+SHA256:
+ 358e765d0b325c936cbf45cee42eb5f6a8d54f2ba6ccc5cfba3a72f55f8fb2b3              217 Release
+ 955c9321435df5e4f67bcdae9169209cf5f3e54462711e0ebe4754278d92e780           149851 main/binary-amd64/Packages
+ 19b9472dfc1388a97efe5f9e363dc15193b88071cf608e2addb78e0f58f076ed            41904 main/binary-amd64/Packages.gz
+ 955c9321435df5e4f67bcdae9169209cf5f3e54462711e0ebe4754278d92e780           149851 main/binary-arm64/Packages
+ d93384788b7057bacb5e3127d704410603935b782b21c685b99ccadbc864aecc            41904 main/binary-arm64/Packages.gz
+SHA512:
+ 93da08a62ee22eff97d7e8aef895aa2d0e7b21ea9a502525cf7af852e4c19819f41441a6539002e56057e2af03e9dcc9005e9fb614d86dd0241ff6b7874cb7bc              217 Release
+ 5409c67f2b0e88dd431680f3b70afc6acd8f02d07c940aa62cc5ab660d98c67b8d9b469e8b8fccc35d1dbab4b8ad4412a2b6537efa8d7458ef19dd5a21e9977b           149851 main/binary-amd64/Packages
+ b484dd88500a552bd3cbb631d01da745877a2e37fca6e0885ca666f607fbeb660d1b3c1daadaf59273dc6127c561b82e22d57223518552340205b8330423e8ca            41904 main/binary-amd64/Packages.gz
+ 5409c67f2b0e88dd431680f3b70afc6acd8f02d07c940aa62cc5ab660d98c67b8d9b469e8b8fccc35d1dbab4b8ad4412a2b6537efa8d7458ef19dd5a21e9977b           149851 main/binary-arm64/Packages
+ 710e54a4026b94fd6f2d2bfc58bfd247a55c7a29e12631773996b5207c9ae4d1aff80e60a2a064bd0eacf6f79dd84991d7fc9032c065869a8d50b6b3b8c1f892            41904 main/binary-arm64/Packages.gz

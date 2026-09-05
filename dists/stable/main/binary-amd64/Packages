@@ -1,0 +1,3294 @@
+Package: indi-3rdparty-drivers
+Architecture: amd64
+Version: 1:2.2.4.1-meta+ab20260905-r15
+Priority: optional
+Section: misc
+Maintainer: Debian INDI Build System <jochym@debian-indi>
+Depends: indi-3rdparty-libs (>= 1:2.2.4.1-meta+ab20260905-r15)
+Recommends: indi-aagcloudwatcher-ng-dbg, indi-aagcloudwatcher-ng-dbgsym, indi-aagcloudwatcher-ng, indi-aok-dbg, indi-aok-dbgsym, indi-aok, indi-apogee-dbg, indi-apogee-dbgsym, indi-apogee, indi-armadillo-platypus-dbg, indi-armadillo-platypus-dbgsym, indi-armadillo-platypus, indi-asi-dbg, indi-asi-dbgsym, indi-asi, indi-astarbox-dbg, indi-astarbox-dbgsym, indi-astarbox, indi-astroasis-dbg, indi-astroasis-dbgsym, indi-astroasis, indi-atik-dbg, indi-atik-dbgsym, indi-atik, indi-avalon-dbg, indi-avalon-dbgsym, indi-avalon, indi-avalonud-dbg, indi-avalonud-dbgsym, indi-avalonud, indi-beefocus-dbg, indi-beefocus-dbgsym, indi-beefocus, indi-bresserexos2-dbg, indi-bresserexos2-dbgsym, indi-bresserexos2, indi-celestron-origin-dbgsym, indi-celestron-origin, indi-celestronaux-dbgsym, indi-celestronaux, indi-dsi-dbg, indi-dsi-dbgsym, indi-dsi, indi-duino-dbg, indi-duino-dbgsym, indi-duino, indi-eqmod-dbg, indi-eqmod-dbgsym, indi-eqmod, indi-ffmv-dbg, indi-ffmv-dbgsym, indi-ffmv, indi-fishcamp-dbg, indi-fishcamp-dbgsym, indi-fishcamp, indi-fli-dbg, indi-fli-dbgsym, indi-fli, indi-gige-dbg, indi-gige-dbgsym, indi-gige, indi-gphoto-dbg, indi-gphoto-dbgsym, indi-gphoto, indi-gpio-dbg, indi-gpio-dbgsym, indi-gpio, indi-gpsd-dbgsym, indi-gpsd, indi-gpsnmea-dbgsym, indi-gpsnmea, indi-inovaplx-dbg, indi-inovaplx-dbgsym, indi-inovaplx, indi-limesdr-dbg, indi-limesdr, indi-maxdomeii-dbg, indi-maxdomeii-dbgsym, indi-maxdomeii, indi-mgen-dbgsym, indi-mgen, indi-mi-dbg, indi-mi-dbgsym, indi-mi, indi-nexdome-dbg, indi-nexdome-dbgsym, indi-nexdome, indi-nightscape-dbg, indi-nightscape-dbgsym, indi-nightscape, indi-nut-dbgsym, indi-nut, indi-ocs-dbgsym, indi-ocs, indi-openogma-dbg, indi-openogma-dbgsym, indi-openogma, indi-orion-ssg3-dbg, indi-orion-ssg3-dbgsym, indi-orion-ssg3, indi-pentax-dbg, indi-pentax-dbgsym, indi-pentax, indi-playerone-dbg, indi-playerone-dbgsym, indi-playerone, indi-qhy-dbg, indi-qhy-dbgsym, indi-qhy, indi-qsi-dbg, indi-qsi-dbgsym, indi-qsi, indi-rolloffino-dbgsym, indi-rolloffino, indi-rtklib-dbg, indi-rtklib-dbgsym, indi-rtklib, indi-sbig-dbg, indi-sbig-dbgsym, indi-sbig, indi-shelyak-dbg, indi-shelyak-dbgsym, indi-shelyak, indi-starbook-dbg, indi-starbook-dbgsym, indi-starbook-ten-dbg, indi-starbook-ten-dbgsym, indi-starbook-ten, indi-starbook, indi-svbony-dbgsym, indi-svbony, indi-sx-dbg, indi-sx-dbgsym, indi-sx, indi-talon6-dbg, indi-talon6-dbgsym, indi-talon6, indi-ticfocuser-ng-dbg, indi-ticfocuser-ng-dbgsym, indi-ticfocuser-ng, indi-toupbase-dbg, indi-toupbase-dbgsym, indi-toupbase, indi-weather-mqtt-dbg, indi-weather-mqtt-dbgsym, indi-weather-mqtt, indi-webcam-dbg, indi-webcam-dbgsym, indi-webcam, indi-weewx-json-dbgsym, indi-weewx-json
+Filename: pool/main/indi-3rdparty-drivers_2.2.4.1-meta_amd64.deb
+Size: 1460
+MD5sum: 43e51ff28bb5fc81bdb6db6657fe3504
+SHA1: 29df4ec997f55f567aec7e4a5a3070d71480a314
+SHA256: 697f5f2161f56cd3a3d5a2193719dece165df37c84578a595fb9104881c6d509
+SHA512: 5b3400568bea5ed209c3e52c40cf1e3cef545e48855c3d8a6dbf3f11d8292a7270f5ba7fc8dd721b488a424e6b5432a7c8609a5059c06432bface6361e1344d5
+Description: Meta-package for INDI 3rd party drivers (amd64)
+ This meta-package recommends all compiled 3rd party drivers
+ for the amd64 architecture.
+ Using Recommends allows users to safely remove or replace individual
+ drivers without breaking the meta-package dependency chain.
+
+Package: indi-3rdparty-drivers
+Architecture: arm64
+Version: 1:2.2.4.1-meta+ab20260905-r15
+Priority: optional
+Section: misc
+Maintainer: Debian INDI Build System <jochym@debian-indi>
+Depends: indi-3rdparty-libs (>= 1:2.2.4.1-meta+ab20260905-r15)
+Recommends: indi-aagcloudwatcher-ng-dbg, indi-aagcloudwatcher-ng-dbgsym, indi-aagcloudwatcher-ng, indi-aok-dbg, indi-aok-dbgsym, indi-aok, indi-apogee-dbg, indi-apogee-dbgsym, indi-apogee, indi-armadillo-platypus-dbg, indi-armadillo-platypus-dbgsym, indi-armadillo-platypus, indi-asi-dbg, indi-asi-dbgsym, indi-asi, indi-astarbox-dbg, indi-astarbox-dbgsym, indi-astarbox, indi-astroasis-dbg, indi-astroasis-dbgsym, indi-astroasis, indi-atik-dbg, indi-atik-dbgsym, indi-atik, indi-avalon-dbg, indi-avalon-dbgsym, indi-avalon, indi-avalonud-dbg, indi-avalonud-dbgsym, indi-avalonud, indi-beefocus-dbg, indi-beefocus-dbgsym, indi-beefocus, indi-bresserexos2-dbg, indi-bresserexos2-dbgsym, indi-bresserexos2, indi-celestron-origin-dbgsym, indi-celestron-origin, indi-celestronaux-dbgsym, indi-celestronaux, indi-dsi-dbg, indi-dsi-dbgsym, indi-dsi, indi-duino-dbg, indi-duino-dbgsym, indi-duino, indi-eqmod-dbg, indi-eqmod-dbgsym, indi-eqmod, indi-ffmv-dbg, indi-ffmv-dbgsym, indi-ffmv, indi-fishcamp-dbg, indi-fishcamp-dbgsym, indi-fishcamp, indi-fli-dbg, indi-fli-dbgsym, indi-fli, indi-gige-dbg, indi-gige-dbgsym, indi-gige, indi-gphoto-dbg, indi-gphoto-dbgsym, indi-gphoto, indi-gpio-dbg, indi-gpio-dbgsym, indi-gpio, indi-gpsd-dbgsym, indi-gpsd, indi-gpsnmea-dbgsym, indi-gpsnmea, indi-inovaplx-dbg, indi-inovaplx-dbgsym, indi-inovaplx, indi-limesdr-dbg, indi-limesdr, indi-maxdomeii-dbg, indi-maxdomeii-dbgsym, indi-maxdomeii, indi-mgen-dbgsym, indi-mgen, indi-mi-dbg, indi-mi-dbgsym, indi-mi, indi-nexdome-dbg, indi-nexdome-dbgsym, indi-nexdome, indi-nightscape-dbg, indi-nightscape-dbgsym, indi-nightscape, indi-nut-dbgsym, indi-nut, indi-ocs-dbgsym, indi-ocs, indi-openogma-dbg, indi-openogma-dbgsym, indi-openogma, indi-orion-ssg3-dbg, indi-orion-ssg3-dbgsym, indi-orion-ssg3, indi-pentax-dbg, indi-pentax-dbgsym, indi-pentax, indi-playerone-dbg, indi-playerone-dbgsym, indi-playerone, indi-qhy-dbg, indi-qhy-dbgsym, indi-qhy, indi-qsi-dbg, indi-qsi-dbgsym, indi-qsi, indi-rolloffino-dbgsym, indi-rolloffino, indi-rtklib-dbg, indi-rtklib-dbgsym, indi-rtklib, indi-sbig-dbg, indi-sbig-dbgsym, indi-sbig, indi-shelyak-dbg, indi-shelyak-dbgsym, indi-shelyak, indi-starbook-dbg, indi-starbook-dbgsym, indi-starbook-ten-dbg, indi-starbook-ten-dbgsym, indi-starbook-ten, indi-starbook, indi-svbony-dbgsym, indi-svbony, indi-sx-dbg, indi-sx-dbgsym, indi-sx, indi-talon6-dbg, indi-talon6-dbgsym, indi-talon6, indi-ticfocuser-ng-dbg, indi-ticfocuser-ng-dbgsym, indi-ticfocuser-ng, indi-toupbase-dbg, indi-toupbase-dbgsym, indi-toupbase, indi-weather-mqtt-dbg, indi-weather-mqtt-dbgsym, indi-weather-mqtt, indi-webcam-dbg, indi-webcam-dbgsym, indi-webcam, indi-weewx-json-dbgsym, indi-weewx-json
+Filename: pool/main/indi-3rdparty-drivers_2.2.4.1-meta_arm64.deb
+Size: 1460
+MD5sum: a8c17149fe18b40d8cc92baa43bfb42c
+SHA1: a37f2165cede84218e4d9631dfc857edf35bef19
+SHA256: 4c33578acc33668ef3eb2488c1a9b9dd8ca170af9d1fe15c430a5c7f8511e3ba
+SHA512: 86fef6a1fc2de158abb3d652d3d9a583be70a077819ce1d51cf891fc54d990d0b13ec864bf4f5fe7092b4d939ca231f04a91959da0bff9f2a0d09298e769f0fd
+Description: Meta-package for INDI 3rd party drivers (arm64)
+ This meta-package recommends all compiled 3rd party drivers
+ for the arm64 architecture.
+ Using Recommends allows users to safely remove or replace individual
+ drivers without breaking the meta-package dependency chain.
+
+Package: indi-3rdparty-libs
+Architecture: amd64
+Version: 1:2.2.4.1-meta+ab20260905-r15
+Priority: optional
+Section: misc
+Maintainer: Debian INDI Build System <jochym@debian-indi>
+Filename: pool/main/indi-3rdparty-libs_2.2.4.1-meta_amd64.deb
+Size: 836
+MD5sum: 3a4a6d9547bd5eb3395471d79ddae79c
+SHA1: 523f9c72ca800f06450501c64e7aed4bd2331239
+SHA256: c8fbb39fc6b5974b74642d43a597929ee5a6067d79c643560830f17ca3b658f0
+SHA512: ef5e4731a2f89b48a3d1e9ee271e6a104998bb6b26c9e148fe1a6280217d4f30fb05f8dba35ccbdf18d6d5d34142125cf11dffc8b610a3038c24efc28e05fe38
+Description: INDI 3rd party libraries meta-package (amd64)
+  Empty meta-package for compatibility with astroberry-OS repository structure.
+  Version epochs guarantee this package supersedes the astroberry-OS one.
+
+Package: indi-3rdparty-libs
+Architecture: arm64
+Version: 1:2.2.4.1-meta+ab20260905-r15
+Priority: optional
+Section: misc
+Maintainer: Debian INDI Build System <jochym@debian-indi>
+Filename: pool/main/indi-3rdparty-libs_2.2.4.1-meta_arm64.deb
+Size: 836
+MD5sum: 6d0d2b078965be0956653ce2df31d3cd
+SHA1: dda8828194d75c3bfdaa65d9780eda622a0817dc
+SHA256: 8ee3bb9b8b3ecc4148e82221be2d893259de45bfced58373e11953949c20b859
+SHA512: 9bbae0cc60fcd775b11308ee5d7628ebd8c77e64c28f44430fda4702a57724170cca01ba4c46f4ab8d31bdaf50d652c2537ba0320644011616deea1153deb65d
+Description: INDI 3rd party libraries meta-package (arm64)
+  Empty meta-package for compatibility with astroberry-OS repository structure.
+  Version epochs guarantee this package supersedes the astroberry-OS one.
+
+Package: indi-aagcloudwatcher-ng
+Architecture: amd64
+Version: 1.7+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 463
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-aagcloudwatcher-ng_1.7.ab20260905-r18_amd64.deb
+Size: 92056
+MD5sum: ee03814dfee98f509e841a1c582a6acd
+SHA1: 523b73efbeb6764a74a06aa1915812927d73ec60
+SHA256: 95b20616231a37c40bef9805db8ee07a0c6734f568514dca7418bbf27e86309e
+SHA512: 801b326b91cef80a4d1e9141fc100ec8a4fb924919dc5abce19abaea63b6b9b3165ea5ba523a79cf470956db7a2433c3fee170e298e326768804095fc063b58c
+Description: INDI driver for the AAG Cloud Watcher (new api version and anemometer support)
+ INDI driver for the AAG Cloud Watcher using the new INDI Weather API and with anemometer support
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-aagcloudwatcher-ng
+Architecture: arm64
+Version: 1.7+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 543
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-aagcloudwatcher-ng_1.7.ab20260905-r18_arm64.deb
+Size: 86268
+MD5sum: 0aa49f196600c5de54c92cccafe03251
+SHA1: 4a7c7d39f7bdc3ce9899db37c58102ee14d36699
+SHA256: 9a2c87675289ba8e8b955ad409ce13a52bfdea6b0928998edaba09010ea89698
+SHA512: 92a8bb1d215ee0aee6530ac8747a2b683523b1531deaeda3519fda71531946e0f8d2b62880d72d26fd49c99bfd87e2cad1cf5aafc7ff3a8f3e6c4b82dea08f7d
+Description: INDI driver for the AAG Cloud Watcher (new api version and anemometer support)
+ INDI driver for the AAG Cloud Watcher using the new INDI Weather API and with anemometer support
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-aok
+Architecture: amd64
+Version: 2.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 90
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 5.2), zlib1g
+Filename: pool/main/indi-aok_2.0.ab20260905-r18_amd64.deb
+Size: 24848
+MD5sum: 80e9078755d5b277d28b77a51b1dbaa6
+SHA1: e58a44d7ae12922b41793fcb0de1f6675d17937a
+SHA256: 059af14ff604419afe1f90a68890e810e377a3a4300cde690668b9c1543ebf1c
+SHA512: 9534f17038672ede0714d310416f85c6d8c915555554f3c87428a116a5cd00a796887aa8e1e62f7f32b5df3d41142851c38418f70bc22c9f97071104761f45a4
+Description: INDI AOK Skywalker Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-aok
+Architecture: arm64
+Version: 2.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 142
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 5.2), zlib1g
+Filename: pool/main/indi-aok_2.0.ab20260905-r18_arm64.deb
+Size: 22820
+MD5sum: 3b9ce6d691f513aba32ba9fee36bb7ff
+SHA1: 0b65e202ad512a9e9228f2460dcf0b81f8b2e07d
+SHA256: c2306ae797ccfeaab82f780f4e51cc1d28168a5bcb3456c4310d0ad04ef1f98f
+SHA512: d8bfbc6a1d5317f78655783e682b43c3aaf34aab88fddaeda5255e31bd0440e36c26abfd1599c8a48479eb0e99eb0633dae1757a7c62ce76cb2c3ad11a6cf87b
+Description: INDI AOK Skywalker Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-apogee
+Architecture: amd64
+Version: 1.9+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 154
+Depends: libapogee3, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-apogee_1.9.ab20260905-r18_amd64.deb
+Size: 40124
+MD5sum: 4e599f6442cf35e8b2002496024f0d66
+SHA1: 046140ffc937ad2b9cf78f3d811c0c6feae2a6a6
+SHA256: 75d782617d75ea4dfb5640998d8fcd523afac4352295a3aacb9f4eab47bf08ff
+SHA512: 05bbc9be99e6dae98728cbe8bfab5ce799d025073ea6eb0641235e3edc8a390f85edc501f58dd0a5ff2427960020ca82c9bdff6d7312ddf9c58ac1da99b64059
+Description: INDI driver for Apogee CCDs and Filter Wheels
+ INDI Driver for Apogee CCDs and Filter Wheels
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-apogee
+Architecture: arm64
+Version: 1.9+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 210
+Depends: libapogee3, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-apogee_1.9.ab20260905-r18_arm64.deb
+Size: 33948
+MD5sum: 0429116990d01b6abe8bc9819a923990
+SHA1: ddea662cd2bdc99b0949b7a0bb3a543b60d11161
+SHA256: 96ec6d298cd41cbf4b8270c05d075ad4484acb2e06026954b6ac696bfa82bcc0
+SHA512: 214763782ef091cf036dc76cd6a90a5e0878a12d8fea13301457bd9aa766477ae6e969a9cb94a2c80d0c0b581f45562e8f17db954ee10c9d9ad10fe7835e5362
+Description: INDI driver for Apogee CCDs and Filter Wheels
+ INDI Driver for Apogee CCDs and Filter Wheels
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-armadillo-platypus
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 846
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-armadillo-platypus_1.0.ab20260905-r18_amd64.deb
+Size: 119180
+MD5sum: 7b0d932f063dbbda8bd0c7a3dbc9d2d9
+SHA1: 4af0ffd96e7b76af94300d0fb26cf4d64b8f8ab5
+SHA256: da7cd1a0ce9785048c849b60a3afefc11778a4e76df9f5fdff5960dffc1c4f00
+SHA512: e779ef6c64ab6a5f7df087de06a39c2758f2cc4184587a324d950675f4ab97d16a2362f89d8575392a9f3eb5de3d4b5eb8227ce4afe567d7a59a740d91eb5a8d
+Description: Lunatico Armadillo and Platypus Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-armadillo-platypus
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 934
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-armadillo-platypus_1.0.ab20260905-r18_arm64.deb
+Size: 112852
+MD5sum: 0e07661a3cbc02d25ff8284159d61f4f
+SHA1: 5542dbf85b774afc7740fbde16b88b1d10109d30
+SHA256: b5a1e8952165e054fca1306fc433faa8d81b9bd19a64b1965dae55fd73620c71
+SHA512: 1272e1a3f17fb8143d0e5044510c935e1ac2646cf26a5b7fe504c18bbffe548efd59b0f80e4dbb0c7730059254d808849a17da5979075d5c8b23ff86eb34ae56
+Description: Lunatico Armadillo and Platypus Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-asi
+Architecture: amd64
+Version: 2.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 619
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libusb-1.0-0 (>= 2:1.0.16), libasi
+Conflicts: indi-asicam
+Replaces: indi-asicam
+Filename: pool/main/indi-asi_2.6.ab20260905-r18_amd64.deb
+Size: 125816
+MD5sum: c396be50f75badd43fc2fec3f941d967
+SHA1: a2887acfdd19f1707e92ebf5c025c8217077a298
+SHA256: 17511294216a1b530f7c9a42aa08325d5b29a1873bb666af5da870f33b654910
+SHA512: 77b10ebbc28ac1a6687f6e53ae7a19596d762d354312b822677db0b31ad64ba6a020e8d6bfba69f97e00861887caed8a8e0fe65ea19993fad782b5491d1fc0b1
+Description: INDI Driver for ZWO Optics ASI cameras
+ Driver for ZWO Optics ASI cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-asi
+Architecture: arm64
+Version: 2.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 875
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libusb-1.0-0 (>= 2:1.0.16), libasi
+Conflicts: indi-asicam
+Replaces: indi-asicam
+Filename: pool/main/indi-asi_2.6.ab20260905-r18_arm64.deb
+Size: 111020
+MD5sum: 2f9955830628f25697c48b2c92a16032
+SHA1: 145a288b6a25928d8b9f0812f691421627cf18b4
+SHA256: 1b5c4b31ff59fa6208594694c70811c32a3fe05f4e738fc1c64b673637f6e6ee
+SHA512: d22b931bf00edc3dd4fd67af2abc7dee649bfdb24067cc7f8ac57b3aac14ff28813046f5ee1a6b23f12114e7f1e4533a109de711463117eb8f531b4c8c75d67a
+Description: INDI Driver for ZWO Optics ASI cameras
+ Driver for ZWO Optics ASI cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-astarbox
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Colin McGill <info@astarbox.co.uk>
+Installed-Size: 71
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-astarbox_1.0.ab20260905-r18_amd64.deb
+Size: 19992
+MD5sum: 7e3beb6aac0f87f7958388e643ac0b63
+SHA1: 37dd17ab35f32cc90913f3cd2b75901885acac6e
+SHA256: 81df5d0077c970feae777064c5eab2685874157bbf65385ace2a46ee631f6e7a
+SHA512: 7befa1d09fbbf9bf66bebc14c1c1d77e6742dbac46b3d608563f29d6f6236332bb4211a5aea26296a6c9467643741f75cfbca2b9bc01336670eba2d253966703
+Description: INDI Driver for AStarBox
+ INDI Driver for AStarBox power control.
+ This driver is compatible with any INDI client but only works on an AStarBox.
+
+Package: indi-astarbox
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Colin McGill <info@astarbox.co.uk>
+Installed-Size: 79
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-astarbox_1.0.ab20260905-r18_arm64.deb
+Size: 18640
+MD5sum: 072be3c90755391ec2790dc16bdab0c4
+SHA1: 6d2667ebf1de7bb243e0ae7a9369d65b6e294fcd
+SHA256: 4c7b959176e397669bbd0d9b04a53da87f362b65f7a3f285d0655d925c916d5f
+SHA512: 9131aa70b184f425c8bed2e3aacdb27ac648566469b2157f8190f0939457f8fd1490f5031e0451147ef7a4884cad656d76bcaba2db173a28513bd82bd00d1975
+Description: INDI Driver for AStarBox
+ INDI Driver for AStarBox power control.
+ This driver is compatible with any INDI client but only works on an AStarBox.
+
+Package: indi-astroasis
+Architecture: amd64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 232
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libastroasis
+Filename: pool/main/indi-astroasis_1.1.ab20260905-r18_amd64.deb
+Size: 64060
+MD5sum: 0dbb4259794a0c4d85706807ce40ed83
+SHA1: 04ae40ad273edb8a52dcbba46ab185b7986fab0c
+SHA256: e5c0d6ebcc6bb2393304b4686dd590b6e3eb9c57dcf0fa4b30644a5c9b7f7f21
+SHA512: 544fee19c68148311ccec5e3b720426ee5119e80736c9300b9bdc22f2360764445b372e5b572dddfa749d17f60db0d7a2b0e970029336968b0befa6070d7360e
+Description: INDI Driver for Astroasis focusers
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-astroasis
+Architecture: arm64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 276
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libastroasis
+Filename: pool/main/indi-astroasis_1.1.ab20260905-r18_arm64.deb
+Size: 60052
+MD5sum: 2332b1d259e39be388b10ac01d703313
+SHA1: 7ac74f6b4c659b5ca0a5b16f2615f95f13a38132
+SHA256: 6e89c9a4e4cec7cef35a393f0a745539a3da498617124ed9dd58b1a08b29b0b6
+SHA512: a5fa1ac5f4cc9547867ccfd52224f919aa3f2cedbb18be32b549e43652406a746b4c835f35107b4d7cfa2950c262ce845468d9f362502828f79caf1955b248d5
+Description: INDI Driver for Astroasis focusers
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-atik
+Architecture: amd64
+Version: 3.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 138
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libatik
+Filename: pool/main/indi-atik_3.0.ab20260905-r18_amd64.deb
+Size: 37524
+MD5sum: 0bebc6e31bc0f12e388e9ca16798cdd4
+SHA1: 2cfec19959164a02fae0973d84a3f70747b1482f
+SHA256: 5d117ef527812a7d441f2ce5d380f437e7f3b3c67d8413428126fa7996bf45b7
+SHA512: 8a18f7e15b743d1fae570f5996437b8483d84179c5d6aa3e5b04607093332beef916b5223c5933002b6cded81428a1fe6e2e61d155d1f6abc88e1acc9b2abd05
+Description: INDI Driver for Atik cameras and filter wheels.
+ Driver for Atik cameras and filter wheels.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-atik
+Architecture: arm64
+Version: 3.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 210
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libatik
+Filename: pool/main/indi-atik_3.0.ab20260905-r18_arm64.deb
+Size: 33900
+MD5sum: 746e7aecb1a3b8d9101232b5c39ac11f
+SHA1: 304713da0100f65a92867089d07e6a77f891257f
+SHA256: 1f8e3d4e5ea9783afca28eb81176a899e103e0ffbb5b980009505ceb5193e36e
+SHA512: 697bb41a47f576d28d0be83dc6385d343c215473516d14b9e2164e2d552f83d6142d48a9e2ca0de1fa0cb837c43c5d3797a9966717f0cabd337b20e22169c878
+Description: INDI Driver for Atik cameras and filter wheels.
+ Driver for Atik cameras and filter wheels.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-avalon
+Architecture: amd64
+Version: 1.14+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 150
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2), zlib1g
+Filename: pool/main/indi-avalon_1.14.ab20260905-r18_amd64.deb
+Size: 45564
+MD5sum: 54f9817909915d32851be0f958131e42
+SHA1: 8010d406402fcc537db08b25780df5aea724cec5
+SHA256: 8f6abcb0161ffc16f742c15df10828bdb37a006364290c684b03133f6a83d6c9
+SHA512: f6a53a5d64b7f387970b7b6243ed29c5de116befcfa0482435094d2ac13471b3279779e34fc940e0d7d934d87d8268af1ea1f4d45ad200f4e0f2c3644b4e88fe
+Description: INDI Avalon Stargo Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-avalon
+Architecture: arm64
+Version: 1.14+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 206
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2), zlib1g
+Filename: pool/main/indi-avalon_1.14.ab20260905-r18_arm64.deb
+Size: 40228
+MD5sum: e793d978a192aeaef804a810a8bda810
+SHA1: b51cc8269442be5ad591eaa66f2fad8673f518c0
+SHA256: d239dbd9e8cfd55327e4e083e48b0f5524ff9e6779eec764fcefaae02794d43e
+SHA512: 401f46615477f1fd79ccb8a1dbeb3c4ba453e4bd874ce8656313ba26e186d8bedfc88e65073db3ae7be37a9f3e1d5bcd40b46a58adad904860f457289405f7bc
+Description: INDI Avalon Stargo Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-avalonud
+Architecture: amd64
+Version: 2.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 420
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libzmq5 (>= 3.2.3+dfsg), zlib1g
+Filename: pool/main/indi-avalonud_2.2.ab20260905-r18_amd64.deb
+Size: 89992
+MD5sum: d054ee445b61fb9556581d0b1a77b085
+SHA1: 2cc6c4a0a5b16b2fd0c62a343c44c7b454cc166c
+SHA256: 48373e252765d70b3082b1c76c72299f0d4d1e3405418d3e15576511732807e2
+SHA512: 8c660a63421c746cd60da68be33862e678a0af655ef301b71e96e863e67643421b15253dd5c7a22f3527b426b4f4a3107b3ae706e6620013ea7fb0e8ce0a4b9f
+Description: INDI Avalon Unified Drivers.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-avalonud
+Architecture: arm64
+Version: 2.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 468
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libzmq5 (>= 3.2.3+dfsg), zlib1g
+Filename: pool/main/indi-avalonud_2.2.ab20260905-r18_arm64.deb
+Size: 80268
+MD5sum: 80cea90a9c1366b50b71996501242164
+SHA1: 8a50cfec7c28cca3765f796481e666538e6fb91b
+SHA256: 4b954c183f4d0002c52d46bd4a6610c88d1dda7b1dc70a25cb79aee3e36402ab
+SHA512: 802660ae219ce68de77075956942b353a29b5f5d1be7832af8f96cc697d3fdca5c4718602d8863440290ce2b2f6932852c2544c867e44b72364ecf5fc3115c73
+Description: INDI Avalon Unified Drivers.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-beefocus
+Architecture: amd64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Andrew Brownbill <andrew.brownbill@gmail.com>
+Installed-Size: 267
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-beefocus_0.1.ab20260905-r18_amd64.deb
+Size: 78248
+MD5sum: 299a1ebec05a18610c0d09809011b4e2
+SHA1: 50446947da99adfc5963b3577c9b0f582a58eb85
+SHA256: ae6c219fe4c7e86cdb818fa3a4115884c12d3bfafd4a243b6166bb0e6beed317
+SHA512: 6017a0d5e6cf03dea0698ca0d77e234e83eee59fc967ece9ecbb539b68af4417b641cac2697e1c288529394ec7dec560037e88fdc5d3f3aba2b8744a9f7cefb6
+Description: INDI Beefocus Driver
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.  The driver interacts with a Bee Focuser using TCP/IP.
+
+Package: indi-beefocus
+Architecture: arm64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Andrew Brownbill <andrew.brownbill@gmail.com>
+Installed-Size: 335
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-beefocus_0.1.ab20260905-r18_arm64.deb
+Size: 72608
+MD5sum: 7b6c7cdba20d5191d3232ccd39489331
+SHA1: e4e3c31b21a40ca15394f05cca9af1b35d3b7fdb
+SHA256: 43aa01cc6a11cea24071eb2b31738dfed927eb5e3acf77a9ddc947f12c9f9928
+SHA512: 4ff8bcc97bcbd71d07174084107ee5527c5300c4656193c9e5aed664cd8d29060f63e21e38fd177725219032300e665839714ffd7f80796a73e6d62133622fdd
+Description: INDI Beefocus Driver
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.  The driver interacts with a Bee Focuser using TCP/IP.
+
+Package: indi-bin
+Architecture: amd64
+Version: 2.2.4+ab20260905-r12
+Priority: optional
+Section: misc
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 26142
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libcurl3t64-gnutls (>= 7.16.2), libev4t64 (>= 1:4.04), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), librtlsdr0, libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.9), zlib1g (>= 1:1.1.4), libindi-data (>= 2.2.4+ab20260905-r12)
+Conflicts: indi-astrolink4, indi-astromechfoc, indi-dreamfocuser, indi-spectracyber
+Replaces: indi-astrolink4, indi-astromechfoc, indi-dreamfocuser, indi-spectracyber
+Filename: pool/main/indi-bin_2.2.4.ab20260905-r12_amd64.deb
+Size: 4113408
+MD5sum: 29d1ba01ea9f5b0b9116a26fcf24fb5a
+SHA1: 5359053b26a2048c19d14ab0eb5cd52c56087372
+SHA256: 7214d2fdace52d623b6958e68e3283df43e6a44c64b47e04ee2f38a60201e820
+SHA512: ae110f32518a5449295dc1423765e2136b745431d0a94470c1b03d8ce489eb72c7f73c2349ca504db7a0672fce88602d49b46f4e1372abe1a374e455f0c8b94c
+Homepage: http://www.indilib.org/
+Description: INDI server, drivers and tools
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains the INDI server, the drivers for the supported
+ astronomical instrumentation, and other INDI tools.
+
+Package: indi-bin
+Architecture: arm64
+Version: 2.2.4+ab20260905-r12
+Priority: optional
+Section: misc
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 30318
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libcurl3t64-gnutls (>= 7.16.2), libev4t64 (>= 1:4.04), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), librtlsdr0, libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.9), zlib1g (>= 1:1.1.4), libindi-data (>= 2.2.4+ab20260905-r12)
+Conflicts: indi-astrolink4, indi-astromechfoc, indi-dreamfocuser, indi-spectracyber
+Replaces: indi-astrolink4, indi-astromechfoc, indi-dreamfocuser, indi-spectracyber
+Filename: pool/main/indi-bin_2.2.4.ab20260905-r12_arm64.deb
+Size: 3728852
+MD5sum: 2f91bec1b67fdd43ebe27737b652a82b
+SHA1: 9a1456ceae892a0f5c56e4ba30d7d9a88af7bd44
+SHA256: c57067cadaaba84e184de93a2c91308b6e5f88a8ce62ed0f1496d123daeb8456
+SHA512: 8f2dfae62d3cbb8e75edd7836a622f6244f90f38d997a10e71c29bd791242d470e3b43923fdca57fe050a2fc334a8fa838426c15abf33039e128d5875eb8d77e
+Homepage: http://www.indilib.org/
+Description: INDI server, drivers and tools
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains the INDI server, the drivers for the supported
+ astronomical instrumentation, and other INDI tools.
+
+Package: indi-bresserexos2
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 114
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 13.1), zlib1g
+Filename: pool/main/indi-bresserexos2_1.0.ab20260905-r18_amd64.deb
+Size: 31796
+MD5sum: e8b81ee2f3bf28e1ff5708228dc8baad
+SHA1: 2f623a253071d66a5f3627833ff3d7e41f8fc5ca
+SHA256: b3378937d5bcef84aee7af4424ce62caed24f81608a0a6607fce2d434ddf3290
+SHA512: fa4749de0280a34d9a7e206eac9a8a6b29c15d8a11f57e392996515908e03136e4ea3a4a520a45f77db568bf25a0613f555fd7da976929c09950882677296835
+Description: INDI Exos II GoTo Telescope Mount Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This is a basic driver for the Bresser Exos II GoTo telescope mount controller, allowing the connection to INDI clients.
+
+Package: indi-bresserexos2
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 142
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 13.1), zlib1g
+Filename: pool/main/indi-bresserexos2_1.0.ab20260905-r18_arm64.deb
+Size: 29280
+MD5sum: c20d0c58a76589f0fb88d9ded6594c3c
+SHA1: 4efec8fcbc23bb7b1c63a6357515cdd46827fc49
+SHA256: 31618f2ca80a74a85c419c5c0c16fbcefa07abc45f7f40ed1d6045c712e50c6e
+SHA512: 614eb9041ae46a4243dc48dad8437a32616e969f0f36556db4cdc188ff634c8b858a7931b3020016eae63d522a3743450082c7d17e9a1fa5af444efea96bcbd0
+Description: INDI Exos II GoTo Telescope Mount Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This is a basic driver for the Bresser Exos II GoTo telescope mount controller, allowing the connection to INDI clients.
+
+Package: indi-celestron-origin
+Architecture: amd64
+Version: 2.1.7.1-1+ab20260905-r18
+Priority: optional
+Section: science
+Maintainer: INDI Library <indi-devel@lists.sourceforge.net>
+Installed-Size: 303
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libqt6core6t64 (>= 6.8.2), libstdc++6 (>= 11), libtiff6 (>= 4.0.3)
+Filename: pool/main/indi-celestron-origin_2.1.7.1-1.ab20260905-r18_amd64.deb
+Size: 91500
+MD5sum: 29e24eb1c8b716d5213670d774154628
+SHA1: 258b7c859ed876eaeb9607e4215b060ff9578d0b
+SHA256: f00735d9fd7c46e900a21f37a8f51391eaee870df3b19fd10837da5f92e31e66
+SHA512: ad2ff990872d7885fd5e3053f25bce5904a110a19aada34e797c69b4304c5cf349fb743675f2900765b86521fb56cbbdf382de8c1530ed823bb39e872973dc43
+Description: INDI driver for Celestron Origin telescope
+ This package provides the INDI driver for Celestron Origin intelligent
+ telescope system with integrated camera and plate solving.
+
+Package: indi-celestron-origin
+Architecture: arm64
+Version: 2.1.7.1-1+ab20260905-r18
+Priority: optional
+Section: science
+Maintainer: INDI Library <indi-devel@lists.sourceforge.net>
+Installed-Size: 335
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libqt6core6t64 (>= 6.8.2), libstdc++6 (>= 11), libtiff6 (>= 4.0.3)
+Filename: pool/main/indi-celestron-origin_2.1.7.1-1.ab20260905-r18_arm64.deb
+Size: 81356
+MD5sum: 9a09767feac8b977086d23e4313a7d8a
+SHA1: af205673ca74ed98423b0d8594ae647052169fb8
+SHA256: 0e2289f93e5253c5e602af115e79e051989fbdfe65b5318c765fd410e66cf0e6
+SHA512: a56f7c9873853a60597be0223f05ba4346820e96075b1129d71c6411e0dc01a824c31b9ea6dc204d72a70f9d10c3e007330627651d802c2efc755fad2f121248
+Description: INDI driver for Celestron Origin telescope
+ This package provides the INDI driver for Celestron Origin intelligent
+ telescope system with integrated camera and plate solving.
+
+Package: indi-celestronaux
+Architecture: amd64
+Version: 1.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Pawel T. Jochym <jochym@wolf.ifj.edu.pl>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 193
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 13.1)
+Filename: pool/main/indi-celestronaux_1.6.ab20260905-r18_amd64.deb
+Size: 61504
+MD5sum: 82e81c7ab4c1c217becf5709476b777a
+SHA1: b61cee6300531bf2020ebd1bf2979f92808d830d
+SHA256: c5be74e40635eef8eecd0350096c7334250e65cc80f0b7aa7d895b7382a0c86b
+SHA512: 40ec73f6b387bc2c084410bfc5c3f121de8cb5edaf945fc9db550887b43ec1a5b5b3a17ae1134e61cd2c677898cafa2237c08ced538da55172a89572d861fe1f
+Description: INDI driver for Celestron mounts in AUX mode.
+ .
+ This is a driver for Celestron telescope mounts working in the AUX mode without hand controller.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-celestronaux
+Architecture: arm64
+Version: 1.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Pawel T. Jochym <jochym@wolf.ifj.edu.pl>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 209
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 13.1)
+Filename: pool/main/indi-celestronaux_1.6.ab20260905-r18_arm64.deb
+Size: 55388
+MD5sum: 811d49202667d84b08b06549ca71a99b
+SHA1: 76a12dc565eec6e5e39acc5a80ea50cdd47bea04
+SHA256: 85669f560f943b7174d29467fa1fcc21ecd2d3a4b6663f4e242c1d5218d86efa
+SHA512: fc290d5afa4cbee5ff0c1e09a3070e201a3169fa5d97cf8c7f068f81927cbfe7f8aad4d51c21d6aa32a252310feda9b18a7def669b0e0452f55922bdb2c7ef95
+Description: INDI driver for Celestron mounts in AUX mode.
+ .
+ This is a driver for Celestron telescope mounts working in the AUX mode without hand controller.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-dsi
+Architecture: amd64
+Version: 0.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 211
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.9), fxload
+Filename: pool/main/indi-dsi_0.4.ab20260905-r18_amd64.deb
+Size: 55052
+MD5sum: 668fcf0eb22ef274ae51d19cb114ced4
+SHA1: 76421a18fd3c437127e8229a4c1edd61f0e699e1
+SHA256: 7a7192fab6ca5510d02c8d5cf0baab3a6dae6d01ffe719c0f16b7f83666b996b
+SHA512: 0c006ef6e8542d81f45776ef65175534697bb6db6e3bb16c081a55602778d5e7006b9570c2ec9818007fb90cba17d7e063fbb2897a5b336682ec99977821fb8e
+Description: INDI Meade DSI Pro I/II/III Driver
+ Driver for Meade DSI Pro I/II/III camera.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-dsi
+Architecture: arm64
+Version: 0.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 235
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.9), fxload
+Filename: pool/main/indi-dsi_0.4.ab20260905-r18_arm64.deb
+Size: 48912
+MD5sum: 6c100949d81e4b9bc38473036bc5762f
+SHA1: 11f0ee14904a5a05e9232ad63860e94cb9a2c7e5
+SHA256: a2b98b8a086b0978e874498aca4bca7d8409e0d1f0096abd0eb636e7f19537b6
+SHA512: cc566ac9a77dbb3a4ee36c40479b0290662a37844f53e1b276c7a78e0f22fd57f44c827b22c662d2039c2434e9a9895aa96be3e98fb4711b5326b07798dfd39c
+Description: INDI Meade DSI Pro I/II/III Driver
+ Driver for Meade DSI Pro I/II/III camera.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-duino
+Architecture: amd64
+Version: 1.21+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 308
+Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-duino_1.21.ab20260905-r18_amd64.deb
+Size: 83340
+MD5sum: 3d81e9ffefb1981d9f0ec3c01786fc36
+SHA1: 9d6f8beda873a24286c9f7313474e18e599e5138
+SHA256: 458a66baca727c4b9258501b34735081c27f59cc539ede992ce6c1a1871a9b1e
+SHA512: c16868c536d0f464ced99d1b44a133fd6c2322c0e12123806929da78bab2b3b0f290ab880ad95ebb072f1def9f179f2d3a38be800c8273ac2a211deb0b1d06a2
+Description: INDI Arduino driver.
+ .
+ This driver enables utilizing Arduino boards as general propouse I/O. This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-duino
+Architecture: arm64
+Version: 1.21+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 376
+Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-duino_1.21.ab20260905-r18_arm64.deb
+Size: 73984
+MD5sum: 46ace5d383554d43ff6b2e769b497319
+SHA1: 53d1c4f77575d179633a753644a1bd8f51ee77ae
+SHA256: 35ad973875251e505c3d12d23d0094a0840e043330aadd4b5535cdd9cda1f5b2
+SHA512: 7d28fb7abacd30f842594b628d9c0596cb344e782e2c73a47ec896cd6eacc66c5f002d898b5c15730534d828751f3432f36b21b2e6dc68f31501f9a5ea623b7e
+Description: INDI Arduino driver.
+ .
+ This driver enables utilizing Arduino boards as general propouse I/O. This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-eqmod
+Architecture: amd64
+Version: 1.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1314
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 14), zlib1g
+Filename: pool/main/indi-eqmod_1.3.ab20260905-r18_amd64.deb
+Size: 183008
+MD5sum: 62e8d515d522666bb681f95c745682a9
+SHA1: 9ff45d70ff8ffd71dee3565e974e30528f46f8a0
+SHA256: fd011e77688e9553d02fa9dcad64aa3056529b880d7dd9d934cf52b1a712f6aa
+SHA512: 091675bbae1730f4829e9c18cc763160f3560303a45136ba4ae230f7a6c5f042adcbff7bcf3bd372150ac5fe4dece7cad766b6e4e2994a2adccafa7d8eb4453d
+Description: INDI EQMod Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This INDI driver interacts with a mount controller using the Skywatcher Protocol through a serial link.
+ It can directly drive Skywatcher and similar mounts through a serial port after a conversion of signal levels (see EQDIRECT interface), or any other mount hardware which uses this protocol.
+
+Package: indi-eqmod
+Architecture: arm64
+Version: 1.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1326
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 14), zlib1g
+Filename: pool/main/indi-eqmod_1.3.ab20260905-r18_arm64.deb
+Size: 161088
+MD5sum: 3460d0d28fcec8117a9ee05d08cbcb0b
+SHA1: fb7ad18a834bd3cdedbdd152b832b4129342e68d
+SHA256: 3f89c2e492fa026cf5fe8eba7cc88d2ee5fd0e99718196e925a5ef63c2b31ee0
+SHA512: 2e981be6098cfd3bf538fa70f1049c7653e02fcaa1acd140cf805cbebba5cdb72c6d3ed2c79923ddd88d139989b8adef5168b0b62bfecde17fb61f2b7da9ce8b
+Description: INDI EQMod Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This INDI driver interacts with a mount controller using the Skywatcher Protocol through a serial link.
+ It can directly drive Skywatcher and similar mounts through a serial port after a conversion of signal levels (see EQDIRECT interface), or any other mount hardware which uses this protocol.
+
+Package: indi-ffmv
+Architecture: amd64
+Version: 0.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 55
+Depends: libc6 (>= 2.34), libdc1394-25 (>= 2.2.6), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-ffmv_0.3.ab20260905-r18_amd64.deb
+Size: 12656
+MD5sum: 8dd2604b95e09bf63056b8f3ebfb0ab5
+SHA1: f85fc4b3acf753fcbd3a2d3c2526625c3b0216aa
+SHA256: 70758ad94db58032cf2ff52e27b098116f5529aea17d7cb0afceaca204c94269
+SHA512: 68bb6ad8edb6f5b948a660e83662b42cf09d29f461ef5c1ca6874a2680c89ecc95821d9991097b46c805d80a403759017d5a4302eff71f106bd6fc7057215483
+Description: INDI Driver for Point Grey Firefly MV cameras.
+ Driver for Point Grey Firefly MV cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-ffmv
+Architecture: arm64
+Version: 0.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 83
+Depends: libc6 (>= 2.34), libdc1394-25 (>= 2.2.6), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-ffmv_0.3.ab20260905-r18_arm64.deb
+Size: 12444
+MD5sum: 3c12df147120fed8ed269ffa385e4549
+SHA1: db236d032d11e60caf3104c658b1e09800582ab4
+SHA256: 49a30534286ae131c636e8ea085766cb5deafadbd4975abf4ac2f9253ba1ae7b
+SHA512: 58c16bb390715a3b4e964a95a8f6a69698c5001a83e76422a7a82f2db7351628d42797f8e974d61abdcf352a1830502c6cf14965e965bda3fc92761c58d7acf3
+Description: INDI Driver for Point Grey Firefly MV cameras.
+ Driver for Point Grey Firefly MV cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-fishcamp
+Architecture: amd64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 58
+Depends: libc6 (>= 2.34), libfishcamp1t64 (>= 1.2+20220607003151), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-fishcamp_1.1.ab20260905-r18_amd64.deb
+Size: 14212
+MD5sum: b831f0e9c28b2eafd54f441ddb3ae4fe
+SHA1: c9c9a97b427a273d79acc666508dd7f332826bce
+SHA256: e2dace15930b5ba2ec6199d7dfd62895cfb25b978f2d067715775015977bf48b
+SHA512: 5ed1ddbbf07debd44f242ebdec44e93ba4f1dac330c7ce997c6b9eb99a6b7dd96921d2cc78cd8e2ad2569b2968a60d3763f6d65102ecb999112bd03765614adc
+Description: INDI Fishcamp CCD Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-fishcamp
+Architecture: arm64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 78
+Depends: libc6 (>= 2.34), libfishcamp1t64 (>= 1.2+20220607003151), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-fishcamp_1.1.ab20260905-r18_arm64.deb
+Size: 13764
+MD5sum: bb4904e40a0570eb6bf120e9520004d3
+SHA1: 9fc52b74393736a268bf3b4b1c681d750a68ed88
+SHA256: 9d9158f67b9e831c6529c5d9df049c02a083fb810011f61e6daad44d24c2c581
+SHA512: 2f952b84bb9014b1ad7cdafc7bfb5192c88b3073e811c3c345392205eeec15cb39d65584d24a84601193c261b5d5ee11dea7e034b30f3203a01a028c68a46eb2
+Description: INDI Fishcamp CCD Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-fli
+Architecture: amd64
+Version: 1.5+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 228
+Depends: libc6 (>= 2.34), libfli2, libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-fli_1.5.ab20260905-r18_amd64.deb
+Size: 54744
+MD5sum: 0765773196ba7201c599c8cc0037324a
+SHA1: d103a16fde12dbed39a4bb36acf6d9fd5542ff21
+SHA256: e9f593cdfc6862eaf9f1884a8de701d1266460fa4ce01970527e3ec4f9cfe66d
+SHA512: 9ff8d5364bcb7dad03c1f1b891564476ddc0f0b36a6e59f6ea17beba6eb288371c41b8b05f29a16e0c0a7a9c6cf134d8fe253e558bcabca7d5fdf8de7015f7ee
+Description: INDI FLI CCD & Focuser Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-fli
+Architecture: arm64
+Version: 1.5+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 344
+Depends: libc6 (>= 2.34), libfli2, libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-fli_1.5.ab20260905-r18_arm64.deb
+Size: 49620
+MD5sum: e1c5ccd2509e51d05e1631d271ee35b2
+SHA1: 925569aab467058c9998ba9a06d2ddf611eadd1c
+SHA256: bc7c57ff3b40f7c5144b0d8a83ba3d93acf46acc9a784ad935bee670a3189c97
+SHA512: 44bce0b803711c616c7b4e6e82fa6db50e17eb75b8ade75c7fe1dd055b8cb81ba3c1a7cf1c3381bd878baa92c614780219d9b383a6db9d7a5de915d7ae5cf6fd
+Description: INDI FLI CCD & Focuser Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-gige
+Architecture: amd64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 107
+Depends: libaravis-0.8-0 (>= 0.8.34), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libindi1, libstdc++6 (>= 12)
+Filename: pool/main/indi-gige_0.1.ab20260905-r18_amd64.deb
+Size: 30832
+MD5sum: af01ecc3dcc4913a4f2dc8d3727ec1c2
+SHA1: baec718345139edbe959864504318f4f72204c81
+SHA256: ca5997248e98d08498945feaeb57cfd2e0643f8f8a3852f7f943cb764022ccda
+SHA512: 52fab4abfbc29193a98cba80a1a44ba1de6ffefb87a1be3322cea5e397583e0cb785a35e428a51e78f2274f8f8101d12c8654036fb25aa4b0e9c8d60b2f25abe
+Description: This package provides basic support for most GigE machine vision cameras through Project Aravis.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-gige
+Architecture: arm64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 143
+Depends: libaravis-0.8-0 (>= 0.8.34), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libindi1, libstdc++6 (>= 12)
+Filename: pool/main/indi-gige_0.1.ab20260905-r18_arm64.deb
+Size: 27996
+MD5sum: 9435b108305eb252b910d0e7b8df9e95
+SHA1: 85ab76db4746399c4d381daf46916088814b96d5
+SHA256: 1f6efaf2829dfebdcb6e1c32e417df9255ddcc2a3d3c39bbf1e0f46f002d06b4
+SHA512: 5943806b0032f92b43e81746b7bae96d1961dc67ebe8520fc31a809ae31b986a9cee23ef5eee46fd1d65487d1158d502989dc04e1d9aab9e06494ddf49deddb3
+Description: This package provides basic support for most GigE machine vision cameras through Project Aravis.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-gphoto
+Architecture: amd64
+Version: 3.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 304
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libgphoto2-6t64 (>= 2.5.10), libgphoto2-port12t64 (>= 2.5.10), libindi1, libjpeg62-turbo (>= 1.3.1), libraw23t64 (>= 0.21.1), libstdc++6 (>= 11)
+Filename: pool/main/indi-gphoto_3.4.ab20260905-r18_amd64.deb
+Size: 78968
+MD5sum: 62f8a11e7d069bb533afe86de95e53ac
+SHA1: 7869f8926715db8eba3cb6203f9a107cb7496992
+SHA256: 42b05abf296457935f7e2a97dd9ee74f2119361710fa8466547c7a8cd872dc9c
+SHA512: b901bea3a5fb87a50222f6b1464fd4392939f2f06019864414203b8360e651b3b269f83af48e82b42c8edaee138d5304f1127f0770c680cfda0a58be41648207
+Description: INDI GPhoto (DSLR) Camera Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.  The driver can operate any camera supported by GPhoto2.
+
+Package: indi-gphoto
+Architecture: arm64
+Version: 3.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 348
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libgphoto2-6t64 (>= 2.5.10), libgphoto2-port12t64 (>= 2.5.10), libindi1, libjpeg62-turbo (>= 1.3.1), libraw23t64 (>= 0.21.1), libstdc++6 (>= 11)
+Filename: pool/main/indi-gphoto_3.4.ab20260905-r18_arm64.deb
+Size: 67700
+MD5sum: 1b914f765674118dcb3dd82583e8a26e
+SHA1: c4bf11598f30f50dd6a4eb34638ff329e438cd84
+SHA256: 0f2948857ae930678b44615286ed5bfc7433f2b12d14821fb2195c7f6077853a
+SHA512: 8c03e5a1f7550c7c5970e68f0427a5fdfa18f49cb1a357dc7250f8ac31ddfd7dddc34f29ac003cfa015c54376b3483e7d7271f71fe142ba0fdeeeceddca81314
+Description: INDI GPhoto (DSLR) Camera Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.  The driver can operate any camera supported by GPhoto2.
+
+Package: indi-gpio
+Architecture: amd64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 139
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgpiod3 (>= 2.1), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-gpio_0.1.ab20260905-r18_amd64.deb
+Size: 43884
+MD5sum: 83266c56a72b4bde584d7a6968b4f1b5
+SHA1: 65b728a09ffe179180264d9ec14150e074536eee
+SHA256: 14c99cfe0dfc3dfee2167b4a88b0dba9a14a861bfd9c3878a552152448eab3a6
+SHA512: f19202a5f8afd551a534aabcb5dfb752a6b5aecff68d4ed070f600598294d4bfa3a3e0c526f67975da3bc45920807b33d0d9e738904cfcc84e64012bd832beb5
+Description: INDI Driver for GPIOD
+ INDI Driver for Boards with GPIOs to read digital inputs and toggle digital outputs.
+ This driver is compatible with any INDI client.
+
+Package: indi-gpio
+Architecture: arm64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 143
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgpiod3 (>= 2.1), libindi1, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-gpio_0.1.ab20260905-r18_arm64.deb
+Size: 37560
+MD5sum: c126de2c5ebf532e570a3521a6b3d4c0
+SHA1: abac98cf60291527f50c2cbc20f67fbd89cdeea6
+SHA256: 8c68007253e9a5d80e3a035367effa39f8d21020c2cf8a5537d7eb866208f3e6
+SHA512: 384aa0b35d5870f4ef908887b09510b0721d376f75bd4138395fa98ec9fee1c5fb03c0bfaaca96e97ab9f7dad32872006cbc4a2359440a1523b45bf4e6b58fbb
+Description: INDI Driver for GPIOD
+ INDI Driver for Boards with GPIOs to read digital inputs and toggle digital outputs.
+ This driver is compatible with any INDI client.
+
+Package: indi-gpsd
+Architecture: amd64
+Version: 0.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Pawel T. Jochym <jochym@wolf.ifj.edu.pl>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 47
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgps30t64 (>= 3.20), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 5.2)
+Filename: pool/main/indi-gpsd_0.6.ab20260905-r18_amd64.deb
+Size: 10716
+MD5sum: 1e225178510f460b35674c5f5787c4bd
+SHA1: cfc96a3fd5634d64bd3f7bd0f34b7dcae9a3af7f
+SHA256: 649dae54fbd21b5f0be65f9c0f583cd51747587995183ea53df22cf91a2b4262
+SHA512: c3a7345f667cd967660a9b600d932fe61442645d89aae4802db38eee3e2f4fa3bf6b8a289922fefa599b1a6a304df2237777e4138b5eda41fdd06d326984917d
+Description: INDI driver for gpsd gps daemon.
+ .
+ This is an INDI driver for GPSd daemon.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-gpsd
+Architecture: arm64
+Version: 0.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Pawel T. Jochym <jochym@wolf.ifj.edu.pl>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 79
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgps30t64 (>= 3.20), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 5.2)
+Filename: pool/main/indi-gpsd_0.6.ab20260905-r18_arm64.deb
+Size: 10036
+MD5sum: cea54879965c8e378b3351d04181a8df
+SHA1: c3f99c126f14f5198b20b7a51693b8f6afd0bc37
+SHA256: 375ce8d3b5e83ef3a29f815cebfe6ec2a16756d6f18963d23df1bef3f7731ada
+SHA512: 0236aa46aa4d5338e7b46ecd6dcd398fabafdeb39037b38892f3af9f99578012a82af54c76ac4ea6bce3a0b57ca24923b04a37033be824010297d99b5742078f
+Description: INDI driver for gpsd gps daemon.
+ .
+ This is an INDI driver for GPSd daemon.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-gpsnmea
+Architecture: amd64
+Version: 0.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 51
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-gpsnmea_0.2.ab20260905-r18_amd64.deb
+Size: 13076
+MD5sum: d902355b4c107ed67108a1043f83a8c3
+SHA1: fb5e7e5cb5751532b4adb4df39afa2ad3e5d16da
+SHA256: 1995e4582251f0f14a379b8ce6f2239fab49e8855ad09323864840969904c255
+SHA512: e935cb73ffce1748a3937c474e970e6a3fea1de5ea666c11fa092b85f39031c03f67b5f6f6f6294f8c80e90c1060e8187944f48ad2260ccd006dfd5915931bce
+Description: INDI driver for GPS NMEA streams.
+ .
+ This is an INDI driver for GPS NMEA streams.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-gpsnmea
+Architecture: arm64
+Version: 0.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 79
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-gpsnmea_0.2.ab20260905-r18_arm64.deb
+Size: 12592
+MD5sum: 2eeb600af13d74a8fce474a90582cc30
+SHA1: 622945774b8b315d8c430fd56f19e62734125240
+SHA256: 4d1ef130115337428f55d6073527286fb93950d9185fba7c1f05053e53c7d803
+SHA512: 9316f15dca726549ff944d51db6197e127627c3df5155abbe445c60a5d80e3981938466efaa1675bbd5dcece6f9e3e4f0023139e87de8f1c96a4ee5c37bda317
+Description: INDI driver for GPS NMEA streams.
+ .
+ This is an INDI driver for GPS NMEA streams.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-inovaplx
+Architecture: amd64
+Version: 1.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 54
+Depends: libc6 (>= 2.34), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libindi1, libinovasdk, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-inovaplx_1.4.ab20260905-r18_amd64.deb
+Size: 12504
+MD5sum: bbe5c4610aeac8d7c672f1223ffbd506
+SHA1: 8c2e176d02e47dae047c06879557d33a5bc1779e
+SHA256: 051fb20df68df1e8211a62590f94df88628c9621401a7ed1f54e9e6880765863
+SHA512: 6bae8f6434ba2c0452f13582bc15c34b09a21a3d06db3a765b2e32adc5218883320fef127bdf6e686a8d15d60146032e872f9b3e3fbadaa8c6c09a5151aa6167
+Description: INDI iNova PLX Camera driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-inovaplx
+Architecture: arm64
+Version: 1.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 78
+Depends: libc6 (>= 2.34), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libindi1, libinovasdk, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-inovaplx_1.4.ab20260905-r18_arm64.deb
+Size: 11812
+MD5sum: ed02faaec5cb9d9f779533e3e29ffbec
+SHA1: 21c1b106ab6be37343eb035da97e826e24f4ffc2
+SHA256: 02a482e82c702c57954598cef69201b69347d83c15a8e28ab5898841bbc77d4e
+SHA512: d723e2c9597605d25bc00571255daf71d105733d5f3312039e56747e0a73ef4d4673402134e6947ac40903a3e82dba38a7d1b40c99962938be46fcccf5d8f9df
+Description: INDI iNova PLX Camera driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-limesdr
+Architecture: amd64
+Version: 1.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 8
+Filename: pool/main/indi-limesdr_1.4.ab20260905-r18_amd64.deb
+Size: 1392
+MD5sum: 671acf0b62ac9a8a9793b86d84b21290
+SHA1: bfed139a063dc43945878075dd9ddee4bfcadcff
+SHA256: 73fff50a342ec38ade6695797ab0df871e1a4c51967255138cffc720861e876a
+SHA512: d9694851af63490c7a83264177500ab5d647e2deecd51bf4fa4a68b18017dcd4162f5e65722513dfe2cb7914e01a55fdb3b5725c8b677955771502af78080dbd
+Description: INDI LimeSDR (LMS7) Receiver driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-limesdr
+Architecture: arm64
+Version: 1.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 8
+Filename: pool/main/indi-limesdr_1.4.ab20260905-r18_arm64.deb
+Size: 1392
+MD5sum: 766f1ffdbada50560b87948d936d214a
+SHA1: 51ade40240b13cd74124a4b55292d9193cf1b855
+SHA256: 87408e3ec55d6191baca5a2f6589d8ce2a3fe7f2a9f8cdce8d06d8c4a4bd3db5
+SHA512: d3fea495d0d00b699a2179fe25f3ebfbe37d101a3e74b88b3cb994a1a181294df4a6a8eafaf452443dd3d739752e5435779c2cfbf72155f769613ea86b00de9b
+Description: INDI LimeSDR (LMS7) Receiver driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-maxdomeii
+Architecture: amd64
+Version: 1.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 71
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-maxdomeii_1.3.ab20260905-r18_amd64.deb
+Size: 19612
+MD5sum: ef4c801361b991603757de2a22e42385
+SHA1: de44d6242180d3d45be97eabfa3b43555a89f7da
+SHA256: 618dbb38e6ad8ef5a4dcd0894ee1b1c79a942827c0da8448aca94da7cef05cdb
+SHA512: c9b2407da34587f78c803569910ab9b6a0ba3d7009497bcbc84125f1d00059b7eea2b76d19599dc1adc32cea92865c3deccc8c8854710053d8b6548452d17329
+Description: INDI driver for MaxDome II automatic observatory dome control system.
+ .
+ MaxDome II is a fully automatic observatory dome control system. Link your dome to a personal computer for complete automation including telescope slaving and shutter control. MaxDome works with a wide variety of commercial and custom-built domes.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-maxdomeii
+Architecture: arm64
+Version: 1.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 79
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-maxdomeii_1.3.ab20260905-r18_arm64.deb
+Size: 17960
+MD5sum: 475426b4849634643f4b4b1a8efe6ff4
+SHA1: 08b0ef575e7879c91af0bba6d403124932d66fab
+SHA256: 47cc23fdc533ccb9074f27b54751ee55515e6f17dbff652679ed4b99816d1a22
+SHA512: 45ad51c8fad3721767a8160b1d9f72862e1aea9a391058d43a8f2bf61e9f8bc56250cd59476725f7b87986fba14c9efe94e8bbb07fef481de011d561438491ba
+Description: INDI driver for MaxDome II automatic observatory dome control system.
+ .
+ MaxDome II is a fully automatic observatory dome control system. Link your dome to a personal computer for complete automation including telescope slaving and shutter control. MaxDome works with a wide variety of commercial and custom-built domes.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-mgen
+Architecture: amd64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 95
+Depends: libc6 (>= 2.34), libftdi1-2 (>= 1.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2), libusb-1.0-0 (>= 2:1.0.8)
+Filename: pool/main/indi-mgen_0.1.ab20260905-r18_amd64.deb
+Size: 27032
+MD5sum: cd9a2a82951d643d314c9e48bcccaa4d
+SHA1: a9ad57838d81f24575a5f9ef24c70037087da855
+SHA256: 4015c10847165ce0e8991338d99212f7ecc88a03634bb81729aff491214edc70
+SHA512: 6a5eb09e37bd07f8b3e249aa3dea8a8e302f2bb409f38aaef0d3671690bc9e30b50e96318d43fccfcd69f712ea8e973c6ab3356eb8822e1f48532137480584d5
+Description: INDI driver for Lacerta MGen Autoguider.
+ .
+ This is an INDI driver for Lacerta MGen Autoguider.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-mgen
+Architecture: arm64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 143
+Depends: libc6 (>= 2.34), libftdi1-2 (>= 1.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2), libusb-1.0-0 (>= 2:1.0.8)
+Filename: pool/main/indi-mgen_0.1.ab20260905-r18_arm64.deb
+Size: 25352
+MD5sum: c16578586f497c5c2d5edeca78f3f4b6
+SHA1: 444f17ac26e2614a54e8f9bf704bcfd809cc1335
+SHA256: 42c7b602156ac7386af7d19fad2e3a0776d1088fa72138d2a7072b14570987c1
+SHA512: a1c46aaa047067a36ead34c4a63c3b8e9e24c6846f7f63a1bdac6838db6df9fbab6865168f37ad69d03b74fc8ef0f5631f7fe01ef08d20f4e8bec192105e9eb9
+Description: INDI driver for Lacerta MGen Autoguider.
+ .
+ This is an INDI driver for Lacerta MGen Autoguider.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-mi
+Architecture: amd64
+Version: 2.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 114
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libmicam
+Filename: pool/main/indi-mi_2.2.ab20260905-r18_amd64.deb
+Size: 26648
+MD5sum: 92c8c32d237225981e883ccfa87db33d
+SHA1: dff02add3f1e5be145a59b97b95a9f90e45222a8
+SHA256: f068b0592f67ec68dc886fc4d3ccf990de2e354f11423547d636c141d1e24cb6
+SHA512: ca8b793521d6f32483343e2e718a7e5246320652c5efe436e238d6fb7382dd1af8c6f6dd38e375275421253d18ce0fb02322cf11ac76936b9566af66f7158ea2
+Description: INDI Moravian CCD Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-mi
+Architecture: arm64
+Version: 2.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 150
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libmicam
+Filename: pool/main/indi-mi_2.2.ab20260905-r18_arm64.deb
+Size: 24480
+MD5sum: c33633142911c4cc1bd3756d11ebe5d2
+SHA1: ecb941e967e10c880d77314528f87ec7d779a746
+SHA256: 83fb16548bd25c2a2fb9900588f40e06f946592ba2d1abdab536d7fa4dac9ed9
+SHA512: d41259a3599e21dc0543768876f56d3515d3357efed214eae184022f44070f205aecfed705bf79ae1ec30833f0a27f50173428fc89aa453d3dd9f6c97c073080
+Description: INDI Moravian CCD Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-nexdome
+Architecture: amd64
+Version: 1.5+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Gerry Rozema <gerryr@rozeware.com>
+Installed-Size: 243
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-nexdome_1.5.ab20260905-r18_amd64.deb
+Size: 75092
+MD5sum: 6f179b21c81f9e68a7f483833f34fc8b
+SHA1: 852db3431ae6cacad95a91429885c5e1004ab351
+SHA256: ac8c4450e8db36dddead9549cf4e3cc142b36304a71314d8463f7467794e85eb
+SHA512: 323d6878ae756617d480830e7d242b8c36bb9ea99bb4eff44656631abcf5597ea5c743e36a2a57bee7cd307547ee6f0d6b45715eb6d3d55c691ae4ab68114362
+Description: INDI driver for NexDome.
+ .
+ NexDome is a 2.4m personal observatory dome with optional automation controls
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-nexdome
+Architecture: arm64
+Version: 1.5+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Gerry Rozema <gerryr@rozeware.com>
+Installed-Size: 271
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-nexdome_1.5.ab20260905-r18_arm64.deb
+Size: 68784
+MD5sum: e84b77ee41a1f586a48635a33d05e95f
+SHA1: 1da5bbef8298877f4a684973fe8f8c1b562f5c8c
+SHA256: dfc32d0f949bd842bb1ba5f3088d43d573fdf955886b332c266904cb5c08418d
+SHA512: 8b596fd690f215d910373793d9778350628536b19946c67460c4056ff1d06f42a7f4424e798a2d76e80ff7f790c8e6f5fc12b8f3586e5e6684927ae9ae2fdc09
+Description: INDI driver for NexDome.
+ .
+ NexDome is a 2.4m personal observatory dome with optional automation controls
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-nightscape
+Architecture: amd64
+Version: 1.0.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 87
+Depends: libc6 (>= 2.38), libftdi1-2 (>= 1.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 12), libftdi1
+Filename: pool/main/indi-nightscape_1.0.6.ab20260905-r18_amd64.deb
+Size: 24360
+MD5sum: 4e9c0757f833fa4767007d1bb05fd385
+SHA1: 44be941fbb7507964e4cf570b969d6e98da7e616
+SHA256: 0302bd75aace4c4f83e9f0c4272c0ff5b5c5bce942264028cdfaba5021248d7d
+SHA512: bb9444926cd21f441aae9b9d35adefb8de2573fde3e08c6ec64102b612a9b1aef82fbec24b73ce8eb5d133333d5c20d702e2b4e8828ae05aa9318c6632e91384
+Description: INDI Driver for Celestron Nightscape 8300
+ Driver for Celestron Nightscape 8300.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-nightscape
+Architecture: arm64
+Version: 1.0.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 147
+Depends: libc6 (>= 2.38), libftdi1-2 (>= 1.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 12), libftdi1
+Filename: pool/main/indi-nightscape_1.0.6.ab20260905-r18_arm64.deb
+Size: 23688
+MD5sum: 78136525387bffdb1a29119a62cf6867
+SHA1: 96c877b87d6eefca472a9763f598707e8cc39abb
+SHA256: 816e9f4d1e4b4e9274e57f5a4c323f03c1e7a5bdec7674aa9b0671e8ecbf7498
+SHA512: 1596188d2e87356f04d136a3c409f9252b2ad79e758c01a553cd967e3ffb0f74843cb5ee37aa55235db1b0a7a474f6b6c35d8f1a844063d752833521ccb40eb0
+Description: INDI Driver for Celestron Nightscape 8300
+ Driver for Celestron Nightscape 8300.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-nut
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Rick Bassham <brodrick.bassham@gmail.com>
+Installed-Size: 38
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnutclient2t64 (= 2.8.1-5), libstdc++6 (>= 5.2)
+Filename: pool/main/indi-nut_1.0.ab20260905-r18_amd64.deb
+Size: 8524
+MD5sum: 41f0ceb2a7f9bd7f2b646b0130789150
+SHA1: 4446c69eef444ff555ddafd6bcc73ea987b5973a
+SHA256: 03fe62c5e3edd05f6a8ed1b786aecd4ff287a0fa1fe18502ff3468347341c8e0
+SHA512: bed453e19e62281a74b7aa3ad09beccc681ea961b75687a732dac2010ca763a5d97fb610c313d54991427c9c72a4b6a26013d9460f6b4dfdee76a43cf86a40ee
+Description: INDI driver for a NUT UPS
+
+Package: indi-nut
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Rick Bassham <brodrick.bassham@gmail.com>
+Installed-Size: 78
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnutclient2t64 (= 2.8.1-5), libstdc++6 (>= 5.2)
+Filename: pool/main/indi-nut_1.0.ab20260905-r18_arm64.deb
+Size: 8296
+MD5sum: 2f0cb30b9e36150e459f840d966e3544
+SHA1: 1a830ed75bb4468b1225d5acd92d394e1e61e9b3
+SHA256: 417be08a1d413df4c112e6be349b2364a60b1efeb33ae4480542bb3f29d06aea
+SHA512: 16bbe7873a8701efd79d3f2805f79c7af4f9596aadc69e022b1ca71860183d585c16a78ef33bbdeddb05b5f126b5ef2d3c556633ec5f32711d7727083a1f01eb
+Description: INDI driver for a NUT UPS
+
+Package: indi-ocs
+Architecture: amd64
+Version: 1.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ed Lee <ed@thefamilee.co.uk>
+Installed-Size: 126
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-ocs_1.6.ab20260905-r18_amd64.deb
+Size: 35136
+MD5sum: 71e97eb6d749726169a59be5d3292d9d
+SHA1: b55b92e4aa8f92874b2dee9e9d8295a9a86c406d
+SHA256: d44159a083d1cd3ce8559bfc9e01dbe634ec9f6a6451e13c775d2449f7ba8d91
+SHA512: 614c23b88bde7f8e2f296651f8013f935e0adfe91f600411b2b806cf5cea507711525b9632c429b703be30549aecb20ed3025461e3cb8cd346495f4b233dea6f
+Description: INDI driver for an Observatory Control System (OCS)
+
+Package: indi-ocs
+Architecture: arm64
+Version: 1.6+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ed Lee <ed@thefamilee.co.uk>
+Installed-Size: 142
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-ocs_1.6.ab20260905-r18_arm64.deb
+Size: 30376
+MD5sum: af79d6eaef9463c6153b8e565598ad09
+SHA1: e192ee03eaa449f57fac8dc27555f5d90d442644
+SHA256: 08fc446bde6eb9c49f6858a3d308ce2535537b55cfa3e48c7c354ad50b091dde
+SHA512: 43a2d016b7c2e152c2d1da0f8152e1fca200174e9454c45514406f10a9ee20046ed9319065b2d7076f69ae9ebd5ccf45a1ecb589198217c2290341a2e16c0f85
+Description: INDI driver for an Observatory Control System (OCS)
+
+Package: indi-openogma
+Architecture: amd64
+Version: 1.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 95
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-openogma_1.2.ab20260905-r18_amd64.deb
+Size: 28232
+MD5sum: a58d925fd23697c7702eba884d2220c0
+SHA1: a2f7797d8939e8dc2c8783336bf73d22e9c62e25
+SHA256: a19f8c4de36c1ff1df71fc6bc95f4cdab6bac2ca3872ad07911f08a95a9bf2fa
+SHA512: 5fe87c9a3d2e1677edd96dd5c85499df3ac3f035dedc8a54ca08dca6c7fddcd1060c8f28f3c7549ccb82a0defded98940d59e8c5fccea45d48272c97ab965045
+Description: INDI driver for OpenOgma cameras
+ INDI driver for OpenOgma cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-openogma
+Architecture: arm64
+Version: 1.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 147
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-openogma_1.2.ab20260905-r18_arm64.deb
+Size: 25336
+MD5sum: 3616ab062596f289237dbe838d682efe
+SHA1: cedc2184ee11178e5510f3fecaed7ad3eb161236
+SHA256: 303a79209c7c07073492259ff820f5c3cc1c11f00b7539b9c4c937244dc81e2c
+SHA512: 152b0df2304a31108eb14caa40a398b4e488af976c974e7d60681b329467c0ca7f627cf89b51183e079282e2c918541a48f3c8a77994a661920c4d2a3dba301e
+Description: INDI driver for OpenOgma cameras
+ INDI driver for OpenOgma cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-orion-ssg3
+Architecture: amd64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ben Gilsrud <bgilsrud@gmail.com>
+Installed-Size: 71
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.8)
+Conflicts: indi-orion-ssg3cam
+Replaces: indi-orion-ssg3cam
+Filename: pool/main/indi-orion-ssg3_0.1.ab20260905-r18_amd64.deb
+Size: 17640
+MD5sum: a82e94fc3ff399bde5ea819a01d0a2f7
+SHA1: 0935bec5f171f50fdaf059637b244741647b90db
+SHA256: 27a4e9720fe311a4efcc16f206cf38d637b6437a1c15ec363d475b079c9dc69c
+SHA512: 76010258455069fbd02c12e2b22d672bae45bfb22af1d56fcab4050167fd30c658e1c47b3e1eb13f8cf75185c6b261a3937c83530c14db12328562110410afaf
+Description: INDI Driver for Orion StarShoot G3 and G4 cameras
+ Driver for Orion Starshoot G3 and G4 cameras
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-orion-ssg3
+Architecture: arm64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ben Gilsrud <bgilsrud@gmail.com>
+Installed-Size: 83
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.8)
+Conflicts: indi-orion-ssg3cam
+Replaces: indi-orion-ssg3cam
+Filename: pool/main/indi-orion-ssg3_0.1.ab20260905-r18_arm64.deb
+Size: 17088
+MD5sum: 493bbb665a812d9a8c68d7e5895e1c7f
+SHA1: 4ac64383f03b0da5058ff10e214b61d45e312c6f
+SHA256: 89bac9af3a9aac911a010608ea7a1702067783443e38efd20ca658ef56a93491
+SHA512: f2412c5882a43926e3479b1ae5534fc3e3282b4ad5d165819a15f068627e12ed400a228d24752f19a95c36d8f494085dbad0325b3aae7549bcc1d81467efc043
+Description: INDI Driver for Orion StarShoot G3 and G4 cameras
+ Driver for Orion Starshoot G3 and G4 cameras
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-pentax
+Architecture: amd64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Karl Rees <indidev@karlrees.com>
+Installed-Size: 344
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libindi1, libjpeg62-turbo (>= 1.3.1), libpktriggercord, libraw23t64 (>= 0.21.1), libstdc++6 (>= 11), libricohcamerasdk
+Filename: pool/main/indi-pentax_1.1.ab20260905-r18_amd64.deb
+Size: 102508
+MD5sum: 5e239bdb8c54fd030cb784310df4ad1e
+SHA1: 480f59c8fc894aabeb70a140926bdad4430553f6
+SHA256: 537c431ee889772b5370fe6a4e5a9480439bb32f487ff863abb5d1b0c6ec7727
+SHA512: 286ca7c79e1fedc82bcc4bd5448e32a38a496691b0d639131ce4442729d52cd25d63f7286de1058df8af1be5a1ff4634b592583e9f5d50a731c246585f555f96
+Description: INDI Pentax driver.
+ Driver for Pentax DSLR cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-pentax
+Architecture: arm64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Karl Rees <indidev@karlrees.com>
+Installed-Size: 272
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libindi1, libjpeg62-turbo (>= 1.3.1), libpktriggercord, libraw23t64 (>= 0.21.1), libstdc++6 (>= 11)
+Filename: pool/main/indi-pentax_1.1.ab20260905-r18_arm64.deb
+Size: 72192
+MD5sum: b51be3ef7bdd34e561dcbfafd7287ea8
+SHA1: 36ea1215bb430e95008cf810fb69671ada71c482
+SHA256: ecc1b66ec528fc0ff0fe06ca8b92a39ed113df6a762cf473f82febe8a1011390
+SHA512: e50b56d5e74496e1a82f906ea5ccc63c4dc4794d903d181e629f0af39a97e34060eb6ee02e6b2099ffb9cff5876650633175326acc23f9db8cf5efc5d05b8040
+Description: INDI Pentax driver.
+ Driver for Pentax DSLR cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-playerone
+Architecture: amd64
+Version: 1.23+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 348
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libplayerone, libstdc++6 (>= 11)
+Filename: pool/main/indi-playerone_1.23.ab20260905-r18_amd64.deb
+Size: 84424
+MD5sum: e58a8425507953da8c9786716bd471cf
+SHA1: c87fcbf34734cf58e9e5501d4a48bb883a4c8473
+SHA256: 80705cbffadac057c3c29ef760f4de940ccafe81dc08bfb469f61115da17ee0e
+SHA512: 9403fd83ea25bd9b041e7bc12cce84e5eb0cce711ce24c67173c587816f2a03cf6fe822ec6804f7e0d465ce687ad5fa4113636151e09d88d5626a814dbb15113
+Description: INDI Driver for Playerone based cameras
+ Driver for Playerone based cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-playerone
+Architecture: arm64
+Version: 1.23+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 540
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libplayerone, libstdc++6 (>= 11)
+Filename: pool/main/indi-playerone_1.23.ab20260905-r18_arm64.deb
+Size: 74324
+MD5sum: 8fedafcb1fae35a80aedb03f76cd3727
+SHA1: a63ec7ead09c71b4db94bc1ddb5f61089638ed35
+SHA256: 13d9a6c76e74d251d2b2c299fd86d5117ff8a40eec50350abb672314e94d1b93
+SHA512: 1091622e4745e0aff6d597152f8e83a68ba42b309c3fe8c9fe2e5991aed8d0832f2536a9480cfbc9782cc4117216cdf1712e5382e246027f239cdadcb5a16097
+Description: INDI Driver for Playerone based cameras
+ Driver for Playerone based cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-qhy
+Architecture: amd64
+Version: 2.7+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 414
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libqhy, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.8)
+Filename: pool/main/indi-qhy_2.7.ab20260905-r18_amd64.deb
+Size: 120628
+MD5sum: b7a8d322e502f6f257d54fca141348d0
+SHA1: bf7a25c9fa99aec70df4bc7173055a93f721f67a
+SHA256: 84b85559d4f505dc20acf832faef1e0200ed0af3ada44232a636773ad73274ea
+SHA512: 1abcce4d6e1f592d1d8716910ca156b55029f573b9c1b30c69500e2d5aec17661be4262c669e9d8ffd66c0d9e85676472b5a174b2a0b7161564d9e2c468c7d85
+Description: INDI QHY Driver. This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-qhy
+Architecture: arm64
+Version: 2.7+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 602
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libqhy, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.8)
+Filename: pool/main/indi-qhy_2.7.ab20260905-r18_arm64.deb
+Size: 108600
+MD5sum: b2a8dc8318d86c4ac08ce1bc5f0c9e5e
+SHA1: 530b0778006a1d4bc5dc6a8f206e0cd6cf0944ef
+SHA256: 14a3c3c8b7264a7147e0a3b0bae6aab14b74520998e1ad5492b8cd595aabba0b
+SHA512: 63a092ebe613522cf47824e1ef64cc82d81bdcdf280ab1b8ce8ebae811b7c6509a4bb0af565cd9f96e303680bf96511c7f04357e187be05bb91cc1167846dd68
+Description: INDI QHY Driver. This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-qsi
+Architecture: amd64
+Version: 0.9+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 86
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libqsi7, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-qsi_0.9.ab20260905-r18_amd64.deb
+Size: 24668
+MD5sum: bbccaae102d4b7f4dd97f249fdde98fa
+SHA1: 37c1879e5c32306e2ad98f53dd580a8ec8b8fac8
+SHA256: 67800996944191a874c12385fbf02115a651e1d1fc93f477ec04a2aceff6403a
+SHA512: 1374407b831850c6f03c6c651fecb02707eeece34941c8c31fedafb63395275736276868c5e1ce4c609588eff34153ea303fbf7b750ce5434d10187e3a2f9577
+Description: INDI QSI CCD Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-qsi
+Architecture: arm64
+Version: 0.9+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 146
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libqsi7, libstdc++6 (>= 13.1)
+Filename: pool/main/indi-qsi_0.9.ab20260905-r18_arm64.deb
+Size: 21744
+MD5sum: 8b162638681b83288a664b10dc836ecb
+SHA1: b670ebf0704d0007e5c24749af8aaf034d4c3583
+SHA256: 38fa57840d3624837a04b143ad0f289ba98e53608a4902a5f048ade69d5ed088
+SHA512: 5c0197bbca141d315d8356aebd3376803078839f2fa46a9c4fed0918e95f31abf58cd7e1084e69c26e81b786681a013f1d9e27f0e39fbec200ba5dc2a11100f9
+Description: INDI QSI CCD Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-rolloffino
+Architecture: amd64
+Version: 1.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 227
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-rolloffino_1.3.ab20260905-r18_amd64.deb
+Size: 65620
+MD5sum: b99924819977ae6b96ab8b7844e9d868
+SHA1: a1fc45a6b437f8baecbd0acd3a58f95af0e7f6a5
+SHA256: 707e9dd73877e32f2155361acc19a88e2f6c2ebf0c98cbb2eb7aacbb52b865d3
+SHA512: 9f0dd68c148345b80174b457a465d16683d35fb1ff2003737851fafbe50cb8739a07ad4ce5f33792e44975cb48e044bd3783c31004568dbc575a52a584bc952e
+Description: INDI driver for Arduino-based roll off constroller.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-rolloffino
+Architecture: arm64
+Version: 1.3+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 271
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-rolloffino_1.3.ab20260905-r18_arm64.deb
+Size: 60836
+MD5sum: 4c5672e107df2c21d5fc3959f94caaf3
+SHA1: 0a373f53ea4ce133e440065eba0cf7b8b3a8a9c2
+SHA256: d6fa54483cd540f8402cea961505187a1cfaf4d809547fc3e75a82a1780d719b
+SHA512: bbea7fdb43cde9d08d3e4f13d9da61cdb2278b1001fbb2e0280a5de75c46817e42237799be962056791450ae5c9994f9e0c0c07dc3dfa5c76edff8180698f23f
+Description: INDI driver for Arduino-based roll off constroller.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-rtklib
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 43
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2), rtklib
+Filename: pool/main/indi-rtklib_1.0.ab20260905-r18_amd64.deb
+Size: 10160
+MD5sum: dd9eb31c4c41717a6a1688362b74d60c
+SHA1: 02eb5949af15052e4d64f7c57a8d523e8c6cbb90
+SHA256: 44c14b365093fa09c232eb65d2e5da45052fe4c2431862c4e8f234efd1bc99aa
+SHA512: ab65c3e32fb5deff7ee913efd8d6ff16515c0bf643c0ced0d901e52075df746f584b99a13c909fdb038338ca6a6e2df71026f6282c791d5eaf8df301ddf492e1
+Description: Precise positioning for INDI
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-rtklib
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 79
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2), rtklib
+Filename: pool/main/indi-rtklib_1.0.ab20260905-r18_arm64.deb
+Size: 9816
+MD5sum: 43a5916b44db2b6d3887765d8b8772f5
+SHA1: aaca9e19312ba83b1c00fa4b80b5d00faa9d8ca0
+SHA256: d21bf8879cfa594eff1034b8a1fd863d988b0e5234942a07ab6b7ca89f3d6c60
+SHA512: d2c180836e779ca7301c0e3d5e88d97719e6e8b329f01e950c9e6d0f0b21e3c51ee1cf5d97c8d004fb409c9368cb00ba29cda5382546db5f1ee838c0a64701c8
+Description: Precise positioning for INDI
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-sbig
+Architecture: amd64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 123
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libsbig, libstdc++6 (>= 11)
+Filename: pool/main/indi-sbig_2.1.ab20260905-r18_amd64.deb
+Size: 36456
+MD5sum: 0c56a44174353bb1d9ee437e711831bb
+SHA1: 0952fd3721dd5ad6c80ec38b624990287c0abbcb
+SHA256: c5141387212af74b865390bf8abff7dc32a8fc2c31245a89dcf17171c8b995b4
+SHA512: f132b4f24024fa4ce9838c4a86d1bf65371d160c7c6e3b3564b1b5ec4c7b232d740423f6e673d3c580012d3e9751b6119a5806397d363780b192253b8b18c1ca
+Description: INDI SBIG Santa Barbra Instrument Group CCD Driver
+ Driver for INDI SBIG Santa Barbra Instrument Group CCD.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-sbig
+Architecture: arm64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 143
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libsbig, libstdc++6 (>= 11)
+Filename: pool/main/indi-sbig_2.1.ab20260905-r18_arm64.deb
+Size: 34616
+MD5sum: ea0eebc5f73875c37d2d617dcd02d680
+SHA1: 3083c4450b64584bec55baeaeeb6ee8e9b08d311
+SHA256: 3a9351cae0f8e1ba3c4ed7dad3d1af7f8a92379337c42bd71717da5d7b77dddf
+SHA512: 8ff8e3267995d5306b34b7bcc31279285971e7ab5ab3388ea200a3653cb5d0a9c2ac1a3ef1459e66da2e24a372400b657239e2d9548ca8ebca814738fad0f4c3
+Description: INDI SBIG Santa Barbra Instrument Group CCD Driver
+ Driver for INDI SBIG Santa Barbra Instrument Group CCD.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-shelyak
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 81
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-shelyak_1.0.ab20260905-r18_amd64.deb
+Size: 17492
+MD5sum: 5f744a3b5ee9d5c77a119b1e7526b53d
+SHA1: 4aee97813a7c20c7cca50036ee448742a5d9bbab
+SHA256: 00a37e9dc99df6d67c22203556372885d7e5b6fcbd4f3199553847469b410845
+SHA512: 2c6ed3d2fd368b878fb2aaaf57ebbb0823c91955ee513e842aecca5addfeb509ccab2196935ff1d11f582debb31a5ba96f0bddf65c47e265d4c5768d51554203
+Description: INDI Shelyak and Alpy Spectrograph Drivers.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-shelyak
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 145
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-shelyak_1.0.ab20260905-r18_arm64.deb
+Size: 16456
+MD5sum: ea1978af270af422a4b637021dc3f055
+SHA1: 002f56d1de7c27b8d4722d6c3f73c0908f90ed2c
+SHA256: f6f677493c61025f1275115fb4ccf301e4103f1bf81576d8507b182e828af1fe
+SHA512: 782858aca43773dfa0140e19e9d434b530088b0d41f1769023d6f6c86765f199251c2846791e8ebc93535be092c832573893abd37ca96682438e36d91e57324b
+Description: INDI Shelyak and Alpy Spectrograph Drivers.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-starbook-ten
+Architecture: amd64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 471
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 14), zlib1g
+Filename: pool/main/indi-starbook-ten_0.1.ab20260905-r18_amd64.deb
+Size: 142604
+MD5sum: dbec76e02c887d0ef0e157f4c6a4e2e3
+SHA1: 5ed6fb61cdb1847d8c3ebf2716ffeb152d34e0dc
+SHA256: c5287e2a9f56ae2c33b86bb4ea8e92237f3dfdc10516cc7c9fdc62c5ac3bf1b5
+SHA512: 84ca2b14c47293efc5e2e64dd760cf016052931da439bff40be9b0cabdbf4e7a730e156418fc47505815defec5a6883e7889fea55c79a092b6f63ca4e925dfad
+Description: INDI Starbook Ten Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This INDI driver controls Vixen Starbook Ten telescope controllers through an HTTP link.
+
+Package: indi-starbook-ten
+Architecture: arm64
+Version: 0.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 527
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 14), zlib1g
+Filename: pool/main/indi-starbook-ten_0.1.ab20260905-r18_arm64.deb
+Size: 126868
+MD5sum: 50797170d9625f9c98c2e8489c0b99a8
+SHA1: 7a601463b6f7f309f84c3c5de27bd70d2a8dadd6
+SHA256: 7356d4695b842318097f5212133ca0960106eab2c333c51b27cad062b6ea0bbc
+SHA512: a22921d3f443e8b8eb77096d7ca548a439d3bbef69f06380cfc703ce851b19dc1f7e0c095cda9e000ef07b424c798c95e3317d100de70c47cb744ac9e1d0abd3
+Description: INDI Starbook Ten Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This INDI driver controls Vixen Starbook Ten telescope controllers through an HTTP link.
+
+Package: indi-starbook
+Architecture: amd64
+Version: 0.8+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 267
+Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 13.1)
+Filename: pool/main/indi-starbook_0.8.ab20260905-r18_amd64.deb
+Size: 79468
+MD5sum: 328a5138e83dfdea4bc45a26daf44daf
+SHA1: 1d32d9e30556c2e806e79826390876097b1aa12e
+SHA256: 4120da362232d53c92ca203c9ac2839799be89d39078a6d61f47d3dd962c64be
+SHA512: 89b54b724fa454ac851d5ef3341e2c4f37c885fbdcd7a204acc718ef3e32bcfbf2b800c243aac1804eeb639b70b6e34fbe7b135d097e2e04da5992ebdedcb80b
+Description: INDI Starbook Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This INDI driver controls Vixen Starbook telescope controllers. This driver aims for compatibility with first generation Starbook.
+
+Package: indi-starbook
+Architecture: arm64
+Version: 0.8+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 271
+Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libindi1, libnova-0.16-0t64 (>= 0.16), libstdc++6 (>= 13.1)
+Filename: pool/main/indi-starbook_0.8.ab20260905-r18_arm64.deb
+Size: 72180
+MD5sum: 957ecffd5c3d4735a881682840f72c19
+SHA1: a5310864e2d08e9c5d5961d0252b9c9322fe4679
+SHA256: e4923b08f4b61a226e3360d0a569ecf2d0cdf5b48ee9bf632f0b70fa78578049
+SHA512: 5755090d539ebefead5833096a7a5eb04059d94e8ebb2f2e5388bc87d3216b765d9e63da361fd0cab361626cad3f6f9222f265cccf33c950bc7fb0a481783273
+Description: INDI Starbook Driver.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+ This INDI driver controls Vixen Starbook telescope controllers. This driver aims for compatibility with first generation Starbook.
+
+Package: indi-svbony
+Architecture: amd64
+Version: 1.4.2+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Blaise-Florentin Collin <thx8411@yahoo.fr>
+Installed-Size: 187
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libusb-1.0-0 (>= 2:1.0.8), libsvbony
+Filename: pool/main/indi-svbony_1.4.2.ab20260905-r18_amd64.deb
+Size: 59224
+MD5sum: b0d375e70cef345921e4ad02967844b3
+SHA1: b4b81ac2e80d2b33faffa0429e3edbc4139fe608
+SHA256: a4b032ac3010341dcb69ea6cc46990591970a54e33d36fdbd643814c3089d775
+SHA512: 14082b3ba243f86dd4118a7c6bf4ae9310f0c5273944aebf9cd5eec3561f122bd7aaa186ced397cc319fc412b6ead3f0b5e7941b860a3ae9a5f2621f93a3b3b0
+Description: INDI driver for the SVBONY Camera
+
+Package: indi-svbony
+Architecture: arm64
+Version: 1.4.2+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Blaise-Florentin Collin <thx8411@yahoo.fr>
+Installed-Size: 275
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libsvbony
+Filename: pool/main/indi-svbony_1.4.2.ab20260905-r18_arm64.deb
+Size: 51840
+MD5sum: cb0606f6ff20d573cf4e27be6d386a60
+SHA1: 937d1ff236d49c5bb2309c499bf305e87b4f81d6
+SHA256: e6cbbf0dc074ff9acfb8181c0e730f2b267af8e3d319c986c7617a1e08339ebc
+SHA512: ebb925834cf825bebb561d08bb735b512b685bda3b7f9c8bf57ffcbae9dd79ad92f4996fccd70e2515cb9a914dfd4c2569dab920198282db11ce8ac805e8f66e
+Description: INDI driver for the SVBONY Camera
+
+Package: indi-sx
+Architecture: amd64
+Version: 1.16+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 166
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.9)
+Conflicts: firmware-ccd
+Replaces: firmware-ccd
+Filename: pool/main/indi-sx_1.16.ab20260905-r18_amd64.deb
+Size: 32972
+MD5sum: b61acd15d9821f435eb37dd9bb88a008
+SHA1: 0087c381df157a40ee9a1b833ec1f1c24c268933
+SHA256: bc53489fbafc1201931bcf4e3c775bc7958e8d3b9f9cf63a7849bc2b0d186000
+SHA512: e062c16e99d84089902a5ac0d93c5cf4959da91f1476b343cf5860055651261a513aa7f95e13c8871d7b6e1600569ec308431f237ca0545889d61912b2224416
+Description: INDI Starlight Xpress CCD and Filter Wheel driver.
+ Driver for Startlight XPress CCD and Filter Wheel.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-sx
+Architecture: arm64
+Version: 1.16+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 285
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.9)
+Conflicts: firmware-ccd
+Replaces: firmware-ccd
+Filename: pool/main/indi-sx_1.16.ab20260905-r18_arm64.deb
+Size: 31628
+MD5sum: a054db63e02d7c5d738eeeb2e7d17e59
+SHA1: 54b973400449abf5ff289a60465ae2dca306432e
+SHA256: 746ca7830939162853885260ad512f6947d8fb4a49f68c44803324d82506d532
+SHA512: 6135964fee22628e4eef43d9e57d3aa2960abbd08225aa0a5eb05c4eddaef7c62d1956940dc9986299723ea4fce6a0019d1f38ea636f2d49e3e8be07a95c91e3
+Description: INDI Starlight Xpress CCD and Filter Wheel driver.
+ Driver for Startlight XPress CCD and Filter Wheel.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-talon6
+Architecture: amd64
+Version: 2.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Ferrante Enriques <ferrante.enriques@gmail.com>
+Installed-Size: 58
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-talon6_2.0.ab20260905-r18_amd64.deb
+Size: 16712
+MD5sum: 30cc385dada4e2742dd3361ab5201c29
+SHA1: a4561e5d971ddc87416d2cb12c8cc0d126015d61
+SHA256: c4ab7db0ea72c966c4e941f72b9028679ae8fe3c416ecbe227822f2b87b267cc
+SHA512: 9ba88ca10dd35085b9dca2af1585027fa9f555efe1bf65a54a09cdcdef2cda1d037d7dd6e823e4c575f381e12cfce29ccec2af6efc87267c2c3a2fe6e732f785
+Description: INDI driver for Talon6 Roll Off Roof.
+ .
+ Talon6 is a control system for obersvatory automation
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-talon6
+Architecture: arm64
+Version: 2.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Ferrante Enriques <ferrante.enriques@gmail.com>
+Installed-Size: 78
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 5.2)
+Filename: pool/main/indi-talon6_2.0.ab20260905-r18_arm64.deb
+Size: 15508
+MD5sum: ee9b9368d72e035dea3483f4784d9caf
+SHA1: 83b32fd97e803f97e4c5c8b87c2a185f2541075c
+SHA256: dba2fd94fe3e95cdc3c43d8a4791c40305bf8ada1426213777abf1b2f35cd680
+SHA512: 506a088b0c3ae5aab9eb8b4a96a39bedc963cfd1b7149956a4854abcc170908f31ceb74c8ae9ee465e4ba39645ab630594b05c604360c9170425ecf8a9398c82
+Description: INDI driver for Talon6 Roll Off Roof.
+ .
+ Talon6 is a control system for obersvatory automation
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-ticfocuser-ng
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1299
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libqt6core6t64 (>= 6.8.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.9)
+Filename: pool/main/indi-ticfocuser-ng_1.0.ab20260905-r18_amd64.deb
+Size: 315120
+MD5sum: febf741aacdb372052f892e9223a4b0c
+SHA1: d50a260578f59e405065d9a26fe27d92bc2472c6
+SHA256: 2fa3b0ee14f9afa95ef03b13c45a708f37948f32673ff05a069b1d7adf0f6124
+SHA512: 559ec6d29e3ef2bb8d41b204d595b7c296fd74ad52f5bb5d1a4d71d66fccd2a00d76ea8527b69d4a25195ceb267544191162044586eea5e6d3f712e882114d8e
+Description: INDI Driver for ticfocuser-ng
+ Driver for ticfocuser-ng.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-ticfocuser-ng
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1520
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libqt6core6t64 (>= 6.8.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.9)
+Filename: pool/main/indi-ticfocuser-ng_1.0.ab20260905-r18_arm64.deb
+Size: 291000
+MD5sum: 906707308d5f9245b2f6f523565170b0
+SHA1: 2e1dad5ad313a0ced8ce99b1dc5a67a897fe3eb4
+SHA256: 12860fe9cf917e77d99e49224ad8529ff359bea5a33cabe2068ba34373dacb30
+SHA512: 42862168ff19d444d974e2b20b41b163017602fd9963125cb28ead8774686cef3be2a6c42d9718bacac907471ef76680f738c0e109db672c6714a66130aadb8e
+Description: INDI Driver for ticfocuser-ng
+ Driver for ticfocuser-ng.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-toupbase
+Architecture: amd64
+Version: 2.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 2457
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libtoupcam, libaltaircam, libbressercam, libogmacam, libsvbonycam, libtscam, libstarshootg, libnncam, libmallincam, libomegonprocam, libmeadecam
+Filename: pool/main/indi-toupbase_2.4.ab20260905-r18_amd64.deb
+Size: 122920
+MD5sum: 535c8aead48667ab7a2ab6a1abd453b9
+SHA1: 6283481c4e2085b0cda14b6cbd2e41eeb4177851
+SHA256: d709c2ff8fffc2ec9260e2041e714999155e4ce21bad15f3a19d6373d1ab04ca
+SHA512: 3fa104e65661a8c04d4642037befd9d1a63629c3b3c5d9ecbd591d2c97eaabdfd22478ac7af93bfb43e8dde4810aed0120c2614a0e9bfa7ac4b80fbb6dc92baf
+Description: INDI Driver for Touptek based cameras
+ Driver for Touptek based cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-toupbase
+Architecture: arm64
+Version: 2.4+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 3001
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11), libtoupcam, libaltaircam, libbressercam, libogmacam, libsvbonycam, libtscam, libstarshootg, libnncam, libmallincam, libomegonprocam, libmeadecam
+Filename: pool/main/indi-toupbase_2.4.ab20260905-r18_arm64.deb
+Size: 121580
+MD5sum: 52f8aa60e23ef8e5d253472dc3d04c88
+SHA1: 2a5f5f6764b546609cd63acf7e0a062b19c97610
+SHA256: 883560ad381044345f4cc8d97e8f20635f5490cb8a5f2273bcf20bdfcae1a84a
+SHA512: 4f7264246313d821fae83391ccc0b806f608a1763b96bf0cf65b6154e46b50702d2e752ba1541e251e2f4a2dc869422352120bd8a823c0f39e0205f3547820a3
+Description: INDI Driver for Touptek based cameras
+ Driver for Touptek based cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-weather-mqtt
+Architecture: amd64
+Version: 1.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 58
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libmosquitto1 (>= 1.0), libstdc++6 (>= 5.2)
+Filename: pool/main/indi-weather-mqtt_1.2.ab20260905-r18_amd64.deb
+Size: 13444
+MD5sum: 2c3b88cfdf9709c0ce397d47df3a28df
+SHA1: b0013f1e0cd6936b411237772d20315664a6d6fd
+SHA256: 3962ac5f8278396ad25d7cb4b18ad0ed18a4b36f34ffe492558e5dcc211f4fc0
+SHA512: 5c3acecef7f297e4c8e0912e1f990c274dff56743d12809a6dfbb9a0dde96994bd325e410dbb51cffe8c23e988b7e3750871f468e54cd7cb067bee1ee2bd4ce1
+Description: INDI Weather MQTT - weather driver using MQTT broker as a data source
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-weather-mqtt
+Architecture: arm64
+Version: 1.2+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 78
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libmosquitto1 (>= 1.0), libstdc++6 (>= 5.2)
+Filename: pool/main/indi-weather-mqtt_1.2.ab20260905-r18_arm64.deb
+Size: 12428
+MD5sum: 9f6bfd779f25862c9865a9a0eb14d975
+SHA1: 91a751ec9789ed00ee786ba8e4520f540082957a
+SHA256: 03d2927c03759e5fa79213424272f7a729968ba0c13f4d64fa0fe4758be78749
+SHA512: 70e6ef92c22dbc730658f9c55da565d4668c2795e8428f6ce038bb562d24619a5d3f327066aa7b3bb0877223ee625270cbcb06cffed871fe1f1131dcfb584eb5
+Description: INDI Weather MQTT - weather driver using MQTT broker as a data source
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-webcam
+Architecture: amd64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 107
+Depends: libavcodec61 (>= 7:7.1.5), libavdevice61 (>= 7:7.1.5), libavformat61 (>= 7:7.1.5), libavutil59 (>= 7:7.1.5), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 6), libswscale8 (>= 7:7.1.5)
+Filename: pool/main/indi-webcam_1.1.ab20260905-r18_amd64.deb
+Size: 32884
+MD5sum: cf6129322468a78174bf36550efbb2f3
+SHA1: 63842d5cad6b7035b14eb59e067edd5440c3e7fc
+SHA256: 177c8f98abc7ccc5c74f23d82c050348de546e42638a00d07d03ce5ecb39d75c
+SHA512: 2b65a573714b3d1ed337eaaa24efa3fcb78d8d3b7a1085592f53b2da9865402e55432bcbc46df619ededc8f5fee08acdd85a68d7c07bd5bb74c9bdfd9d478317
+Description: INDI Driver for FFMPEG based web cameras.
+ Driver for FFMPEG Cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-webcam
+Architecture: arm64
+Version: 1.1+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 143
+Depends: libavcodec61 (>= 7:7.1.5), libavdevice61 (>= 7:7.1.5), libavformat61 (>= 7:7.1.5), libavutil59 (>= 7:7.1.5), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 6), libswscale8 (>= 7:7.1.5)
+Filename: pool/main/indi-webcam_1.1.ab20260905-r18_arm64.deb
+Size: 30164
+MD5sum: 6e4a9c0a82163eadbe50821e72e675fe
+SHA1: 48a88eeca79322b88de5b7698061baaecf75afe5
+SHA256: 0b576d0a25022345b620d57529360d10cd4b938ebfc9c0837da9d79fc76f6664
+SHA512: bc11242a32ae04f7e5dc35ffc6f8a34a4db365d6c6393bfbd1a57fc1c6319bf6b2878fe67c4833e7edc9522ea06d4ebc799d17084f046b9ea228374d2ec8c87a
+Description: INDI Driver for FFMPEG based web cameras.
+ Driver for FFMPEG Cameras.
+ .
+ This driver is compatible with any INDI client such as KStars or Xephem.
+
+Package: indi-weewx-json
+Architecture: amd64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Rick Bassham <brodrick.bassham@gmail.com>
+Installed-Size: 126
+Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-weewx-json_1.0.ab20260905-r18_amd64.deb
+Size: 37860
+MD5sum: fb2f084c0f4b2b9e1f57795eec142f5e
+SHA1: 223e73abbda9fec670b80ad191e1a48be414234e
+SHA256: e3eaf19d21aa8441145b8783be82555c5681d3d8feffe5e2d6b90f92a18b62e5
+SHA512: aed7bef7e41b2e6bd536f90f2f0efcee50c2880aa5f6dbe595accb4996b1cd8abb9a0fd9c0d6d33f8ba931b70e4f087862bf3de7371bd6f7686a0143763adca8
+Description: INDI driver for the WeeWX Weather Station
+
+Package: indi-weewx-json
+Architecture: arm64
+Version: 1.0+ab20260905-r18
+Priority: extra
+Section: science
+Maintainer: Rick Bassham <brodrick.bassham@gmail.com>
+Installed-Size: 142
+Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libindi1, libstdc++6 (>= 11)
+Filename: pool/main/indi-weewx-json_1.0.ab20260905-r18_arm64.deb
+Size: 35016
+MD5sum: 8937b5bf4d56f871ca9d727516ec1786
+SHA1: 95e4d045b6afa686f39515c4e2468f8f219037a5
+SHA256: 107f84a78f88a90c7ce00f6e00bb534ce3a2a041d921e6ecf02681f1a69b194e
+SHA512: 151eebcc227c5b91fac205319f6149ed9d91368fb5b0fe89065a7df2965da6e213d3849c50518d6b0233dfc7e1e4f6f53cec118c4b55d42dfcfafbc2b0b8e20a
+Description: INDI driver for the WeeWX Weather Station
+
+Package: libaltaircam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 25830
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libaltaircam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3740712
+MD5sum: 8b867ccfe01cfcc5fe1c27f46f9feaac
+SHA1: 9753e54e93106b6aaa6b531d6a4a763a50bc16fe
+SHA256: 34a2a74367ac337d918918bfa7edce866f9d965500f7e3d5fc96d2397c5c7899
+SHA512: b3df4e58a9227c7facf32152c3c7ebc70b05d0573d3d7f043198820d99d1602096a81a1d8530d5df80038465af7dcb1006ff8f058d9102612da309688a7f0b64
+Description: Library for Altair Astro Cameras.
+
+Package: libaltaircam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 8083
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libaltaircam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 1126508
+MD5sum: b00a3320858648a32dc7b22d01ba5a15
+SHA1: fee339c86d1340951674abfe7644c9ed0102fe9b
+SHA256: f7f2d3408e4d8ffbbce1af0bc849d46ac0c505a0d4018a62295fe65da4b7d6e5
+SHA512: 5013cccaa556680d65b4641f1a8fe5e331bd1b3e0e906b50dbf5eb987d2b23a17b8f5e7dbb3a738b229909fd1b49ee874fbb101085a8d7376485aaed4164b85d
+Description: Library for Altair Astro Cameras.
+
+Package: libapogee3-dev
+Architecture: amd64
+Version: 3.2+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libapogee3
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 245
+Depends: libapogee3
+Filename: pool/main/libapogee3-dev_3.2.ab20260905-r18_amd64.deb
+Size: 36556
+MD5sum: 23fc343f541fc31a5c6e17abaef8fe60
+SHA1: 73a197a41ccf54931e1819f28dcf032fe2b10150
+SHA256: e2bcf507bca3f20567f518447a748134d0ead2eba7036b8f431f1ed9c01d07ba
+SHA512: bc70cf9ab14e3b2bf14be4d8b2dedb2776f13198612ce489eeb36c602a5da189a1d53278d3c60dcf40329f10bfeb4b49f0f21a2aef70d989e301846768ec710e
+Description: Apogee Library development headers
+ .
+ This package includes development headers for Apogee CCDs and Filter Wheels.
+
+Package: libapogee3-dev
+Architecture: arm64
+Version: 3.2+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libapogee3
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 245
+Depends: libapogee3
+Filename: pool/main/libapogee3-dev_3.2.ab20260905-r18_arm64.deb
+Size: 36552
+MD5sum: 5fbc64c524960f110535bbc0ab40d14c
+SHA1: 21f89cb0a3ccc4d415dbd9d5f5fa63075d0f5e1c
+SHA256: 7db46cb304a7d780463cc67007c60a6fc778f63145fff4ffc20eb0176e39de98
+SHA512: 3ee2f851402db361c53c09701fbe88a93ed3bcf9addf16f8f7d85d3a741a941b905159b2300c9c212ceb211394160426945b3e17b84df09ddd37a211d5fa567e
+Description: Apogee Library development headers
+ .
+ This package includes development headers for Apogee CCDs and Filter Wheels.
+
+Package: libapogee3
+Architecture: amd64
+Version: 3.2+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 7927
+Depends: libc6 (>= 2.32), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.8)
+Filename: pool/main/libapogee3_3.2.ab20260905-r18_amd64.deb
+Size: 417868
+MD5sum: 739fb2a7520cc5b89fc068e40862e1dd
+SHA1: d1bf5bd3cb9494e771e55f01df3f75e700b1c18e
+SHA256: f9dbb7525287b40a8e6cca92a64f6638d2feeba51ce193f19bc55dc741d05256
+SHA512: 4b9b23093fd556eb3ec96c60461c37874507a5aeeb507597d52c453691de4a1c5b014f64d847f76631ad7838aaa557e0b619d5b068e5f6c20e77eb17fff439cd
+Description: Apogee Library
+ .
+ This package includes library to control Apogee CCDs and Filter Wheels.
+
+Package: libapogee3
+Architecture: arm64
+Version: 3.2+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 7867
+Depends: libc6 (>= 2.32), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.8)
+Filename: pool/main/libapogee3_3.2.ab20260905-r18_arm64.deb
+Size: 367380
+MD5sum: c9eb5f2a13ff16a1f2dbc9ea7a773d5c
+SHA1: e678b3dcf18f863c5f53973348190432a23e0b92
+SHA256: e00e414bf7770298c6d143814fa5b03dc2c39ccde493658c7cefde2e0952f860
+SHA512: f0b2ddb8b45358381aa7e69b6e1c2a239fee07e6a30bd4ec0c3549cc3cff7102d07cbfd6111de7595022a857e40c8bb14bd1178e8b259868b7c53aac4e74dfdd
+Description: Apogee Library
+ .
+ This package includes library to control Apogee CCDs and Filter Wheels.
+
+Package: libasi
+Architecture: amd64
+Version: 1.410+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 4687
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 6), libusb-1.0-0 (>= 2:1.0.16)
+Conflicts: asi-common
+Replaces: asi-common
+Filename: pool/main/libasi_1.410.ab20260905-r18_amd64.deb
+Size: 897720
+MD5sum: 170076655f4cdc313c4ff373c9a36011
+SHA1: 4d9bd6504e9641ee571419c500e80c1327cc1fb2
+SHA256: 2097c5f3a3b4bdc49be8500e504a2b34259c12e327cc8427e6b3bf8099a5dab5
+SHA512: 2ca2a1b8c1fee3eb4e79261a58221010e01ff8efa967e4c96ed8b3050978b17495b801bd0d4816d7867510df53a03460f77f3bdc29f9caf62c2af7514826facd
+Description: Library for ASI Cameras, Filter Wheel, Focuser and ST4
+
+Package: libasi
+Architecture: arm64
+Version: 1.410+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 4407
+Depends: libc6 (>= 2.17), libgcc-s1 (>= 4.5), libstdc++6 (>= 6), libusb-1.0-0 (>= 2:1.0.16)
+Conflicts: asi-common
+Replaces: asi-common
+Filename: pool/main/libasi_1.410.ab20260905-r18_arm64.deb
+Size: 809260
+MD5sum: 973a04b5c69b6a023ad38ce0a282aa08
+SHA1: 3031967f88819b28c2eb233c09108f3166633a14
+SHA256: 546855eae09081c29a7f73a6e3e8708c96128ed0d401c6740ddc0039a2c68ad2
+SHA512: 4eb295cb0aca4d783f5a280a20627ee0af95a94743edd7f779833f153e8e63f8fd1bea69b975d4cfd08da363f3dea24822788a942edd02b5a5b44a550eb80cfb
+Description: Library for ASI Cameras, Filter Wheel, Focuser and ST4
+
+Package: libastroasis
+Architecture: amd64
+Version: 1.1.0+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 126
+Depends: libc6 (>= 2.17), libgcc-s1 (>= 3.0), libusb-1.0-0
+Filename: pool/main/libastroasis_1.1.0.ab20260905-r18_amd64.deb
+Size: 21340
+MD5sum: b3793755b225ef2ccdd9285acb278396
+SHA1: 3921a2d41acb1b75586fff5f54efb80c9355fc4b
+SHA256: e58e37e1966f0f199ef9120abc1015f0602c8473431ccfabcc3fb5fde9600cae
+SHA512: 950b219b9ac9be6c81d5fad8656fe0c343fa280a029ba6a64d15dd9614f3051594df801221a978a53ba8ce0fb8acade1aa8fd1dea548d0e6a4f95ef4f1e408fc
+Description: Library for Astroasis focuser
+
+Package: libastroasis
+Architecture: arm64
+Version: 1.1.0+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 110
+Depends: libc6 (>= 2.17), libgcc-s1 (>= 3.0), libusb-1.0-0
+Filename: pool/main/libastroasis_1.1.0.ab20260905-r18_arm64.deb
+Size: 19856
+MD5sum: 2d8a336c186c88fc06e98666ea15883c
+SHA1: b17196cf8b772dffe0cd9f25315ca2132588a620
+SHA256: d38036664f5931cefa56b1aff411ba15022537c5b8c47f4ef8b92aa9cf72591d
+SHA512: 6daae77b9e4a2668777d5675df5d577f145dbb008f58432067d62fd1ec8f5e3076aeea51079d739ff512fee1c32716a5425a9fdd4b5de3bc0e54e2d0e8567e75
+Description: Library for Astroasis focuser
+
+Package: libatik
+Architecture: amd64
+Version: 2.2.9+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 35171
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgomp1 (>= 4.2.1), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 6), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.21)
+Conflicts: atikccd
+Replaces: atikccd
+Filename: pool/main/libatik_2.2.9.ab20260905-r18_amd64.deb
+Size: 5926200
+MD5sum: 043dba375dad1b2e4d9a45fbeddba10f
+SHA1: 3d8e633e4decd8b64a4525752bfec5c8b0681f2f
+SHA256: dbc25664cd130229dc0f3dffd25937fd23ae643fba38ed2b3aa60e2f31fd8e64
+SHA512: 498f5c75fc86d88373b5b3aab1b5fd1599298b9c68cb8c43ac90efa1482791973b320f2de33c9fdcbbaf025eda75c2aaa3b4c8936c5ab25f50475011f5a19b91
+Description: Library for Atik Cameras.
+
+Package: libatik
+Architecture: arm64
+Version: 2.2.9+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 28789
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 6), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.21)
+Conflicts: atikccd
+Replaces: atikccd
+Filename: pool/main/libatik_2.2.9.ab20260905-r18_arm64.deb
+Size: 4909960
+MD5sum: 4fc9dccdd63a097ab1d8e9b4ecb27bc3
+SHA1: 5f76e8cadac17bccc7f2287b273fa318dfb6c5f9
+SHA256: db16aa85c64c27373956c87da46177dff2317ed4307f92f94e218f57ce01d73d
+SHA512: 403884a2260d64530af820293ce8be19f3f98ea91be428fedf2b35a4afd932d63e2bec166aa06b580a7ec031cc7a582928b78c8cd53305dadd62782e9a438b72
+Description: Library for Atik Cameras.
+
+Package: libbressercam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 22971
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libbressercam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3878780
+MD5sum: 95ee2af6a7a260270444a725125c4df2
+SHA1: 6f9351d6642bc5ff15165417da61ec387e634d19
+SHA256: 9e5e33bcfd7722bac0f46299c6ba6a92e6c75ee320611c1c15554a1127f2c4c6
+SHA512: 44596c58ac29668c481b9f398f3722d1c6a54d9bb459ac1c0a57d6a39bcbfc6bd35131ebe6cb38fcc576f8dadd133a0159e066bafc09949a4724b531fdd1503a
+Description: Library for Bresser Cameras.
+
+Package: libbressercam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 5275
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libbressercam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 1181516
+MD5sum: 92e5bd49fb43f55702978af2b0c35ed0
+SHA1: ce3ba86d39e5a62009e6a3c39291396d12e37973
+SHA256: ca361b296ffb1a053b9c55e49d6586e1302ca11690e79cacd5530bc458e1d394
+SHA512: aab0445524f22c50741df6d2cd5fdb197ecbef5c826139611dfff3e8f3717876da7d8600c4ca81bb3f1dc4882f961709eb76e55f5080e2471d3272d43bfc48a1
+Description: Library for Bresser Cameras.
+
+Package: libfli-dev
+Architecture: amd64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 25
+Depends: libfli2
+Filename: pool/main/libfli-dev_2.1.ab20260905-r18_amd64.deb
+Size: 5256
+MD5sum: f7c10944bf258286ab8d00de72f8db80
+SHA1: 97934d5956b49d5e4a772aa6f1bf6e3fb3c7e7f0
+SHA256: 8e0d706009bb27aa90d3e9eb27008808d811d27153034af795d2310a32d875a1
+SHA512: 5fa03af44b9b27ec0f39ded47d0d49aebc3aaefd06cc38ea6545c6778010fba143ccf0ed59cb4ca3a0b1b1fe359052f474132d01962a31605b6d33d40c417d3c
+Description: This contains development headers for the Finger Lakes Instruments library.
+
+Package: libfli-dev
+Architecture: arm64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 25
+Depends: libfli2
+Filename: pool/main/libfli-dev_2.1.ab20260905-r18_arm64.deb
+Size: 5252
+MD5sum: 8cdec23223a8448374b3b8655e4ddf3b
+SHA1: a022fafe38357ed17587b71f2a94a7deba667196
+SHA256: e3ee8f345681fb0953f98b5751d0fb622d8ec242940c2dbbcb7819eae382b975
+SHA512: 84c222ba562401fd1f53d3dbd787519e8884cd5d82a7b3ab204118f99a2df660525041fd196497b0f1df63a854cf42c53071f8e4220161161bb6404e3b04b052
+Description: This contains development headers for the Finger Lakes Instruments library.
+
+Package: libfli2
+Architecture: amd64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 134
+Depends: libc6 (>= 2.34), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libfli2_2.1.ab20260905-r18_amd64.deb
+Size: 42532
+MD5sum: fee0d75c2e257879c4b3c04c3158b717
+SHA1: 9cd143a5358ff6771f4bce760b109299f731bf2c
+SHA256: d248369cead53ca75a8e40b187e86348f7c67f5f4309fe0f464f0c8623efdfd4
+SHA512: 2cae73daa3ceaa189ceaacafbcf70666540502e643f94f70b845350d540beb875bc4f5b76b31434f7bc9d9963b811e9628a0ab192bb84a96afdcd513022b7969
+Description: Finger Lakes Instrument library is used by applications to control FLI CCDs and Filter wheels.
+
+Package: libfli2
+Architecture: arm64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 146
+Depends: libc6 (>= 2.34), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libfli2_2.1.ab20260905-r18_arm64.deb
+Size: 40748
+MD5sum: a1784d4d1f1c319d779e1c40257dc13c
+SHA1: 77325135e7483bbf9ad5e21d78e850c701fc0998
+SHA256: 5db8deac8d9b860cdf50205e466a90776741dbc8109f7fb51659642f86300a98
+SHA512: 313346859a9e730cd5cf17af2b9d0eaecc3aa27c94d443f5e0c3e7191a597fd033e383069ee5b186e55301c6ea9ad1cb9377092d8845159e7541e445908432f0
+Description: Finger Lakes Instrument library is used by applications to control FLI CCDs and Filter wheels.
+
+Package: libflipro-dev
+Architecture: amd64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 214
+Depends: libflipro2
+Filename: pool/main/libflipro-dev_2.1.ab20260905-r18_amd64.deb
+Size: 35772
+MD5sum: 63d51f9551412349d5131f9b9335938a
+SHA1: d6635d15c2521bc724861e5d1276b247d1538405
+SHA256: 14d26fe0fd9d12f6b5d7756a4e95d82472b73ca2747abe5dee198ad0d2c4bec2
+SHA512: 43d2d16deed7b051c6cfc5cf4d26e677ce18d1781d8f579f8d544a4f81368dc2614a824def8579915547b437ea0cea13e75c88bf204a39d3e1d7da450f6de2eb
+Description: This contains development headers for the Finger Lakes Instruments Pro library.
+
+Package: libflipro-dev
+Architecture: arm64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 214
+Depends: libflipro2
+Filename: pool/main/libflipro-dev_2.1.ab20260905-r18_arm64.deb
+Size: 35772
+MD5sum: 7f7df54d956938bdf12e6c7b32546163
+SHA1: d07a2579c83f4d2163c57ec9e0eb5515eb65af3e
+SHA256: a61b15a39a7b53f786f16745bdd4e877dc3c31d0d4853254dadfd7af1af8a073
+SHA512: b82432dba20f53f08aa30c05f42d4dfcac383183a4fcac7fbaf44b1f2dc3fa382b35d40e22040a88478211aef9e8b52c2b6f1fd60583aa2b3cb17ee283715788
+Description: This contains development headers for the Finger Lakes Instruments Pro library.
+
+Package: libflipro2
+Architecture: amd64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1015
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 12)
+Filename: pool/main/libflipro2_2.1.ab20260905-r18_amd64.deb
+Size: 259860
+MD5sum: 118ff647cf1ef3c5e4abd8877ca15c79
+SHA1: 041f8faa4dbe4eb701897e0eec6fef2c31ceb894
+SHA256: f065d96aebcf4a16637c6bd7953653508002d0b25d188ac7511086766a755397
+SHA512: b2a7c6f3e71cd9cf1d8111c31fab09be919756ed20bd22377793e35d4fd09ca932072a8f063efe10c477a88841ac78e1acd2a0a61b805b7ad6ce35918c0fbfb7
+Description: Finger Lakes Instrument library is used by applications to control FLI Kepler cameras.
+
+Package: libflipro2
+Architecture: arm64
+Version: 2.1+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libfli
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 989
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 12)
+Filename: pool/main/libflipro2_2.1.ab20260905-r18_arm64.deb
+Size: 245612
+MD5sum: 4337a82030bd7d99210f041e229ec95c
+SHA1: 5c37c4d669c68ebf8cae6c670326fca6e1ed44e8
+SHA256: 70571dc11160dd17e7fd4448fb7af1e6f42d21e3f883f936dd9769e60bedd0de
+SHA512: c378584dc7cc57320ec767e41def18e888a268a31a232531f4e869418342fcc8f7b784aba0295a041a03e2f5f14553fccb8291badc3920a470bbe5cca0d03b73
+Description: Finger Lakes Instrument library is used by applications to control FLI Kepler cameras.
+
+Package: libindi-data
+Architecture: all
+Version: 2.2.4+ab20260905-r12
+Multi-Arch: foreign
+Priority: optional
+Section: misc
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 123
+Filename: pool/main/libindi-data_2.2.4.ab20260905-r12_all.deb
+Size: 62408
+MD5sum: 8cfccaeee81594943c4bb39269cac39f
+SHA1: d674140bf065df6eec2c8e1d5f11c117a9d0e7e1
+SHA256: a6cfb6abb95858ab60b8c98fd4163adab36552ac9ce0434d3c4c0d2695d77b2a
+SHA512: a671008cc75904cf302e6c3edfe89c29ee6f3d80e1ad3737837b83a351848105eb4d466cbdf18542a223b219bce3dac19ce0771b6b2312e94547b6b1684376eb
+Homepage: http://www.indilib.org/
+Description: Instrument-Neutral Device Interface library -- shared data
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains the data files for the INDI library.
+
+Package: libindi-dev
+Architecture: amd64
+Version: 2.2.4+ab20260905-r12
+Priority: optional
+Section: libdevel
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 10104
+Depends: libindi1 (= 2.2.4+ab20260905-r12), libusb-1.0-0-dev
+Filename: pool/main/libindi-dev_2.2.4.ab20260905-r12_amd64.deb
+Size: 1144740
+MD5sum: 1a18f2bbb8ccee025825f372c14e6e41
+SHA1: 2794fe947a815c94828b2b9bd7c583e9c7101e16
+SHA256: d3beb646cc757997e0bb2b97dcf798a8148864358b4ecc46488c231d0aa9dd1f
+SHA512: 42cea54057026a36689d38eed03d0754c2920eddda5a17bd1833ca0ffe4b8a2ae7623a6e34c868dbbe5a9ce5a5b1a5a91f89c126ee737a417eb08ea914d154db
+Homepage: http://www.indilib.org/
+Description: Instrument-Neutral Device Interface library -- development files
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains development headers and libraries for the INDI library.
+
+Package: libindi-dev
+Architecture: arm64
+Version: 2.2.4+ab20260905-r12
+Priority: optional
+Section: libdevel
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 10146
+Depends: libindi1 (= 2.2.4+ab20260905-r12), libusb-1.0-0-dev
+Filename: pool/main/libindi-dev_2.2.4.ab20260905-r12_arm64.deb
+Size: 1102016
+MD5sum: 343780725b3c3cc63576ab6983972d67
+SHA1: 05c5567015cc9b4eb74153135a000a7c1ed7b6ab
+SHA256: 521d1262db95c56c2f939db8ce8477fcc79dc0577dae99141182ea22e0199f2c
+SHA512: 3eeb06de73c63c62548914ffa11ed922c0731b9ba7c60272d65b7a15062f3c4eaea3b5c015dfd3a5867b9771e3669da540a07fd3739e420334077a0fe3502f2b
+Homepage: http://www.indilib.org/
+Description: Instrument-Neutral Device Interface library -- development files
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains development headers and libraries for the INDI library.
+
+Package: libindi1
+Architecture: amd64
+Version: 2.2.4+ab20260905-r12
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 3860
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libcurl3t64-gnutls (>= 7.16.2), liberfa1 (>= 1.5.0), libfftw3-double3 (>= 3.3.10), libgcc-s1 (>= 3.0), libgsl28 (>= 2.8+dfsg), libgslcblas0 (>= 2.8), libjpeg62-turbo (>= 1.3.1), libnova-0.16-0t64 (>= 0.16), libogg0 (>= 1.0rc3), libstdc++6 (>= 14), libtheoradec1 (>= 1.0), libtheoraenc1 (>= 1.0), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.9), libxisf0 (>= 0.2.13), zlib1g (>= 1:1.1.4), libindi-data (>= 2.2.4+ab20260905-r12), indi-bin (>= 2.2.4+ab20260905-r12)
+Conflicts: libindi-plugins, libindi0, libindialignmentdriver1, libindidriver1
+Replaces: libindi-plugins, libindi0, libindialignmentdriver1, libindidriver1
+Filename: pool/main/libindi1_2.2.4.ab20260905-r12_amd64.deb
+Size: 892192
+MD5sum: 2647f774bc2bb4ea50d68aba7e76f371
+SHA1: 999a6ee7aa5db91449eadf160ae2cc05f44d8727
+SHA256: 78cc5ab7e64187535c2c8a03b81141321797c57bb8be38ea5fa892a6c476aee5
+SHA512: f79efd6b02daf5620f111c29ccd351502558e738852b5093f6fef2787e5592893c1232198ac0eec0fdc2173fbfe53bcd174a111cad272882c5bf3e59cb0b969d
+Homepage: http://www.indilib.org/
+Description: Instrument-Neutral Device Interface library -- shared library
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains the shared library.
+
+Package: libindi1
+Architecture: arm64
+Version: 2.2.4+ab20260905-r12
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: libindi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 3880
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libcurl3t64-gnutls (>= 7.16.2), liberfa1 (>= 1.5.0), libfftw3-double3 (>= 3.3.10), libgcc-s1 (>= 3.0), libgsl28 (>= 2.8+dfsg), libgslcblas0 (>= 2.8), libjpeg62-turbo (>= 1.3.1), libnova-0.16-0t64 (>= 0.16), libogg0 (>= 1.0rc3), libstdc++6 (>= 14), libtheoradec1 (>= 1.0), libtheoraenc1 (>= 1.0), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.9), libxisf0 (>= 0.2.13), zlib1g (>= 1:1.1.4), libindi-data (>= 2.2.4+ab20260905-r12), indi-bin (>= 2.2.4+ab20260905-r12)
+Conflicts: libindi-plugins, libindi0, libindialignmentdriver1, libindidriver1
+Replaces: libindi-plugins, libindi0, libindialignmentdriver1, libindidriver1
+Filename: pool/main/libindi1_2.2.4.ab20260905-r12_arm64.deb
+Size: 795040
+MD5sum: 3c29a7c793b1d03b20385c1e00d14d57
+SHA1: c1173b20f21e6e29e6dbc522dde83ebc0358b880
+SHA256: 1c6f57fe1a2b2c120742f53cdd28e508b12692814085de9d80e23d469773c3ba
+SHA512: 5b15559896ac4fb0797acebafe031211c018df938452a58dfe1568f4de2e8dc84dc32ab6ea578efb2ce14fa1f4ba4854dcbf2fea8ad5f51287cdc472a52ca35e
+Homepage: http://www.indilib.org/
+Description: Instrument-Neutral Device Interface library -- shared library
+ INDI (Instrument-Neutral Device Interface) is a distributed XML-based
+ control protocol designed to operate astronomical instrumentation.
+ INDI is small, flexible, easy to parse, scalable, and stateless.
+ It supports common DCS functions such as remote control, data acquisition,
+ monitoring, and a lot more.
+ .
+ This package contains the shared library.
+
+Package: libinovasdk
+Architecture: amd64
+Version: 1.3.6+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 121
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 4.1.1), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libinovasdk_1.3.6.ab20260905-r18_amd64.deb
+Size: 29052
+MD5sum: 9d70ea027c93192acbebe3caea9b8170
+SHA1: 69f0d08076591fc4b9a049384a96497b38c575d9
+SHA256: d957ac9b62a46f9edd0e625a7c0759f0c455dcbe58948bbd9a24bdc66875d160
+SHA512: 30772eef7763dff6f773142e06bac83102517ec366c773ee156600f0bacd20d731223a26b99ae99abca6764f75d29b0b7d0cb636929da28d31ed1857e8ba2a2a
+Description: i.Nova Technologies Camera SDK.
+ .
+ This package contains the library.
+
+Package: libinovasdk
+Architecture: arm64
+Version: 1.3.6+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 120
+Depends: libc6 (>= 2.17), libgcc-s1 (>= 3.0), libstdc++6 (>= 4.1.1), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libinovasdk_1.3.6.ab20260905-r18_arm64.deb
+Size: 27864
+MD5sum: b06543d4f202582a6e347852c3266c92
+SHA1: a739bb8658c0a5751e6841f1ac3f26c850d23555
+SHA256: 1b437daa6e6e5710d441a169ff637dc55563947c23da4367bcba5ecfd664b8e8
+SHA512: d0d08dc933300625473235d256eb82711a352e8583367bc66c94d3625c9e939313dfa9be0b86532e374725a36f228e03ac14128ccb26e93727d79acaddeb2b9e
+Description: i.Nova Technologies Camera SDK.
+ .
+ This package contains the library.
+
+Package: libmallincam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 23286
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libmallincam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3596752
+MD5sum: 763a74d66efe2b95625064f10f8f2bba
+SHA1: 89cbfd8253e0bec726b847752205db90243412b7
+SHA256: 8eef5659b3ac729b464b3a133728faa9116bbadbf8b9ca7ef79d132429cc5ea9
+SHA512: 0a67a66f145d177cfb80af5808f102b57f10a0e25480452f6369cd3ad1d5cbad1cffaa204e4aad249d3826d5e0686ddbc654bd117fc2b01a29f34f16c78100c5
+Description: Library for Mallincam Cameras.
+
+Package: libmallincam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 5583
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libmallincam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 952740
+MD5sum: 5c46f24ad2099ec2ef089218cc968c8a
+SHA1: f5882a3e22af2a087e1cba2973675361e23f25a5
+SHA256: 1b4bf7113a95387f1f1bad8ce5e19d0ce90ba3195f90c8b3cc21f8d8ca353251
+SHA512: 8182e6f42ee200fb5e474749871c748f40c63b5b0f4ec8d532a9584ab450c3e39c2124048e6874b368d352b55b16f85b11b8e6123675d2bd9fa9a30df2a980fd
+Description: Library for Mallincam Cameras.
+
+Package: libmeadecam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Ben Gilsrud <bgilsrud@gmail.com>
+Installed-Size: 22098
+Depends: libc6 (>= 2.34), libtoupcam
+Filename: pool/main/libmeadecam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3805024
+MD5sum: ec3e395ffd934fff53f6a67d67f2132b
+SHA1: 236de70ae4c8d62eba1ceea823216a64e0314e49
+SHA256: 1980abb9cb409d43a695325e48019a2cebfb085b28c38463ab0c398ddac45416
+SHA512: 3da76aad962f6ee31de64df20a23e0eb2e2e8b33d33240000aabfce3793d345f3fd5bc8023d6d5e0176b0e047cf59d00471c0d7a6a78b510cd7cfed73738f1ea
+Description: Library for Meade Touptek Cameras.
+
+Package: libmeadecam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Ben Gilsrud <bgilsrud@gmail.com>
+Installed-Size: 4382
+Depends: libc6 (>= 2.34), libtoupcam
+Filename: pool/main/libmeadecam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 1112504
+MD5sum: 99a0daccb345272ba0a640a23b0d0e93
+SHA1: ec5bb0d077e45e67010acc897b64e6e05235a071
+SHA256: a7a0d13823eda218cd6a5d4e47b458df5558dc830c605d67cd064a0250bd3109
+SHA512: b89d983b8749494a89ee9a06b8da21d0d4cd8f5bf62d5b1a4feac86ac8fc1ea85846bc68fdb55783b8bc764d70a56cbf991a81a5861038a7370c2271ebfac9a7
+Description: Library for Meade Touptek Cameras.
+
+Package: libmicam
+Architecture: amd64
+Version: 1.5+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 227
+Depends: libc6 (>= 2.34), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libmicam_1.5.ab20260905-r18_amd64.deb
+Size: 68388
+MD5sum: 34a9feda28c5f6c5bf40655c8b7b4d0e
+SHA1: e99416977cd773ae752c4192bce90cd7338d7443
+SHA256: e990bcee9c1ec9ee970173ce99df4a625edc59fb51471ea6c5da5929426b4429
+SHA512: 31320b03911c79200fcf4abb986dfccaf78d648a597da38ece71300c5b01c9595b83d6f2a725265afbe739be252872fd7cc77356ce8db3897b5b14a869981ddb
+Description: Library for Moravian Instruments Cameras
+
+Package: libmicam
+Architecture: arm64
+Version: 1.5+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Radek Kaczorek <rkaczorek@gmail.com>
+Installed-Size: 199
+Depends: libc6 (>= 2.17), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libmicam_1.5.ab20260905-r18_arm64.deb
+Size: 60052
+MD5sum: f2581c8d08100a5220da3f80cd44826d
+SHA1: c8e571a5367521e32e7df7b8e410653bc82c87a0
+SHA256: acbc696f35a2faad8f87a4350fd2698f0a569eed744641bc20dfc3d46fdf20c4
+SHA512: 708872a8e3a64cba15b6ccfa72b38c90e815749c892e545d8f5ea48858ab14532a57c5f11e91f8d7758bd957e406feb2c9026cf8f6c5ebc9ff271824ada2fea7
+Description: Library for Moravian Instruments Cameras
+
+Package: libnncam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 63475
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libnncam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 6554936
+MD5sum: 93183a3d4b387e3db6837d1c99471b20
+SHA1: 6764925640fd285f488d18e0a55654de766aecf9
+SHA256: 9eb49c5a6f6990083cfc2421d9081e4ae4125cd36f8d6939e5eec3f77675a26b
+SHA512: 610050d42d224f3a56d02dee65b427270e06ffd6e173cc26d0be11b50fdf3192eaa3904c7e144cfa48ab36f75248842e6c0a43e88a1d9227ebe3e55b6a744576
+Description: Library for Nn Cameras.
+
+Package: libnncam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 45640
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libnncam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 3737176
+MD5sum: e26121d3eaeb072e730cf3cba9aa2faf
+SHA1: 86e3c0e0a230ee6cf82e92d524b93c51c62e821b
+SHA256: a205fcf26062caab34028838938e48825c98260c3299a6ffc646182b4c6f2b5e
+SHA512: ca8bd89a4ac7117e1c7cc8f3b7a03625521f1e8b966732b1fffbf4274cba0a229110d172e67edc5654801e8351e3786f41f404c5e6b28097e5212cec6ba0263f
+Description: Library for Nn Cameras.
+
+Package: libogmacam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 21067
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libogmacam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3458524
+MD5sum: bdf0884f9aacac72a882df8ac2c947a3
+SHA1: 1f421a28f6d81b25d21e0852b95862ac7d2f98d5
+SHA256: 40b00787f578d1f393e162c8af3cc5d2db3070af1016ca01f7a61923c6996f9a
+SHA512: 8a08cd142ecda110f06a58cad9030784cf5a2346825eb141cdcf20dcd853a908eabbe29dc4b62a612ca8c07ced12adb68a4e33084fc1cadbae9157083e8c6889
+Description: Library for OGMAVision Cameras.
+
+Package: libogmacam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 3368
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libogmacam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 801680
+MD5sum: 02de80f12b878ffab2460a1dfd485387
+SHA1: 2a12eee862c0f9a18ef9317d85f8cfdd8abf3d90
+SHA256: 2031c01d377b2bbb57fa3282078a5e2613c0d3d84a0cc6ab271d307a43f69d4d
+SHA512: e64a9081e45b006ff6d1ab0e5be854b83c7d9ebc97bbf686011950b866b227683494d43c972c2fb9eafc5920c969a1dd33e1af2037b0b98c3cc9dcbd2f946296
+Description: Library for OGMAVision Cameras.
+
+Package: libomegonprocam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 23283
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libomegonprocam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3600616
+MD5sum: 11e355ae09ae544d1390665885629a6a
+SHA1: 64fa7753af9108e44085f9d85a6939cb6d18eedc
+SHA256: d939c6acf8f3764f8d5d1c684d86f71baef8b896326cef8ad4dc15a886eea68f
+SHA512: 086ee310fe5fddfd2dcf675091bc91798f086ee09ca4755cab8dd207b2a6373a3a431de690b02d0b79aafe0293760799eec04f38a7ac5afa14006aba5d1d0508
+Description: Library for Omegon Pro Cameras.
+
+Package: libomegonprocam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 5556
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libomegonprocam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 946432
+MD5sum: 2c80a94e756ef27c836cdcc505b42f02
+SHA1: e29666e83673eabd60095c3dd700b5268ff013d8
+SHA256: 2a4f72031c999a5b2e7f3a2fedfdeb347e088b728252938e81e525dde9b005d0
+SHA512: ee7cdc907a87957589d9d3b0bd5d9ac08fb7482cd88dd2c15fe2c2f2477a12b695868899cb34738db6eb092a6e4006cceb088a59b9809045be72d50709834d2e
+Description: Library for Omegon Pro Cameras.
+
+Package: libpktriggercord
+Architecture: amd64
+Version: 0.85.02+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Karl Rees <indidev@karlrees.com>
+Installed-Size: 241
+Depends: libc6 (>= 2.33)
+Filename: pool/main/libpktriggercord_0.85.02.ab20260905-r18_amd64.deb
+Size: 49764
+MD5sum: 866c9997501aa90e593c728cc6f7f2e0
+SHA1: dfdc80820e939bebf36707623d68edb4f2df5090
+SHA256: 290f423548bf719a31a69b7b8e90e3849d93fbe5ea59424296e75533f88866df
+SHA512: 86d00ac1ca776be6660b14b93225b0bf6b3051da826b9cd5b646b8e67c7020dac93cfb6fef3da0b1a557f9cbbea98b2380729d2ce64c03a03b1fc35db43a389e
+Description: Library for Pentax cameras in MSC mode.
+ Uses pktrigercord - see http://pktriggercord.melda.info/.
+
+Package: libpktriggercord
+Architecture: arm64
+Version: 0.85.02+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Karl Rees <indidev@karlrees.com>
+Installed-Size: 281
+Depends: libc6 (>= 2.33)
+Filename: pool/main/libpktriggercord_0.85.02.ab20260905-r18_arm64.deb
+Size: 47372
+MD5sum: 3d1d4d7fa970bc3b8ddc8bf1c3f51e98
+SHA1: 8ba89a5fa9bf7d36c46e71fe80704fd270e31091
+SHA256: dc727427b97041e6c1c09e56a7b7f29ff9d38673bbe64fb37a641ff78e5521a9
+SHA512: a74c4c9222161310c5cb2d77e257fefb9e967ef6a13639d12bf0f96dd58cc07e6f3bc29fdb058d008edbbdc6c36a3f09e7a399032c41a309225e5504b1bcd155
+Description: Library for Pentax cameras in MSC mode.
+ Uses pktrigercord - see http://pktriggercord.melda.info/.
+
+Package: libplayerone
+Architecture: amd64
+Version: 1.18+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Hiroshi SAITO <hiro3110g@gmail.com>
+Installed-Size: 629
+Depends: libc6 (>= 2.27), libgcc-s1 (>= 3.0), libstdc++6 (>= 6), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libplayerone_1.18.ab20260905-r18_amd64.deb
+Size: 177896
+MD5sum: 567e6e95144c77a8fd7ed688bc92d613
+SHA1: 2a791432585b223642fad98af06aa40c4a13bdac
+SHA256: 81890ac2bf109cb40232aa4eae20f40e76d0b20b65f80d7a8199c5a2e6a10ab1
+SHA512: aa7f4be5bbd25d86b888aa506a0a9da8dc7cce07c11701f63d1799d8a69916dff624ca8478b9cbbfd9f982cac190d376ad159e91926494331f06e8f0794086ed
+Description: Library for Player One Astronomy's Cameras
+
+Package: libplayerone
+Architecture: arm64
+Version: 1.18+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Hiroshi SAITO <hiro3110g@gmail.com>
+Installed-Size: 601
+Depends: libc6 (>= 2.27), libgcc-s1 (>= 3.0), libstdc++6 (>= 6), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.16)
+Filename: pool/main/libplayerone_1.18.ab20260905-r18_arm64.deb
+Size: 159536
+MD5sum: 1547a4e5a4c37e6f12cd7d8176d8f601
+SHA1: 98526194531346d817e6fd0fbcd6fe975f73d811
+SHA256: 28ee3744b42163af553cfca5da08ac6eb6ab91f1f095fc82fa00f2025ce8a636
+SHA512: 080f12068672f7bbd614ab0569b96f91a5f880ceb9222d48e36cfeeaaa0c6be1d7ab6625bee00bca984d3c8a127b992725252066622418e10c7fb1bd2a474887
+Description: Library for Player One Astronomy's Cameras
+
+Package: libqhy
+Architecture: amd64
+Version: 26.7.21+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 18535
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libusb-1.0-0 (>= 2:1.0.16), fxload
+Conflicts: firmware-ccd
+Replaces: firmware-ccd
+Filename: pool/main/libqhy_26.7.21.ab20260905-r18_amd64.deb
+Size: 1327032
+MD5sum: 86ddfbeef0d618dab29b8fd0238b8083
+SHA1: 804e0ca9a75689fb0500da71ae80d14ca1690db3
+SHA256: cbf1b1e9041e57bb997863b0fef30972409ec825a71acbf4ea4f0873a4b1b5ed
+SHA512: 9ee5b4e9ebd84933cbf693409ca45d2cd95a74f3611b42a26a774de1dfda8537484fd386ea0f8c2afb76972d59c201a8c308ffa71bdc5586e255ad403a58900c
+Description: libqhy provide libraries to access and control QHY CCDs and Filter Wheels.
+
+Package: libqhy
+Architecture: arm64
+Version: 26.7.21+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 18278
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 11), libusb-1.0-0 (>= 2:1.0.16), fxload
+Conflicts: firmware-ccd
+Replaces: firmware-ccd
+Filename: pool/main/libqhy_26.7.21.ab20260905-r18_arm64.deb
+Size: 1214088
+MD5sum: 334ae0cfdd5c52d72debe2469705cb23
+SHA1: b02b59f526c089ee1d7afcb7fb207235264ad1f3
+SHA256: be06d53be4dfaed00b3a6953f50fba9d0ce29c8272c70acb165d96caab0f6df7
+SHA512: b4d9376f8ce0380722cbc4adca7e632922fd880e90599ca99735e51aa5eb330915a457df8cf4cdaf821ff630e267f08fd30622441b7456b88c1602d56be688bb
+Description: libqhy provide libraries to access and control QHY CCDs and Filter Wheels.
+
+Package: libqsi-dev
+Architecture: amd64
+Version: 7.6.2+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libqsi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 24
+Depends: libqsi7 (= 7.6.2+ab20260905-r18)
+Filename: pool/main/libqsi-dev_7.6.2.ab20260905-r18_amd64.deb
+Size: 4928
+MD5sum: 7623949544f391bcf75872b085343b6e
+SHA1: faed4ab4ff509b4012e5d08111c6f95658d5d63f
+SHA256: c645ffb1ed1bed3b5c868c4315ecc284f00335eaaee12abfec18ba4097b8347d
+SHA512: f277ff6c62163749b3053b5ac34e1b5171dd1072a861d147eb1812438482ad0f3737f675b3fd30c96915f838d791ee2141eba7ba5ffec4064da2ef45c20f2eb4
+Description: Quantum Scientific Imaging (QSI) development headers.
+ .
+ This package contains the development files.
+
+Package: libqsi-dev
+Architecture: arm64
+Version: 7.6.2+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libqsi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 24
+Depends: libqsi7 (= 7.6.2+ab20260905-r18)
+Filename: pool/main/libqsi-dev_7.6.2.ab20260905-r18_arm64.deb
+Size: 4924
+MD5sum: c74a4e989289fd659020686a9e5b3cc3
+SHA1: b0b5eb22b993150faf2aac6954957c99f0fa23bf
+SHA256: fd3815fb7d32231e3fdb2fc4bd96cb721968e9a8aae0a8de902f311ce1de94cb
+SHA512: 0bd2e133e3374ebd46c4454987066694bc596d13efcdd822fe23c8ac4def6dd8405d2a8a1a343da14390e920ac3d5fbca15612adfc4c559816881d7d527f3add
+Description: Quantum Scientific Imaging (QSI) development headers.
+ .
+ This package contains the development files.
+
+Package: libqsi7
+Architecture: amd64
+Version: 7.6.2+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libqsi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1484
+Depends: libc6 (>= 2.38), libftdi1-2 (>= 1.5), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libftdi1
+Conflicts: libqsi6
+Replaces: libqsi6
+Filename: pool/main/libqsi7_7.6.2.ab20260905-r18_amd64.deb
+Size: 244556
+MD5sum: 4b16f827f136ff64bd649a822414f0ba
+SHA1: 5bae637acfee655a94d0410258759554d2e9b9b8
+SHA256: 8d9557b09692aadd78e135707767109e0d5f55758332d6fe60cd964b3a4ea392
+SHA512: 25742a02913b95f8701bf1754c8a60dc929f103828d2397fa022a52bd429fc1090ab0fb7e9bda64da81d0f104c4e38f4c8c1c35d74130b2fc0bb23c2b92abcb4
+Description: Quantum Scientific Imaging (QSI) library.
+ .
+ This package contains the library.
+
+Package: libqsi7
+Architecture: arm64
+Version: 7.6.2+ab20260905-r18
+Priority: extra
+Section: libs
+Source: libqsi
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 1432
+Depends: libc6 (>= 2.38), libftdi1-2 (>= 1.5), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libftdi1
+Conflicts: libqsi6
+Replaces: libqsi6
+Filename: pool/main/libqsi7_7.6.2.ab20260905-r18_arm64.deb
+Size: 208688
+MD5sum: 95dd651690fb83fd7bd69a7930100fad
+SHA1: bcde01c6a3a4b398c83622672ffe10a3efbec77c
+SHA256: 7b4eaa1743a33ea667d7531715d4f7418685be956f510fea5e27eb344f0f6c62
+SHA512: d0f1ed44ee183c5ddecae9b0fdb0ca47cdd979a219ab5848d9709adc6404445fc56f627dee1eceff50a171fdcf8292bd1f8e03f8bc85bf9491be4c57e4086985
+Description: Quantum Scientific Imaging (QSI) library.
+ .
+ This package contains the library.
+
+Package: libricohcamerasdk
+Architecture: amd64
+Version: 1.1.0+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Karl Rees <indidev@karlrees.com>
+Installed-Size: 1520
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), libusb-1.0-0 (>= 2:1.0.9)
+Filename: pool/main/libricohcamerasdk_1.1.0.ab20260905-r18_amd64.deb
+Size: 314408
+MD5sum: 6024b98160e62d6b5c18948079929dc3
+SHA1: acd6c7267833bddc6210412ad74876f09250d55d
+SHA256: 62d5cd4e01e3fe4ed4399bc469ab0a5fbbc5a4aff082573fe99303900025a25e
+SHA512: b54c0aedf19f83f663d06cedefd4caec4c7da1083a992b22a21295e2cfaa5f9b0235b839a29adf92a231f015c21378d60d1c09430e3fc596955369b460058e6e
+Description: Library for using Pentax cameras in PTP mode with INDI.
+ Uses Ricoh Camera SDK - see https://api.ricoh/.
+
+Package: libsbig
+Architecture: amd64
+Version: 4.9.9+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 588
+Depends: libc6 (>= 2.14), libusb-1.0-0 (>= 2:1.0.8), fxload
+Conflicts: libsbigudrv2
+Replaces: libsbigudrv2
+Filename: pool/main/libsbig_4.9.9.ab20260905-r18_amd64.deb
+Size: 151728
+MD5sum: c7e238218e2ca927f6ebc2f3c458a5e8
+SHA1: 461a5e5b0af7e7c0dcb89a3efe971eb9f2ea163d
+SHA256: 87a882d568bb6ab9190959d5960bd01a8020162503cd7450e2cd564130763970
+SHA512: 301142bb57ce3d758c0ae8182abe05ac25ddeab9d3bf15baa5d5e5f8e3d1b8f4f598720850febe2c5522027bf7245776c7d2e6552db54d3be88b37acdb218f1d
+Description: Santa Barbra Instrument Group (SBIG) Universal Library Driver
+ The Official Santa Barbra Instrument Group (SBIG) Universal Library
+ Driver is used by applications to access and control the USB,
+ Parallel Port, and Ethernet versions of the CCD cameras and filter
+ wheels including SBIG ST-7/8/9/10/2K cameras, ST-L cameras, and
+ ST-402/1603/3200 cameras. The firmware is included for all classes of
+ cameras.
+
+Package: libsbig
+Architecture: arm64
+Version: 4.9.9+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 735
+Depends: libc6 (>= 2.17), libudev1 (>= 183), fxload
+Conflicts: libsbigudrv2
+Replaces: libsbigudrv2
+Filename: pool/main/libsbig_4.9.9.ab20260905-r18_arm64.deb
+Size: 157556
+MD5sum: e7f40a67da398d513e20d87db41bc755
+SHA1: f43a04a9983cb604611216d5eb1153277f7c1470
+SHA256: 7610ca770837f155d29e34a12e43bbbac58153156cc6c6e9d1fdf2a86b014131
+SHA512: 77005e730c938fa111ad72fe893c99aa75d157385541e3ef1ce4a8996686d32fbeca3ab88355b458c19303060300fcde943d751f92865567b2ff41b8c995585b
+Description: Santa Barbra Instrument Group (SBIG) Universal Library Driver
+ The Official Santa Barbra Instrument Group (SBIG) Universal Library
+ Driver is used by applications to access and control the USB,
+ Parallel Port, and Ethernet versions of the CCD cameras and filter
+ wheels including SBIG ST-7/8/9/10/2K cameras, ST-L cameras, and
+ ST-402/1603/3200 cameras. The firmware is included for all classes of
+ cameras.
+
+Package: libstarshootg
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 21548
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libstarshootg_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3501148
+MD5sum: ecf14b8146d39f2ac71df01fb568f671
+SHA1: 369ea5878b31f4a55961d2a1801dd58b30c261fa
+SHA256: db605ea36b8bfcfef3f6a30d607a12b27c17cdeeaad212ee5f7d9598c601042d
+SHA512: 0e32f7e199e31fdc0335e8972f203896bf39be1aca44117b8381ae3924cdf1e2a6a31bc79c9990685f4428ac0d935c156f96f78837f94ea00fd55c931862a292
+Description: Library for Orion Starshoot G Cameras.
+
+Package: libstarshootg
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 3821
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libstarshootg_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 839816
+MD5sum: ef27ef7ec23b53c5404185b8058ecb1b
+SHA1: e2adda5bf75ea3d11043997acc6dd3d232f1e922
+SHA256: 15fb3e87724d2a41e5a4eae58353864ab32e47a430ebb116bc1e5faacfed9c54
+SHA512: 9ead7e14be600702e40eb435a1c4c32a60d9bef5ba6298c650da17f5302c0fb707174d203462cdbedbe5ad86ed44da44eb00a13f9b58ee87f5cfdc0b44142ede
+Description: Library for Orion Starshoot G Cameras.
+
+Package: libsvbony
+Architecture: amd64
+Version: 1.13.4+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Blaise-Florentin Collin <thx8411@yahoo.fr>
+Installed-Size: 5382
+Depends: libc6 (>= 2.15), libgcc-s1 (>= 3.0), libstdc++6 (>= 6)
+Conflicts: libsv305, libsv305-dbgsym
+Replaces: libsv305, libsv305-dbgsym
+Filename: pool/main/libsvbony_1.13.4.ab20260905-r18_amd64.deb
+Size: 4244936
+MD5sum: df0a88a4dacc4e9608632789dda23190
+SHA1: e5fdfd90fdb0c31fd21daff78eb2086476d9bf9f
+SHA256: d05c13c4802e946ec29292de431f028d85e9159eab4ce53257c555be8478d30b
+SHA512: d2d1f4b2bae77ead7f30bdf03e35b17941d9fc74cf11e724379fd3af45d941a75fcf2f3acb6c365d7649389c07450ce317df44fbde062aee70d518f53832caef
+Description: SDK library for the SVBONY Camera
+
+Package: libsvbony
+Architecture: arm64
+Version: 1.13.4+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Blaise-Florentin Collin <thx8411@yahoo.fr>
+Installed-Size: 5193
+Depends: libc6 (>= 2.17), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), libusb-1.0-0 (>= 2:1.0.9)
+Conflicts: libsv305, libsv305-dbgsym
+Replaces: libsv305, libsv305-dbgsym
+Filename: pool/main/libsvbony_1.13.4.ab20260905-r18_arm64.deb
+Size: 4150984
+MD5sum: db9615d4258117d26563d76df4acd4b0
+SHA1: 4db6256d6d5153bca1fdd17c876cd4f42af5c443
+SHA256: 2176f9a89938b577d512c5d08b7037321d96c9713ff233b16353c1e5decf5ddc
+SHA512: a74662d82716311a0d59079ca6cd765d5a61c6a8cd31d7ee3a528960a655bdcda98a76b28b6181804257d3cc4b73133584d383645245ea04dd5474f07282bf15
+Description: SDK library for the SVBONY Camera
+
+Package: libsvbonycam
+Architecture: amd64
+Version: 57.27591.20250122+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 19983
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libsvbonycam_57.27591.20250122.ab20260905-r18_amd64.deb
+Size: 3326268
+MD5sum: d73cab6bbe1bc11191b50d45a10e4bff
+SHA1: 902bb5e44535c1e6b00886f306635ca5bc077496
+SHA256: b109d15afa80dd5a6ef1d0b7cf789e3946ec2954ef190f12bae422d4ddf23abd
+SHA512: 434059bb4d12738adaf979dac7c676fd0dfc053f134be4d274d68070601d58eee8d81f86512132a7aba5d5bfac73a0d76832cf5a9d63d56de170f31e7d3edc2c
+Description: Library for SVBONY Cameras.
+
+Package: libsvbonycam
+Architecture: arm64
+Version: 57.27591.20250122+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 3045
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libsvbonycam_57.27591.20250122.ab20260905-r18_arm64.deb
+Size: 819192
+MD5sum: ba65c92eb4ae721b629a83fbb247fcec
+SHA1: 2514b43814fc225799cf6ca9ec7d6092dde43e47
+SHA256: 9a51db1cfaca9ea4738eaa165b3d47dd802db5d5075cfaf4547c5c1e33065a6f
+SHA512: 5f50db56804b967d5190fce12002014dfe8e591e8369a9f5d9bfcf99bff1b341f8cb60e1ba0b83bafe95e5795b97c3a1be63c26d917c2cdb14ee71f5de8123d1
+Description: Library for SVBONY Cameras.
+
+Package: libtoupcam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 63478
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libtoupcam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 6542596
+MD5sum: f0f448c054d4c5d4db2600a9a8166be1
+SHA1: bef26f0dff999aa19d90d481099943e3ffdd946d
+SHA256: 86b21a8a0e51bae72ca08093f7f655b284a473c191ca5027e588b0cb396004bc
+SHA512: edf9f727b934a9c0056fab8b4d93753a71af916614c1140bcc2ddb3c0e0a3c8da45ea47f2c909a6e079c79e97aec1751d230b6fb6fa31d67f375b2535efa67cd
+Description: Library for Touptek Cameras.
+
+Package: libtoupcam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 45643
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libtoupcam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 3832504
+MD5sum: 1ddf18fab94c91cd77ee2feade54b58e
+SHA1: 047ca711025f8248192f1d12609c25272a36c7f3
+SHA256: 4a26e2725cc4fdf0f6bf1a5fc0304bcea674dbde07a45f2b2db2909463207093
+SHA512: 3ef6a870e9f69dd1ce024f15774a310b1611b0b973ca221c9bae95d65e1e08a7b67af2f9ccafa875384fedfd6c6f3983b639b4d25b5b6d3a46e5aa82d3c8ac95
+Description: Library for Touptek Cameras.
+
+Package: libtscam
+Architecture: amd64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 21880
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libtscam_60.31631.20260606.ab20260905-r18_amd64.deb
+Size: 3519648
+MD5sum: 111d3bac2ca5ce984e1af99bda3b3016
+SHA1: 894b69c8f058df77a57e8f1c3cf26951be294e31
+SHA256: e87b4de784068115d31ff683391bf189fc176d3536d1e9bd163f6e74612a7d06
+SHA512: cc3096290afc8bbc021ae5804315e9c6215eb9ae3bcca92fb1aa3787cb03a5ef872bda2b8c3e50b35c1167f96c0195d7c3e28e3c0dcf4287cbca6cf063728410
+Description: Library for Teleskop Cameras.
+
+Package: libtscam
+Architecture: arm64
+Version: 60.31631.20260606+ab20260905-r18
+Priority: extra
+Section: libs
+Maintainer: Jasem Mutlaq <mutlaqja@ikarustech.com>
+Installed-Size: 4133
+Depends: libc6 (>= 2.34)
+Filename: pool/main/libtscam_60.31631.20260606.ab20260905-r18_arm64.deb
+Size: 858440
+MD5sum: c0cc042d8c1fdb5226ebc5ad3be4c56c
+SHA1: 0d2a7bba2a1bc6bff668ced4c77f72af029e02bb
+SHA256: 6510cbd528db20d54ad9c5219c3c0ef2cd8f5cc4b8c8517053fc9661d0270007
+SHA512: e7a7cf8927cdfb0397367f9a683a7e082f87338387c23e93282c05070e9e6af22a3b3a0a827bcab5d3058ccde385af4754a66765055a60799b389eb0e1975dbd
+Description: Library for Teleskop Cameras.
+
