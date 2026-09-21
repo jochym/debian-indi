@@ -35,59 +35,224 @@ jobs:
           echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
           echo "Core: v$CORE_TAG, 3rdparty: v$THIRD_TAG, Release: v$RELEASE_VERSION"
 
-      - name: Download core packages (arm64)
+      # --- Core packages ---
+      - name: Download core packages (debian-bookworm-arm64)
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: alt-indi-core.yml
-          name: indi-compiled-packages-arm64
+          name: indi-compiled-packages-debian-bookworm-arm64
           workflow_conclusion: success
-          path: ./artifacts/core-arm64
+          path: ./artifacts/core-debian-bookworm-arm64
 
-      - name: Download core packages (amd64)
+      - name: Download core packages (debian-bookworm-amd64)
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: alt-indi-core.yml
-          name: indi-compiled-packages-amd64
+          name: indi-compiled-packages-debian-bookworm-amd64
           workflow_conclusion: success
-          path: ./artifacts/core-amd64
+          path: ./artifacts/core-debian-bookworm-amd64
 
-      - name: Download 3rdparty packages (arm64)
+      - name: Download core packages (debian-trixie-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-debian-trixie-arm64
+          workflow_conclusion: success
+          path: ./artifacts/core-debian-trixie-arm64
+
+      - name: Download core packages (debian-trixie-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-debian-trixie-amd64
+          workflow_conclusion: success
+          path: ./artifacts/core-debian-trixie-amd64
+
+      - name: Download core packages (ubuntu-noble-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-ubuntu-noble-arm64
+          workflow_conclusion: success
+          path: ./artifacts/core-ubuntu-noble-arm64
+
+      - name: Download core packages (ubuntu-noble-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-ubuntu-noble-amd64
+          workflow_conclusion: success
+          path: ./artifacts/core-ubuntu-noble-amd64
+
+      - name: Download core packages (ubuntu-resolute-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-ubuntu-resolute-arm64
+          workflow_conclusion: success
+          path: ./artifacts/core-ubuntu-resolute-arm64
+
+      - name: Download core packages (ubuntu-resolute-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-core.yml
+          name: indi-compiled-packages-ubuntu-resolute-amd64
+          workflow_conclusion: success
+          path: ./artifacts/core-ubuntu-resolute-amd64
+
+      # --- 3rdparty packages ---
+      - name: Download 3rdparty packages (debian-bookworm-arm64)
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: alt-indi-3rdparty.yml
-          name: 3rdparty-compiled-packages-arm64
+          name: 3rdparty-compiled-packages-debian-bookworm-arm64
           workflow_conclusion: success
-          path: ./artifacts/3rdparty-arm64
+          path: ./artifacts/3rdparty-debian-bookworm-arm64
 
-      - name: Download 3rdparty packages (amd64)
+      - name: Download 3rdparty packages (debian-bookworm-amd64)
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: alt-indi-3rdparty.yml
-          name: 3rdparty-compiled-packages-amd64
+          name: 3rdparty-compiled-packages-debian-bookworm-amd64
           workflow_conclusion: success
-          path: ./artifacts/3rdparty-amd64
+          path: ./artifacts/3rdparty-debian-bookworm-amd64
 
-      - name: Download meta-packages (arm64)
+      - name: Download 3rdparty packages (debian-trixie-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-debian-trixie-arm64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-debian-trixie-arm64
+
+      - name: Download 3rdparty packages (debian-trixie-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-debian-trixie-amd64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-debian-trixie-amd64
+
+      - name: Download 3rdparty packages (ubuntu-noble-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-ubuntu-noble-arm64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-ubuntu-noble-arm64
+
+      - name: Download 3rdparty packages (ubuntu-noble-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-ubuntu-noble-amd64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-ubuntu-noble-amd64
+
+      - name: Download 3rdparty packages (ubuntu-resolute-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-ubuntu-resolute-arm64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-ubuntu-resolute-arm64
+
+      - name: Download 3rdparty packages (ubuntu-resolute-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: alt-indi-3rdparty.yml
+          name: 3rdparty-compiled-packages-ubuntu-resolute-amd64
+          workflow_conclusion: success
+          path: ./artifacts/3rdparty-ubuntu-resolute-amd64
+
+      # --- Meta packages ---
+      - name: Download meta-packages (debian-bookworm-arm64)
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: indi-3rdparty-meta.yml
-          name: indi-3rdparty-meta-package-arm64
+          name: indi-3rdparty-meta-package-debian-bookworm-arm64
           workflow_conclusion: success
-          path: ./artifacts/meta-arm64
+          path: ./artifacts/meta-debian-bookworm-arm64
 
-      - name: Download meta-packages (amd64)
+      - name: Download meta-packages (debian-bookworm-amd64)
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: indi-3rdparty-meta.yml
-          name: indi-3rdparty-meta-package-amd64
+          name: indi-3rdparty-meta-package-debian-bookworm-amd64
           workflow_conclusion: success
-          path: ./artifacts/meta-amd64
+          path: ./artifacts/meta-debian-bookworm-amd64
+
+      - name: Download meta-packages (debian-trixie-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-debian-trixie-arm64
+          workflow_conclusion: success
+          path: ./artifacts/meta-debian-trixie-arm64
+
+      - name: Download meta-packages (debian-trixie-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-debian-trixie-amd64
+          workflow_conclusion: success
+          path: ./artifacts/meta-debian-trixie-amd64
+
+      - name: Download meta-packages (ubuntu-noble-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-ubuntu-noble-arm64
+          workflow_conclusion: success
+          path: ./artifacts/meta-ubuntu-noble-arm64
+
+      - name: Download meta-packages (ubuntu-noble-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-ubuntu-noble-amd64
+          workflow_conclusion: success
+          path: ./artifacts/meta-ubuntu-noble-amd64
+
+      - name: Download meta-packages (ubuntu-resolute-arm64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-ubuntu-resolute-arm64
+          workflow_conclusion: success
+          path: ./artifacts/meta-ubuntu-resolute-arm64
+
+      - name: Download meta-packages (ubuntu-resolute-amd64)
+        uses: dawidd6/action-download-artifact@v9
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: indi-3rdparty-meta.yml
+          name: indi-3rdparty-meta-package-ubuntu-resolute-amd64
+          workflow_conclusion: success
+          path: ./artifacts/meta-ubuntu-resolute-amd64
 
       - name: Create or find GitHub Release
         run: |
@@ -100,7 +265,7 @@ jobs:
 
           if [ -z "$RELEASE_ID" ]; then
             echo "Creating release $TAG..."
-            BODY=$(printf '## Community build of INDI v%s\n\n- **indi-core:** v%s\n- **indi-3rdparty:** v%s\n- **Architectures:** amd64, arm64\n\nAssets below are individual `.deb` packages for direct download.\n\n**APT repository (unofficial):** https://jochym.github.io/debian-indi/' \
+            BODY=$(printf '## Community build of INDI v%s\n\n- **indi-core:** v%s\n- **indi-3rdparty:** v%s\n- **Distributions:** Debian 12 (bookworm), Debian 13 (trixie), Ubuntu 24.04 LTS (noble), Ubuntu 26.04 LTS (resolute)\n- **Architectures:** amd64, arm64\n\nAssets below are individual `.deb` packages for direct download.\n\n**APT repository (unofficial):** https://jochym.github.io/debian-indi/' \
               "$RELEASE_VERSION" "$CORE_VERSION" "$THIRD_VERSION")
             PAYLOAD=$(jq -n \
               --arg tag "$TAG" \
@@ -116,7 +281,7 @@ jobs:
           else
             echo "Release $TAG already exists, ID: $RELEASE_ID"
             echo "Updating release body and name..."
-            BODY=$(printf '## Community build of INDI v%s\n\n- **indi-core:** v%s\n- **indi-3rdparty:** v%s\n- **Architectures:** amd64, arm64\n\nAssets below are individual `.deb` packages for direct download.\n\n**APT repository (unofficial):** https://jochym.github.io/debian-indi/' \
+            BODY=$(printf '## Community build of INDI v%s\n\n- **indi-core:** v%s\n- **indi-3rdparty:** v%s\n- **Distributions:** Debian 12 (bookworm), Debian 13 (trixie), Ubuntu 24.04 LTS (noble), Ubuntu 26.04 LTS (resolute)\n- **Architectures:** amd64, arm64\n\nAssets below are individual `.deb` packages for direct download.\n\n**APT repository (unofficial):** https://jochym.github.io/debian-indi/' \
               "$RELEASE_VERSION" "$CORE_VERSION" "$THIRD_VERSION")
             PAYLOAD=$(jq -n \
               --arg name "Community build of INDI v${RELEASE_VERSION}" \

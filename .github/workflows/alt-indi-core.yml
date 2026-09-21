@@ -17,15 +17,67 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: arm64
+          - distro_id: debian-bookworm
+            distro_name: Debian 12 (Bookworm)
+            distro_type: debian
+            codename: bookworm
+            image: debian:bookworm-slim
+            arch: arm64
             runner: ubuntu-24.04-arm
-          - arch: amd64
+          - distro_id: debian-bookworm
+            distro_name: Debian 12 (Bookworm)
+            distro_type: debian
+            codename: bookworm
+            image: debian:bookworm-slim
+            arch: amd64
+            runner: ubuntu-latest
+          - distro_id: debian-trixie
+            distro_name: Debian 13 (Trixie)
+            distro_type: debian
+            codename: trixie
+            image: debian:trixie-slim
+            arch: arm64
+            runner: ubuntu-24.04-arm
+          - distro_id: debian-trixie
+            distro_name: Debian 13 (Trixie)
+            distro_type: debian
+            codename: trixie
+            image: debian:trixie-slim
+            arch: amd64
+            runner: ubuntu-latest
+          - distro_id: ubuntu-noble
+            distro_name: Ubuntu 24.04 LTS (Noble)
+            distro_type: ubuntu
+            codename: noble
+            image: ubuntu:noble
+            arch: arm64
+            runner: ubuntu-24.04-arm
+          - distro_id: ubuntu-noble
+            distro_name: Ubuntu 24.04 LTS (Noble)
+            distro_type: ubuntu
+            codename: noble
+            image: ubuntu:noble
+            arch: amd64
+            runner: ubuntu-latest
+          - distro_id: ubuntu-resolute
+            distro_name: Ubuntu 26.04 LTS (Resolute)
+            distro_type: ubuntu
+            codename: resolute
+            image: ubuntu:resolute
+            arch: arm64
+            runner: ubuntu-24.04-arm
+          - distro_id: ubuntu-resolute
+            distro_name: Ubuntu 26.04 LTS (Resolute)
+            distro_type: ubuntu
+            codename: resolute
+            image: ubuntu:resolute
+            arch: amd64
             runner: ubuntu-latest
 
     runs-on: ${{ matrix.runner }}
 
     container:
-      image: debian:trixie-slim
+      image: ${{ matrix.image }}
 
     steps:
       - name: Configure apt for quiet mode
@@ -36,12 +88,24 @@ jobs:
           quiet "true";
           EOF
 
-      - name: Enable contrib and non-free repositories
+      - name: Configure package repositories
         run: |
-          if [ -f /etc/apt/sources.list.d/debian.sources ]; then
-            sed -i 's/Components: main/Components: main contrib non-free/' /etc/apt/sources.list.d/debian.sources
-          else
-            sed -i 's/main$/main contrib non-free/' /etc/apt/sources.list
+          if [ "${{ matrix.distro_type }}" = "ubuntu" ]; then
+            if [ -f /etc/apt/sources.list.d/ubuntu.sources ]; then
+              sed -i 's/Components: main restricted/Components: main restricted universe multiverse/' /etc/apt/sources.list.d/ubuntu.sources || true
+              sed -i 's/Components: main/Components: main restricted universe multiverse/' /etc/apt/sources.list.d/ubuntu.sources || true
+            fi
+            if [ -f /etc/apt/sources.list ]; then
+              sed -i 's/main restricted$/main restricted universe multiverse/' /etc/apt/sources.list || true
+              sed -i 's/main$/main restricted universe multiverse/' /etc/apt/sources.list || true
+            fi
+          elif [ "${{ matrix.distro_type }}" = "debian" ]; then
+            if [ -f /etc/apt/sources.list.d/debian.sources ]; then
+              sed -i 's/Components: main/Components: main contrib non-free non-free-firmware/' /etc/apt/sources.list.d/debian.sources || sed -i 's/Components: main/Components: main contrib non-free/' /etc/apt/sources.list.d/debian.sources || true
+            fi
+            if [ -f /etc/apt/sources.list ]; then
+              sed -i 's/main$/main contrib non-free non-free-firmware/' /etc/apt/sources.list || sed -i 's/main$/main contrib non-free/' /etc/apt/sources.list || true
+            fi
           fi
 
       - name: Install build tools
@@ -74,7 +138,7 @@ jobs:
       - name: Inject build version into changelog
         run: |
           BUILD_TAG=$(date +%Y%m%d)-r${{ github.run_number }}
-          sed -i "1s/)/+ab${BUILD_TAG})/" indi/debian/changelog
+          sed -i "1s/)/+ab${BUILD_TAG}~${{ matrix.codename }})/" indi/debian/changelog
           echo "Patched: $(head -1 indi/debian/changelog)"
 
       - name: Build INDI core packages
@@ -96,14 +160,14 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: build-core-log-${{ matrix.arch }}
+          name: build-core-log-${{ matrix.distro_id }}-${{ matrix.arch }}
           path: build-core.log
           retention-days: 14
 
-      - name: Upload compiled packages (${{ matrix.arch }})
+      - name: Upload compiled packages (${{ matrix.distro_id }}-${{ matrix.arch }})
         uses: actions/upload-artifact@v4
         with:
-          name: indi-compiled-packages-${{ matrix.arch }}
+          name: indi-compiled-packages-${{ matrix.distro_id }}-${{ matrix.arch }}
           path: |
             *.deb
             **/*.deb
