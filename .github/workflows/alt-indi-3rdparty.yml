@@ -14,13 +14,65 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: arm64
+          - distro_id: debian-bookworm
+            distro_name: Debian 12 (Bookworm)
+            distro_type: debian
+            codename: bookworm
+            image: debian:bookworm-slim
+            arch: arm64
             runner: ubuntu-24.04-arm
-          - arch: amd64
+          - distro_id: debian-bookworm
+            distro_name: Debian 12 (Bookworm)
+            distro_type: debian
+            codename: bookworm
+            image: debian:bookworm-slim
+            arch: amd64
+            runner: ubuntu-latest
+          - distro_id: debian-trixie
+            distro_name: Debian 13 (Trixie)
+            distro_type: debian
+            codename: trixie
+            image: debian:trixie-slim
+            arch: arm64
+            runner: ubuntu-24.04-arm
+          - distro_id: debian-trixie
+            distro_name: Debian 13 (Trixie)
+            distro_type: debian
+            codename: trixie
+            image: debian:trixie-slim
+            arch: amd64
+            runner: ubuntu-latest
+          - distro_id: ubuntu-noble
+            distro_name: Ubuntu 24.04 LTS (Noble)
+            distro_type: ubuntu
+            codename: noble
+            image: ubuntu:noble
+            arch: arm64
+            runner: ubuntu-24.04-arm
+          - distro_id: ubuntu-noble
+            distro_name: Ubuntu 24.04 LTS (Noble)
+            distro_type: ubuntu
+            codename: noble
+            image: ubuntu:noble
+            arch: amd64
+            runner: ubuntu-latest
+          - distro_id: ubuntu-resolute
+            distro_name: Ubuntu 26.04 LTS (Resolute)
+            distro_type: ubuntu
+            codename: resolute
+            image: ubuntu:resolute
+            arch: arm64
+            runner: ubuntu-24.04-arm
+          - distro_id: ubuntu-resolute
+            distro_name: Ubuntu 26.04 LTS (Resolute)
+            distro_type: ubuntu
+            codename: resolute
+            image: ubuntu:resolute
+            arch: amd64
             runner: ubuntu-latest
 
     runs-on: ${{ matrix.runner }}
-    container: debian:trixie-slim
+    container: ${{ matrix.image }}
     steps:
       - name: Configure apt for quiet mode
         run: |
@@ -30,12 +82,24 @@ jobs:
           quiet "true";
           EOF
 
-      - name: Enable contrib and non-free repositories
+      - name: Configure package repositories
         run: |
-          if [ -f /etc/apt/sources.list.d/debian.sources ]; then
-            sed -i 's/Components: main/Components: main contrib non-free/' /etc/apt/sources.list.d/debian.sources
-          else
-            sed -i 's/main$/main contrib non-free/' /etc/apt/sources.list
+          if [ "${{ matrix.distro_type }}" = "ubuntu" ]; then
+            if [ -f /etc/apt/sources.list.d/ubuntu.sources ]; then
+              sed -i 's/Components: main restricted/Components: main restricted universe multiverse/' /etc/apt/sources.list.d/ubuntu.sources || true
+              sed -i 's/Components: main/Components: main restricted universe multiverse/' /etc/apt/sources.list.d/ubuntu.sources || true
+            fi
+            if [ -f /etc/apt/sources.list ]; then
+              sed -i 's/main restricted$/main restricted universe multiverse/' /etc/apt/sources.list || true
+              sed -i 's/main$/main restricted universe multiverse/' /etc/apt/sources.list || true
+            fi
+          elif [ "${{ matrix.distro_type }}" = "debian" ]; then
+            if [ -f /etc/apt/sources.list.d/debian.sources ]; then
+              sed -i 's/Components: main/Components: main contrib non-free non-free-firmware/' /etc/apt/sources.list.d/debian.sources || sed -i 's/Components: main/Components: main contrib non-free/' /etc/apt/sources.list.d/debian.sources || true
+            fi
+            if [ -f /etc/apt/sources.list ]; then
+              sed -i 's/main$/main contrib non-free non-free-firmware/' /etc/apt/sources.list || sed -i 's/main$/main contrib non-free/' /etc/apt/sources.list || true
+            fi
           fi
 
       - name: Install build tools
@@ -61,27 +125,28 @@ jobs:
           ref: refs/tags/v${{ env.VERSION }}
           path: '3rdparty'
 
-      - name: Download core packages (${{ matrix.arch }})
+      - name: Download core packages (${{ matrix.distro_id }}-${{ matrix.arch }})
         uses: dawidd6/action-download-artifact@v9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: alt-indi-core.yml
-          name: indi-compiled-packages-${{ matrix.arch }}
+          name: indi-compiled-packages-${{ matrix.distro_id }}-${{ matrix.arch }}
           workflow_conclusion: success
           path: ./pre-built-core
 
       - name: Install core packages
         run: |
-          apt-get install -y ./pre-built-core/build/*.deb
+          DEBS=$(find ./pre-built-core -name "*.deb" -not -name "*dbg*" | tr '\n' ' ')
+          apt-get install -y --no-install-recommends $DEBS
 
       - name: Inject build version into driver changelogs
         run: |
           BUILD_TAG=$(date +%Y%m%d)-r${{ github.run_number }}
           for cl in 3rdparty/debian/*/changelog; do
             [ -f "$cl" ] || continue
-            sed -i "1s/)/+ab${BUILD_TAG})/" "$cl"
+            sed -i "1s/)/+ab${BUILD_TAG}~${{ matrix.codename }})/" "$cl"
           done
-          echo "Patched changelogs with +ab${BUILD_TAG}"
+          echo "Patched changelogs with +ab${BUILD_TAG}~${{ matrix.codename }}"
 
       - name: Build and install all libraries
         run: |
@@ -217,20 +282,20 @@ jobs:
           done
           exec 1>&3 2>&4
 
-      - name: Upload compiled packages (${{ matrix.arch }})
+      - name: Upload compiled packages (${{ matrix.distro_id }}-${{ matrix.arch }})
         uses: actions/upload-artifact@v4
         with:
-          name: 3rdparty-compiled-packages-${{ matrix.arch }}
+          name: 3rdparty-compiled-packages-${{ matrix.distro_id }}-${{ matrix.arch }}
           path: |
             3rdparty/build/*.deb
           retention-days: 14
           if-no-files-found: error
 
-      - name: Upload build logs (${{ matrix.arch }})
+      - name: Upload build logs (${{ matrix.distro_id }}-${{ matrix.arch }})
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: build-3rdparty-log-${{ matrix.arch }}
+          name: build-3rdparty-log-${{ matrix.distro_id }}-${{ matrix.arch }}
           path: |
             build-libraries.log
             build-drivers.log
