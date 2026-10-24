@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INDI APT Repository (unofficial)</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+  code { background: #f4f4f4; padding: 0.2em 0.4em; border-radius: 4px; }
+  pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 4px; overflow-x: auto; }
+  .btn { display: inline-block; background: #0366d6; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; }
+  .btn:hover { background: #0256b3; }
+</style>
+</head>
+<body>
+<h1>INDI APT Repository (unofficial)</h1>
+
+<p>Community-maintained repository for <strong>INDI Library</strong> and 3rd-party drivers, built for Debian-based distributions (Trixie/Stable). Automatically built from upstream tags at <code>indilib/indi</code> and <code>indilib/indi-3rdparty</code>.</p>
+<p><strong>Note:</strong> This is an independent, unofficial repository with no affiliation to the astroberry project or the upstream INDI organization.</p>
+
+<h2>GPG Key</h2>
+<p>Public key for verifying repository signatures:</p>
+<p><a href="/gpg_public_key.asc" class="btn">Download public key (ASCII armor)</a></p>
+<pre>curl -fsSL https://jochym.github.io/debian-indi/gpg_public_key.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-indi.gpg</pre>
+
+<h2>Adding the Repository</h2>
+<p>Add to <code>/etc/apt/sources.list.d/debian-indi.list</code>:</p>
+<pre>deb [signed-by=/etc/apt/trusted.gpg.d/debian-indi.gpg] https://jochym.github.io/debian-indi/ stable main</pre>
+<p>Or without GPG verification (faster for testing):</p>
+<pre>deb [trusted=yes] https://jochym.github.io/debian-indi/ stable main</pre>
+<p>Then:</p>
+<pre>sudo apt update
+sudo apt install indi-3rdparty-drivers</pre>
+
+<h2>Available Packages</h2>
+<ul>
+<li><strong>indi-bin</strong>, <strong>libindi1</strong>, <strong>libindi-dev</strong>, <strong>libindi-data</strong> – core INDI Library</li>
+<li><strong>indi-3rdparty-libs</strong> – meta-package for 3rd-party libraries (empty)</li>
+<li><strong>indi-3rdparty-drivers</strong> – meta-package for all 3rd-party drivers (Recommends all <code>indi-*</code>)</li>
+<li>Several dozen drivers: <code>indi-eqmod</code>, <code>indi-gphoto</code>, <code>indi-asi</code>, <code>indi-qhy</code>, <code>indi-sbig</code>, <code>indi-playerone</code> and more</li>
+</ul>
+<p>Individual packages can be downloaded from the <a href="https://github.com/jochym/debian-indi/releases/latest">GitHub Releases page</a>.</p>
+
+<h2>Architectures</h2>
+<p><strong>amd64</strong> (x86_64) and <strong>arm64</strong> (aarch64 – Raspberry Pi, Orange Pi, etc.)</p>
+
+<h2>Updates</h2>
+<p>Repository is refreshed manually when upstream tags are released. Versions are always synchronized with <code>indilib/indi</code> and <code>indilib/indi-3rdparty</code>.</p>
+
+<hr>
+<p><small>Automatically built by GitHub Actions. Sources: <a href="https://github.com/indilib/indi">indilib/indi</a>, <a href="https://github.com/indilib/indi-3rdparty">indilib/indi-3rdparty</a>.</small></p>
+</body>
+</html>
